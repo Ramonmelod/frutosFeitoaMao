@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FRUTOS FEITO A MÃO - Contato</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FDTMYG4CXL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-FDTMYG4CXL");
+    </script>
+
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #f8f5ed; /* COR FUNDO*/
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .logo {
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .txt_intro {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #c07809;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #f9e0dc;
+        color: #8a504b;
+        font-size: 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .button:hover {
+        background-color: #e6aca8;
+        cursor: pointer;
+        border-radius: 25px;
+        padding: 15px 20px;
+        font-size: 35px;
+      }
+
+      .icon {
+        margin-right: 10px;
+      }
+
+      .form-container {
+        margin-top: 50px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 15px;
+        margin: 10px 0;
+        border: 1px solid #c07809;
+        border-radius: 10px;
+        font-size: 16px;
+      }
+
+      form input[type="submit"] {
+        background-color: #c07809;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #a56707;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="../logo.png" alt="Logo Frutos Feito à Mão" class="logo" />
+        <div class="txt_intro">Bordados feitos totalmente à mão.</div>
+        <div class="txt_intro">
+          “Bordando os Bons Frutos de Jesus com Amor e Arte.”
+        </div>
+      </header>
+
+      <div class="buttons">
+        <a
+          href="https://www.instagram.com/frutosfeitoamao"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
+        >
+        <a
+          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
+        >
+        <a
+          href="mailto:frutosfeitoamao@gmail.com"
+          target="_blank"
+          class="button"
+          ><i class="far fa-envelope icon icon-email"></i>Email</a
+        >
+      </div>
+
+      <div class="form-container">
+        <h2>Entre em contato</h2>
+        <form action="https://seuservidor.com/enviar-mensagem" method="post">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu email" required />
+          <textarea
+            name="mensagem"
+            rows="5"
+            placeholder="Sua mensagem"
+            required
+          ></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
