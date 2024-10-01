@@ -89,35 +89,34 @@
       }
       .buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: flex-end;
         margin-top: 30px;
         width: 100%;
-        max-width: 400px;
+        position: absolute;
+        top: 5px;
       }
+
       .button {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10px 0;
+        margin: 10px;
         padding: 10px 20px;
         background-color: #f9e0dc;
-        color: #8a504b;
-        font-size: 25px;
+        /*color: #8a504b;*/
+        font-size: 15px;
         text-align: center;
         text-decoration: none;
-        border-radius: 20px;
+        border-radius: 80px;
         transition: all 0.5s ease-in-out;
-        width: 100%;
-        max-width: 400px; /* adjust to your preference */
-        min-width: 300px;
+        width: 5px;
       }
       .button:hover {
         background-color: #e6aca8;
-        color: #8a504b;
+        /*color: #8a504b*/
         cursor: pointer;
         border-radius: 25px;
-        padding: 15px 20px;
+        padding: 10px 20px;
         font-size: 35px;
       }
 
@@ -139,9 +138,6 @@
       .icon-email {
         color: #e74c3c;
       }
-      .icon-ecommerce {
-        color: #8e44ad;
-      }
 
       /* Media queries */
       @media (max-width: 768px) {
@@ -154,11 +150,31 @@
   <body>
     <header>
       <nav>
-        <a href="index.html">Home</a>
+        <a href="../home/index.html">Home</a>
         <a href="../cursos/index.html">Cursos</a>
         <a href="../sobre/index.html">Sobre</a>
         <a href="../contato/index.html">Contato</a>
       </nav>
+      <div class="buttons">
+        <a
+          href="https://www.instagram.com/frutosfeitoamao"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-instagram icon icon-instagram"></i
+        ></a>
+        <a
+          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-whatsapp icon icon-whatsapp"></i
+        ></a>
+        <a
+          href="mailto:frutosfeitoamao@gmail.com"
+          target="_blank"
+          class="button"
+          ><i class="far fa-envelope icon icon-email"></i
+        ></a>
+      </div>
     </header>
 
     <section>
@@ -167,30 +183,6 @@
       <div class="txt_intro">Bordados feitos totalmente mão.</div>
       <div class="txt_intro">
         “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-      </div>
-
-      <div class="buttons">
-        <a
-          href="https://www.instagram.com/frutosfeitoamao"
-          target="_blank"
-          class="button"
-          ><i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
-        >
-        <a
-          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
-          target="_blank"
-          class="button"
-          ><i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
-        >
-        <a
-          href="mailto:frutosfeitoamao@gmail.com"
-          target="_blank"
-          class="button"
-          ><i class="far fa-envelope icon icon-email"></i>Email</a
-        >
-        <!-- Loja virtual
- 	<a href="https://www.ecommercewebsite.com/" target="_blank" class="button"><i class="fas fa-shopping-cart icon icon-ecommerce"></i>Ecommerce</a>*/
-    -->
       </div>
     </section>
   </body>
