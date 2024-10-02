@@ -78,14 +78,21 @@
 
       .logo {
         display: block;
+        position: relative;
+        top: -80px;
         margin: 0 auto;
         text-align: center;
         height: 300px;
         width: auto;
         transition: all 0.3s ease-in-out;
       }
+      .logo:hover {
+        height: 350px;
+      }
 
       .txt_intro {
+        position: relative;
+        top: -50px;
         margin-top: 20px;
         font-size: 20px;
         font-weight: bold;
@@ -93,11 +100,12 @@
       }
       .buttons {
         display: flex;
+        position: absolute;
+        top: 0px;
+        right: 10px;
         justify-content: flex-end;
         margin-top: 30px;
-        width: 100%;
-        position: absolute;
-        top: 10px;
+        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
       }
 
       .button {
@@ -107,7 +115,6 @@
         margin: 10px;
         padding: 10px 20px;
         background-color: #f9e0dc;
-        /*color: #8a504b;*/
         font-size: 15px;
         text-align: center;
         text-decoration: none;
@@ -117,15 +124,10 @@
       }
       .button:hover {
         background-color: #e6aca8;
-        /*color: #8a504b*/
         cursor: pointer;
         border-radius: 25px;
         padding: 10px 20px;
         font-size: 35px;
-      }
-
-      .logo:hover {
-        height: 350px;
       }
 
       /* Icon styles */
