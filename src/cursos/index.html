@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <title>FRUTOS FEITO A MÃO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FRUTOS FEITO A MÃO - Home</title>
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -13,69 +16,34 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FDTMYG4CXL"
-    ></script>
-
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-FDTMYG4CXL");
-    </script>
-
     <style>
-      /* Common styles */
-
+      /* Estilos comuns */
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: #f8f5ed; /* COR FUNDO*/
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+        background-color: #f8f5ed; /* Cor de fundo */
+        margin: 0;
+        padding: 0;
       }
 
       header {
-        width: 80%;
-        margin: auto;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .logo {
-        display: block;
-        margin: 0 auto;
+        width: 100%;
+        background-color: #f9e0dc;
+        padding: 10px 0;
         text-align: center;
-        height: 300px;
-        width: auto;
-        transition: all 0.3s ease-in-out;
-      }
-
-      .txt_intro {
-        margin-top: 20px;
-        font-size: 20px;
-        font-weight: bold;
-        color: #c07809;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 80px;
+        width: 100%;
       }
       .buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        justify-content: flex-end;
         margin-top: 30px;
-        width: 95%;
-        max-width: 400px;
+        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
       }
+
       .button {
         display: flex;
         align-items: center;
@@ -83,30 +51,65 @@
         margin: 10px;
         padding: 10px 20px;
         background-color: #f9e0dc;
-        color: #8a504b;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         text-decoration: none;
-        border-radius: 20px;
+        border-radius: 80px;
         transition: all 0.5s ease-in-out;
-        width: 100%;
-        max-width: 400px; /* adjust to your preference */
-        min-width: 300px;
+        width: 5px;
       }
       .button:hover {
         background-color: #e6aca8;
-        color: #8a504b;
         cursor: pointer;
         border-radius: 25px;
-        padding: 15px 20px;
+        padding: 10px 20px;
         font-size: 35px;
+      }
+
+      .logo {
+        height: 300px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      nav {
+        margin-top: 20px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #8a504b;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #c07809;
+      }
+
+      /* Seção de introdução */
+      .intro-section {
+        text-align: center;
+        padding: 50px 20px;
+        color: #8a504b;
+      }
+
+      .intro-section h1 {
+        font-size: 36px;
+        color: #c07809;
+      }
+
+      .intro-section p {
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 1.5;
       }
 
       .logo:hover {
         height: 350px;
       }
 
-      /* Icon styles */
+      /* Ícones */
       .icon {
         margin-right: 10px;
       }
@@ -120,50 +123,70 @@
       .icon-email {
         color: #e74c3c;
       }
-      .icon-ecommerce {
-        color: #8e44ad;
-      }
 
-      /* Media queries */
+      /* Media queries para dispositivos móveis */
       @media (max-width: 768px) {
+        .logo {
+          height: 300px;
+        }
+
+        nav a {
+          font-size: 16px;
+        }
+
+        .intro-section h1 {
+          font-size: 28px;
+        }
+
+        .intro-section p {
+          font-size: 18px;
+        }
         .button {
-          font-size: 35px;
+          position: relative;
+          top: 15px;
+          right: 50%;
+          margin: 5px;
+          padding: 10px;
+          font-size: 15px;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="../logo.png" alt="My Logo" class="logo" />
-
-      <div class="txt_intro">Bordados feitos totalmente mão.</div>
-      <div class="txt_intro">
-        “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-      </div>
-
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../cursos/index.html">Cursos</a>
+        <a href="../sobre/index.html">Sobre</a>
+        <a href="../contato/index.html">Contato</a>
+      </nav>
       <div class="buttons">
         <a
           href="https://www.instagram.com/frutosfeitoamao"
           target="_blank"
           class="button"
-          ><i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
-        >
+          ><i class="fab fa-instagram icon icon-instagram"></i
+        ></a>
         <a
           href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
           target="_blank"
           class="button"
-          ><i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
-        >
+          ><i class="fab fa-whatsapp icon icon-whatsapp"></i
+        ></a>
         <a
           href="mailto:frutosfeitoamao@gmail.com"
           target="_blank"
           class="button"
-          ><i class="far fa-envelope icon icon-email"></i>Email</a
-        >
-        <!-- Loja virtual
- 	<a href="https://www.ecommercewebsite.com/" target="_blank" class="button"><i class="fas fa-shopping-cart icon icon-ecommerce"></i>Ecommerce</a>*/
-    -->
+          ><i class="far fa-envelope icon icon-email"></i
+        ></a>
       </div>
     </header>
+
+    <section class="intro-section">
+      <img src="../logo.png" alt="Frutos Feito à Mão Logo" class="logo" />
+      <h1>Bem-vindo ao Frutos Feito à Mão</h1>
+
+      <p>Em construção!</p>
+    </section>
   </body>
 </html>

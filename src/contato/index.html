@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRUTOS FEITO A MÃO - Contato</title>
-
+    <title>FRUTOS FEITO A MÃO - Home</title>
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -16,57 +15,68 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-FDTMYG4CXL"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-FDTMYG4CXL");
-    </script>
-
     <style>
+      /* Estilos comuns */
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: #f8f5ed; /* COR FUNDO*/
+        background-color: #f8f5ed; /* Cor de fundo */
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
       }
 
-      .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
+      header {
+        width: 100%;
+        background-color: #f9e0dc;
+        padding: 10px 0;
         text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 80px;
+        width: 100%;
       }
 
       .logo {
-        display: block;
-        margin: 0 auto;
-        height: 200px;
+        height: 300px;
         transition: all 0.3s ease-in-out;
       }
 
-      .txt_intro {
+      nav {
         margin-top: 20px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #8a504b;
         font-size: 20px;
         font-weight: bold;
+      }
+
+      nav a:hover {
         color: #c07809;
       }
 
+      /* Seção de introdução */
+      .intro-section {
+        text-align: center;
+        padding: 50px 20px;
+        color: #8a504b;
+      }
+
+      .intro-section h1 {
+        font-size: 36px;
+        color: #c07809;
+      }
+
+      .intro-section p {
+        font-size: 20px;
+        margin-top: 20px;
+        line-height: 1.5;
+      }
+
+      /* Botões de ação */
       .buttons {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         margin-top: 30px;
       }
 
@@ -83,20 +93,52 @@
         text-decoration: none;
         border-radius: 20px;
         transition: all 0.5s ease-in-out;
-        width: 100%;
-        max-width: 400px;
+        width: 150px;
       }
 
       .button:hover {
         background-color: #e6aca8;
+        color: #8a504b;
         cursor: pointer;
-        border-radius: 25px;
-        padding: 15px 20px;
-        font-size: 35px;
       }
 
+      /* Ícones */
       .icon {
         margin-right: 10px;
+      }
+
+      .icon-instagram {
+        color: #e1306c;
+      }
+      .icon-whatsapp {
+        color: #25d366;
+      }
+      .icon-email {
+        color: #e74c3c;
+      }
+
+      /* Media queries para dispositivos móveis */
+      @media (max-width: 768px) {
+        .logo {
+          height: 300px;
+        }
+
+        nav a {
+          font-size: 16px;
+        }
+
+        .intro-section h1 {
+          font-size: 28px;
+        }
+
+        .intro-section p {
+          font-size: 18px;
+        }
+        .button {
+          margin: 5px;
+          padding: 10px;
+          font-size: 15px;
+        }
       }
 
       .form-container {
@@ -134,39 +176,46 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <img src="../logo.png" alt="Logo Frutos Feito à Mão" class="logo" />
-        <div class="txt_intro">Bordados feitos totalmente à mão.</div>
-        <div class="txt_intro">
-          “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-        </div>
-      </header>
+    <header>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../cursos/index.html">Cursos</a>
+        <a href="../sobre/index.html">Sobre</a>
+        <a href="../contato/index.html">Contato</a>
+      </nav>
+    </header>
+
+    <section class="intro-section">
+      <img src="../logo.png" alt="Frutos Feito à Mão Logo" class="logo" />
+      <h1>Frutos Feito à Mão</h1>
 
       <div class="buttons">
         <a
           href="https://www.instagram.com/frutosfeitoamao"
           target="_blank"
           class="button"
-          ><i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
+        >
+          <i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
         >
         <a
           href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
           target="_blank"
           class="button"
-          ><i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
+        >
+          <i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
         >
         <a
           href="mailto:frutosfeitoamao@gmail.com"
           target="_blank"
           class="button"
-          ><i class="far fa-envelope icon icon-email"></i>Email</a
+        >
+          <i class="far fa-envelope icon icon-email"></i>Email</a
         >
       </div>
 
       <div class="form-container">
         <h2>Entre em contato</h2>
-        <form action="https://seuservidor.com/enviar-mensagem" method="post">
+        <form action="https://formspree.io/f/xwpegdvw" method="post">
           <input type="text" name="nome" placeholder="Seu nome" required />
           <input type="email" name="email" placeholder="Seu email" required />
           <textarea
@@ -178,6 +227,6 @@
           <input type="submit" value="Enviar" />
         </form>
       </div>
-    </div>
+    </section>
   </body>
 </html>
