@@ -32,6 +32,37 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
       }
+      .buttons {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        justify-content: flex-end;
+        margin-top: 30px;
+        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #f9e0dc;
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 80px;
+        transition: all 0.5s ease-in-out;
+        width: 5px;
+      }
+      .button:hover {
+        background-color: #e6aca8;
+        cursor: pointer;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 35px;
+      }
 
       .logo {
         height: 300px;
@@ -70,37 +101,6 @@
         font-size: 20px;
         margin-top: 20px;
         line-height: 1.5;
-      }
-
-      /* Botões de ação */
-      .buttons {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-      }
-
-      .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        padding: 10px 20px;
-        background-color: #f9e0dc;
-        color: #8a504b;
-        font-size: 25px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 20px;
-        transition: all 0.5s ease-in-out;
-        width: 150px;
-      }
-      .button:hover {
-        background-color: #e6aca8;
-        color: #8a504b;
-        cursor: pointer;
-        border-radius: 25px;
-        padding: 15px 20px;
-        font-size: 35px;
       }
 
       .logo:hover {
@@ -150,6 +150,26 @@
         <a href="../sobre/index.html">Sobre</a>
         <a href="../contato/index.html">Contato</a>
       </nav>
+      <div class="buttons">
+        <a
+          href="https://www.instagram.com/frutosfeitoamao"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-instagram icon icon-instagram"></i
+        ></a>
+        <a
+          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
+          target="_blank"
+          class="button"
+          ><i class="fab fa-whatsapp icon icon-whatsapp"></i
+        ></a>
+        <a
+          href="mailto:frutosfeitoamao@gmail.com"
+          target="_blank"
+          class="button"
+          ><i class="far fa-envelope icon icon-email"></i
+        ></a>
+      </div>
     </header>
 
     <section class="intro-section">
@@ -161,30 +181,6 @@
         para sua vida. Nossa missão é criar peças exclusivas e artesanais, com
         qualidade e carinho em cada ponto.
       </p>
-
-      <div class="buttons">
-        <a
-          href="https://www.instagram.com/frutosfeitoamao"
-          target="_blank"
-          class="button"
-        >
-          <i class="fab fa-instagram icon icon-instagram"></i>Instagram</a
-        >
-        <a
-          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
-          target="_blank"
-          class="button"
-        >
-          <i class="fab fa-whatsapp icon icon-whatsapp"></i>WhatsApp</a
-        >
-        <a
-          href="mailto:frutosfeitoamao@gmail.com"
-          target="_blank"
-          class="button"
-        >
-          <i class="far fa-envelope icon icon-email"></i>Email</a
-        >
-      </div>
     </section>
   </body>
 </html>
