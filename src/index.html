@@ -140,6 +140,30 @@
 
 
       }
+            /* Setas de navegação */
+            .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .arrow-left {
+        left: 0;
+      }
+
+      .arrow-right {
+        right: 0;
+      }
+
+      .arrow:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
 
       .product-card {
         position: relative;
@@ -273,6 +297,7 @@
  
 
     <div class="images">
+      <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
       <div class="product-card">
      
         <img src="leticia.jpg" />
@@ -304,6 +329,7 @@
           <p>A partir de: R$180,00</p>
         </div>
       </div>
+      <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
     </div>
   </body>
 </html>
