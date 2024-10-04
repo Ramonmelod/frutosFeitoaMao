@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
+   
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -50,6 +50,7 @@
         margin: auto;
       }
       header {
+        display: flex;
         position: fixed;
         width: 100%;
         background-color: #e4cbb1;
@@ -58,6 +59,64 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
         z-index: 5; /*numero da camada*/
+      }
+  
+      .logo {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 50px;
+        height: 80px;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+   
+      }
+      .logo:hover {
+        height: 85px;
+      }
+      .logo-title {
+        display: block;
+        position: relative;
+        color: #c07809; /* Cor do texto semelhante à da imagem */
+        top: 25px;
+        left: 50px;
+        text-decoration: none;
+        
+       }
+       .logo-title .frutos{
+        position: relative;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-family: 'Playfair Display', serif;
+        margin: 5px
+       }
+       .logo-title .feito-a-mao{
+        position: relative;
+        top:-10px;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Dancing Script', cursive;
+       }
+      nav {
+        position: relative;
+        left: 30%;
+        text-align: center;
+        margin-top: 20px;
+      
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #c47601;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: #eea73d;
       }
 
       .buttons {
@@ -93,36 +152,6 @@
         font-size: 35px;
       }
 
-      nav {
-        margin-top: 20px;
-      }
-
-      nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #c47601;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      nav a:hover {
-        color: #eea73d;
-      }
-
-
-      .logo {
-        display: block;
-        position: relative;
-        top: 150px;
-        margin: 0 auto;
-        text-align: center;
-        height: 300px;
-        width: auto;
-        transition: all 0.3s ease-in-out;
-   
-      }
-      .logo:hover {
-        height: 350px;
-      }
       .txt_intro {
         position: relative;
         top: 150px;
@@ -261,6 +290,11 @@
   </head>
   <body>
     <header>
+      <img src="./clean-logo.png" alt="My Logo" class="logo" />
+      <div class="logo-title">
+      <a href="index.html" class="frutos">FRUTOS <BR/></a>
+      <a href="index.html" class="feito-a-mao">. feito à mão .</a>
+    </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="./cursos/index.html">Cursos</a>
@@ -290,7 +324,7 @@
     </header>
 
  
-      <img src="./logo.png" alt="My Logo" class="logo" />
+     
 
       <div class="txt_intro">Bordados feitos totalmente mão.</div>
       <div class="txt_intro">
