@@ -8,7 +8,7 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const logo = document.querySelector('.logo');
 let scrollAmount = 0;
-const scrollStep = 50; 
+const scrollStep = 270; 
 
 
 
@@ -19,10 +19,9 @@ prevBtn.addEventListener('click', () => {
   image03.style.transform = `translateX(${scrollAmount}px)`
   image04.style.transform = `translateX(${scrollAmount}px)`
 
-  // //logo.style.left = "500px";
-  // scrollAmount = scrollAmount + scrollStep;
-  // console.log(scrollAmount)
-  // imagesContainer.style.transform = `translateX(${scrollAmount}px)`; //
+  //imagesContainer.scrollBy(500,0)
+
+
 });
 nextBtn.addEventListener('click', () => {
   scrollAmount = scrollAmount - scrollStep;
