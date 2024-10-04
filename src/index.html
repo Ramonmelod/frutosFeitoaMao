@@ -48,6 +48,7 @@
         left: 0;
         right: 0;
         margin: auto;
+        justify-content: center;
       }
       header {
         display: flex;
@@ -162,16 +163,16 @@
         color: #c07809;
       
       }
+
       .images {
         display: flex;
         position: relative;
         top: 150px;
-        width: 100%;
+        left: 220px;
+        width: 70%;
         height: 600px;
         justify-content: center;
-        transform:translateX(0px)
-
-
+        overflow: hidden;
       }
       /* Setas de navegação */
       .arrow {
@@ -206,7 +207,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        margin: 20px;
+        margin: 10px;
         height: 430px;
       }
 
@@ -327,15 +328,16 @@
  
      
 
-      <div class="txt_intro">Bordados feitos totalmente mão.</div>
-      <div class="txt_intro">
-        “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-      </div>
-      <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
-      <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
-    <div class="images">
+    <div class="txt_intro">Bordados feitos totalmente mão.</div>
+    <div class="txt_intro">
+      “Bordando os Bons Frutos de Jesus com Amor e Arte.”
+    </div>
+    <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
+    <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
+
+      <div class="images">
       
-      <div class="product-card">
+      <div class="product-card" id="image-01">
      
         <img src="leticia.jpg" />
         <div class="product-info">
@@ -344,7 +346,7 @@
         </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" id="image-02">
         <img src="Martin-Bruno.jpg" />
         <div class="product-info">
           <h3>Bordado personalizado</h3>
@@ -352,14 +354,14 @@
         </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" id="image-03">
         <img src="vovo.jpg" />
         <div class="product-info">
           <h3>Bordado personalizado</h3>
           <p>A partir de: R$180,00</p>
         </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" id="image-04">
         <img src="brunaefabio.jpg" />
         <div class="product-info">
           <h3>Bordado personalizado</h3>
@@ -368,6 +370,7 @@
       </div>
       
     </div>
+
     <script type="module" src="./js/script.js"></script> 
   </body>
 </html>
