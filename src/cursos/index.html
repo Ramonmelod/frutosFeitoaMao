@@ -28,6 +28,7 @@
       }
 
       header {
+        position: fixed;
         width: 100%;
         background-color: #e4cbb1;
         padding: 10px 0;
@@ -35,6 +36,7 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
         width: 100%;
+        z-index: 5; /*numero da camada*/
       }
       .buttons {
         display: flex;
@@ -69,6 +71,8 @@
       }
 
       .logo {
+        position: relative;
+        top: 100px;
         height: 300px;
         transition: all 0.3s ease-in-out;
       }
@@ -91,17 +95,23 @@
 
       /* Seção de introdução */
       .intro-section {
+        position: relative;
+        top:0px;
         text-align: center;
         padding: 50px 20px;
         color: #8a504b;
       }
 
       .intro-section h1 {
+        position: relative;
+        top:100px;
         font-size: 36px;
         color: #c07809;
       }
 
       .intro-section p {
+        position: relative;
+        top:100px;
         font-size: 20px;
         margin-top: 20px;
         line-height: 1.5;
