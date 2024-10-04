@@ -27,6 +27,17 @@
         margin: 0;
         padding: 0;
       }
+      header {
+        position: fixed;
+        width: 100%;
+        background-color: #e4cbb1;
+        padding: 10px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 80px;
+        width: 100%;
+        z-index: 5; /*numero da camada*/
+      }
       .button {
         display: flex;
         align-items: center;
@@ -41,22 +52,6 @@
         transition: all 0.5s ease-in-out;
         width: 5px;
       }
-      .button:hover {
-        background-color: #e6aca8;
-        cursor: pointer;
-        border-radius: 25px;
-        padding: 10px 20px;
-        font-size: 35px;
-      }
-      header {
-        width: 100%;
-        background-color: #e4cbb1;
-        padding: 10px 0;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: 80px;
-        width: 100%;
-      }
       .buttons {
         display: flex;
         position: absolute;
@@ -67,6 +62,15 @@
         width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
       }
 
+      .button:hover {
+        background-color: #e6aca8;
+        cursor: pointer;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 35px;
+      }
+ 
+ 
       .button {
         display: flex;
         align-items: center;
@@ -112,6 +116,8 @@
 
       /* Seção de introdução */
       .intro-section {
+        position: relative;
+        top:100px;
         text-align: center;
         padding: 50px 20px;
         color: #8a504b;
