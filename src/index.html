@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-   
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -35,7 +35,7 @@
 
       gtag("config", "G-FDTMYG4CXL");
     </script>
-<script src="./script.js"></script>
+    <script src="./script.js"></script>
     <style>
       /* Common styles */
 
@@ -61,7 +61,7 @@
         height: 80px;
         z-index: 5; /*numero da camada*/
       }
-  
+
       .logo {
         display: block;
         position: relative;
@@ -70,7 +70,6 @@
         height: 80px;
         width: auto;
         transition: all 0.3s ease-in-out;
-   
       }
       .logo:hover {
         height: 85px;
@@ -82,31 +81,29 @@
         top: 25px;
         left: 50px;
         text-decoration: none;
-        
-       }
-       .logo-title .frutos{
+      }
+      .logo-title .frutos {
         position: relative;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
-        font-family: 'Playfair Display', serif;
-        margin: 5px
-       }
-       .logo-title .feito-a-mao{
+        font-family: "Playfair Display", serif;
+        margin: 5px;
+      }
+      .logo-title .feito-a-mao {
         position: relative;
-        top:-10px;
+        top: -10px;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
         font-weight: bold;
-        font-family: 'Dancing Script', cursive;
-       }
+        font-family: "Dancing Script", cursive;
+      }
       nav {
         position: relative;
         left: 30%;
         text-align: center;
         margin-top: 20px;
-      
       }
 
       nav a {
@@ -167,12 +164,44 @@
         display: flex;
         position: relative;
         top: 150px;
-        left: 220px;
-        width: 70%;
+        left: 180px;
+        width: 80%;
         height: 600px;
-        justify-content: center;
-        overflow: hidden;
+        overflow-x: scroll; /* Garante que o contêiner permita a rolagem horizontal */
+        scroll-behavior: smooth; /* Faz a rolagem ser suave */
+      }
 
+      .product-card {
+        position: relative;
+        border: 1px solid #ddd; /* Borda em volta do card */
+        border-radius: 10px;
+        /* overflow: hidden; */
+        width: 300px;
+        /* text-align: center; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        margin: 10px;
+        height: 430px;
+      }
+
+      .product-card img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+      }
+      .product-info {
+        padding: 15px;
+        background-color: #fff;
+        border-top: 2px solid #a0c568; /* Linha delimitadora */
+      }
+
+      .product-info h3,
+      .product-info p {
+        margin: 0;
+        color: #6b6b6b;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
       }
       /* Setas de navegação */
       .arrow {
@@ -181,7 +210,7 @@
         border-radius: 25px;
         background-color: #e4cbb1;
         color: #c07809;
-        border:none;
+        border: none;
         padding: 15px;
         cursor: pointer;
         z-index: 1;
@@ -198,40 +227,6 @@
       .arrow:hover {
         background-color: #e4c5b1a1;
       }
-      .product-card {
-        position: relative;
-        border: 1px solid #ddd; /* Borda em volta do card */
-        border-radius: 10px;
-        overflow:hidden; /* Garante que o conteúdo fique dentro do card */
-        width: 250px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        height: 430px;
-      }
-
-      .product-card img {
-        width: 100%;
-        height: auto;
-      }
-      .product-info {
-        padding: 15px;
-        background-color: #fff;
-        border-top: 2px solid #a0c568; /* Linha delimitadora */
-      }
-
-      .product-info h3,
-      .product-info p {
-        margin: 0;
-        color: #6b6b6b;
-      }
-      .product-card:hover {
-        transform: scale(1.05);
-      }
-
- 
-
       /* Icon styles */
       .icon {
         margin-right: 10px;
@@ -279,9 +274,9 @@
     <header>
       <img src="./clean-logo.png" alt="My Logo" class="logo" />
       <div class="logo-title">
-      <a href="index.html" class="frutos">FRUTOS <BR/></a>
-      <a href="index.html" class="feito-a-mao">. feito à mão .</a>
-    </div>
+        <a href="index.html" class="frutos">FRUTOS <br /></a>
+        <a href="index.html" class="feito-a-mao">. feito à mão .</a>
+      </div>
       <nav>
         <a href="index.html">Home</a>
         <a href="./cursos/index.html">Cursos</a>
@@ -310,9 +305,6 @@
       </div>
     </header>
 
- 
-     
-
     <div class="txt_intro">Bordados feitos totalmente mão.</div>
     <div class="txt_intro">
       “Bordando os Bons Frutos de Jesus com Amor e Arte.”
@@ -320,10 +312,8 @@
     <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
     <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
 
-      <div class="images">
-      
+    <div class="images">
       <div class="product-card" id="image-01">
-     
         <img src="leticia.jpg" />
         <div class="product-info">
           <h3>Bordado personalizado</h3>
@@ -353,9 +343,36 @@
           <p>A partir de: R$180,00</p>
         </div>
       </div>
-      
+      <div class="product-card" id="image-05">
+        <img src="brunaefabio.jpg" />
+        <div class="product-info">
+          <h3>Bordado personalizado</h3>
+          <p>A partir de: R$180,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-06">
+        <img src="brunaefabio.jpg" />
+        <div class="product-info">
+          <h3>Bordado personalizado</h3>
+          <p>A partir de: R$180,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-07">
+        <img src="brunaefabio.jpg" />
+        <div class="product-info">
+          <h3>Bordado personalizado</h3>
+          <p>A partir de: R$180,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-08">
+        <img src="brunaefabio.jpg" />
+        <div class="product-info">
+          <h3>Bordado personalizado</h3>
+          <p>A partir de: R$180,00</p>
+        </div>
+      </div>
     </div>
 
-    <script type="module" src="./js/script.js"></script> 
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
