@@ -62,7 +62,7 @@
         z-index: 5; /*numero da camada*/
       }
 
-      .logo {
+      .mini-logo {
         display: block;
         position: relative;
         top: 0px;
@@ -71,7 +71,7 @@
         width: auto;
         transition: all 0.3s ease-in-out;
       }
-      .logo:hover {
+      .mini-logo:hover {
         height: 85px;
       }
       .logo-title {
@@ -149,6 +149,19 @@
         padding: 10px 20px;
         font-size: 35px;
       }
+      .logo {
+        display: block;
+        position: relative;
+        top: 130px;
+        margin: 0 auto;
+        text-align: center;
+        height: 100px;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+      }
+      .logo:hover {
+        height: 120px;
+      }
 
       .txt_intro {
         position: relative;
@@ -163,7 +176,7 @@
       .images {
         display: flex;
         position: relative;
-        top: 150px;
+        top: 170px;
         left: 180px;
         width: 80%;
         height: 600px;
@@ -202,7 +215,7 @@
       /* Setas de navegação */
       .arrow {
         position: absolute;
-        top: 400px;
+        top: 550px;
         border-radius: 25px;
         background-color: #e4cbb1;
         color: #c07809;
@@ -268,7 +281,7 @@
   </head>
   <body>
     <header>
-      <img src="./clean-logo.png" alt="My Logo" class="logo" />
+      <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
       <div class="logo-title">
         <a href="index.html" class="frutos">FRUTOS <br /></a>
         <a href="index.html" class="feito-a-mao">. feito à mão .</a>
@@ -300,6 +313,7 @@
         ></a>
       </div>
     </header>
+    <img src="./logo.png" alt="My Logo" class="logo" />
 
     <div class="txt_intro">Bordados feitos totalmente mão.</div>
     <div class="txt_intro">
