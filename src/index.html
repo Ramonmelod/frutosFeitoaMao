@@ -63,8 +63,12 @@
       }
       .menu-icon {
         display: none;
+        position: relative;
+
+        margin: 25px;
         font-size: 30px;
         cursor: pointer;
+        color: #f8f5ed;
       }
 
       .mini-logo {
@@ -267,28 +271,36 @@
 
       /* Media queries */
       @media (max-width: 768px) {
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 50%;
+          background-color: #e4cbb1;
+        }
+
+        nav a {
+          padding: 15px;
+          text-align: center;
+          border-bottom: 1px solid #c07809;
+        }
+        .show {
+          display: flex;
+        }
+
         .menu-icon {
           display: block;
         }
         .mini-logo {
-          display: block;
-          position: relative;
-          top: 0px;
-          left: 50px;
-          height: 50px;
-          width: auto;
-          transition: all 0.3s ease-in-out;
+          display: none;
         }
         .mini-logo:hover {
           height: 65px;
         }
         .logo-title {
-          display: block;
-          position: relative;
-          color: #c07809; /* Cor do texto semelhante à da imagem */
-          top: 10px;
-          left: 50px;
-          text-decoration: none;
+          display: none;
         }
         .logo-title .frutos {
           position: relative;
@@ -309,11 +321,11 @@
         }
 
         .logo {
-          height: 100px;
-        }
-
-        nav a {
-          font-size: 16px;
+          position: absolute;
+          left: 160px;
+          top: 10px;
+          height: 80px;
+          z-index: 6; /*numero da camada*/
         }
 
         .intro-section h1 {
