@@ -262,8 +262,45 @@
 
       /* Media queries */
       @media (max-width: 768px) {
+        .mini-logo {
+          display: block;
+          position: relative;
+          top: 0px;
+          left: 50px;
+          height: 50px;
+          width: auto;
+          transition: all 0.3s ease-in-out;
+        }
+        .mini-logo:hover {
+          height: 65px;
+        }
+        .logo-title {
+          display: block;
+          position: relative;
+          color: #c07809; /* Cor do texto semelhante à da imagem */
+          top: 10px;
+          left: 50px;
+          text-decoration: none;
+        }
+        .logo-title .frutos {
+          position: relative;
+          font-size: 8px;
+          color: #c07809;
+          text-decoration: none;
+          font-family: "Playfair Display", serif;
+          margin: 5px;
+        }
+        .logo-title .feito-a-mao {
+          position: relative;
+          top: -10px;
+          font-size: 10px;
+          color: #c07809;
+          text-decoration: none;
+          font-weight: bold;
+          font-family: "Dancing Script", cursive;
+        }
         .logo {
-          height: 300px;
+          height: 100px;
         }
 
         nav a {
@@ -324,7 +361,7 @@
     </header>
     <img src="./logo.png" alt="My Logo" class="logo" />
 
-    <div class="txt_intro">Bordados feitos totalmente mão.</div>
+    <div class="txt_intro">Bordados feitos totalmente à mão.</div>
     <div class="txt_intro">
       “Bordando os Bons Frutos de Jesus com Amor e Arte.”
     </div>
