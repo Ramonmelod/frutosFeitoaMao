@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FRUTOS FEITO A MÃO - Home</title>
+
+    <title>Frutos Feito a Mão - Sobre</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../logo.png" type="image/png" />
+
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
@@ -23,66 +27,114 @@
         margin: 0;
         padding: 0;
       }
-      .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        padding: 10px 20px;
-        background-color: #f9e0dc;
-        font-size: 15px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 80px;
-        transition: all 0.5s ease-in-out;
-        width: 5px;
-      }
-      .button:hover {
-        background-color: #e6aca8;
-        cursor: pointer;
-        border-radius: 25px;
-        padding: 10px 20px;
-        font-size: 35px;
-      }
       header {
+        display: flex;
+        position: fixed;
         width: 100%;
-        background-color: #f9e0dc;
+        background-color: #e4cbb1;
         padding: 10px 0;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
-        width: 100%;
+        z-index: 5; /*numero da camada*/
       }
+      .menu-icon {
+        display: none;
+        position: relative;
+        margin: 25px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #f8f5ed;
+      }
+
+      .mini-logo {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 50px;
+        height: 80px;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+      }
+      .mini-logo:hover {
+        height: 85px;
+      }
+      .logo-title {
+        display: block;
+        position: relative;
+        color: #c07809; /* Cor do texto semelhante à da imagem */
+        top: 25px;
+        left: 50px;
+        text-decoration: none;
+      }
+      .logo-title .frutos {
+        position: relative;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-family: "Playfair Display", serif;
+        margin: 5px;
+      }
+      .logo-title .feito-a-mao {
+        position: relative;
+        top: -10px;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Dancing Script", cursive;
+      }
+      nav {
+        position: relative;
+        left: 30%;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #c47601;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: #eea73d;
+      }
+
       .buttons {
         display: flex;
         position: absolute;
         top: 0px;
-        right: 10px;
-        justify-content: flex-end;
-        margin-top: 30px;
+        right: 0%;
         width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
       }
 
       .button {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
+        position: relative;
+        margin: 0px;
         padding: 10px 20px;
-        background-color: #f9e0dc;
+        background-color: #e4cbb1;
         font-size: 20px;
-        text-align: center;
         text-decoration: none;
         border-radius: 80px;
         transition: all 0.5s ease-in-out;
         width: 5px;
+        right: 20px;
       }
       .button:hover {
-        background-color: #e6aca8;
         cursor: pointer;
         border-radius: 25px;
-        padding: 10px 20px;
-        font-size: 35px;
+        width: 10px;
+        font-size: 25px;
+      }
+      .logo {
+        display: none;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        width: auto;
       }
 
       .comoSurgiu {
@@ -90,24 +142,10 @@
         transition: all 0.3s ease-in-out;
       }
 
-      nav {
-        margin-top: 20px;
-      }
-
-      nav a {
-        margin: 0 15px;
-        text-decoration: none;
-        color: #8a504b;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #c07809;
-      }
-
       /* Seção de introdução */
       .intro-section {
+        position: relative;
+        top: 100px;
         text-align: center;
         padding: 50px 20px;
         color: #8a504b;
@@ -118,31 +156,62 @@
         color: #c07809;
       }
 
-      .intro-section p {
-        font-size: 20px;
-        margin-top: 20px;
-        line-height: 1.5;
-      }
-
       /* Ícones */
       .icon {
         margin-right: 10px;
       }
 
       .icon-instagram {
-        color: #e1306c;
+        color: #f8f5ed;
       }
       .icon-whatsapp {
-        color: #25d366;
+        color: #f8f5ed;
       }
       .icon-email {
-        color: #e74c3c;
+        color: #f8f5ed;
       }
 
       /* Media queries para dispositivos móveis */
       @media (max-width: 768px) {
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 50%;
+          background-color: #e4cbb1;
+        }
+
+        nav a {
+          padding: 15px;
+          text-align: center;
+          border-bottom: 1px solid #c07809;
+        }
+        .show {
+          display: flex;
+        }
+
+        .menu-icon {
+          display: block;
+        }
+        .mini-logo {
+          display: none;
+        }
+
+        .logo-title {
+          display: none;
+        }
         .logo {
+          display: block;
+          position: fixed;
+          left: 42%;
+          top: 10px;
           height: 80px;
+          z-index: 6; /*layer number*/
+        }
+        .logo:hover {
+          height: 85px;
         }
 
         nav a {
@@ -156,12 +225,16 @@
         .intro-section p {
           font-size: 18px;
         }
+        .buttons {
+          position: absolute;
+          top: 0px;
+          right: 15%;
+          width: 20%;
+        }
         .button {
-          position: relative;
-          top: 15px;
-          right: 50%;
-          margin: 5px;
-          padding: 10px;
+          font-size: small;
+        }
+        .button:hover {
           font-size: 15px;
         }
       }
@@ -169,12 +242,20 @@
   </head>
   <body>
     <header>
-      <nav>
+      <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+      <img src="../clean-logo.png" alt="My Logo" class="mini-logo" />
+      <div class="logo-title">
+        <a href="index.html" class="frutos">FRUTOS <br /></a>
+        <a href="index.html" class="feito-a-mao">. feito à mão .</a>
+      </div>
+
+      <nav id="nav-menu">
         <a href="../index.html">Home</a>
         <a href="../cursos/index.html">Cursos</a>
         <a href="../sobre/index.html">Sobre</a>
         <a href="../contato/index.html">Contato</a>
       </nav>
+
       <div class="buttons">
         <a
           href="https://www.instagram.com/frutosfeitoamao"
@@ -196,7 +277,7 @@
         ></a>
       </div>
     </header>
-
+    <img src="../logo.png" alt="My Logo" class="logo" />
     <section class="intro-section">
       <h1>Frutos Feito à Mão</h1>
       <img
@@ -205,5 +286,6 @@
         class="comoSurgiu"
       />
     </section>
+    <script src="../js/sobre.js"></script>
   </body>
 </html>

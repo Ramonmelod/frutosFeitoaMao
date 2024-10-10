@@ -5,8 +5,11 @@
     <!-- makes it adjustable for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>FRUTOS FEITO A MÃO</title>
+    <title>Frutos Feito a Mão - Home</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./logo.png" type="image/png" />
     <!-- Google Fonts -->
+
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -32,7 +35,7 @@
 
       gtag("config", "G-FDTMYG4CXL");
     </script>
-
+    <script src="./script.js"></script>
     <style>
       /* Common styles */
 
@@ -45,94 +48,214 @@
         left: 0;
         right: 0;
         margin: auto;
+        justify-content: center;
       }
       header {
+        display: flex;
+        position: fixed;
         width: 100%;
-        background-color: #f9e0dc;
+        background-color: #e4cbb1;
         padding: 10px 0;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 80px;
+        z-index: 5; /*numero da camada*/
       }
-
-      .buttons {
-        display: flex;
-        position: absolute;
-        top: 0px;
-        right: 10px;
-        justify-content: flex-end;
-        margin-top: 30px;
-        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
-      }
-
-      .button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        padding: 10px 20px;
-        background-color: #f9e0dc;
-        font-size: 20px;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 80px;
-        transition: all 0.5s ease-in-out;
-        width: 5px;
-      }
-      .button:hover {
-        background-color: #e6aca8;
+      .menu-icon {
+        display: none;
+        position: relative;
+        margin: 25px;
+        font-size: 30px;
         cursor: pointer;
-        border-radius: 25px;
-        padding: 10px 20px;
-        font-size: 35px;
+        color: #f8f5ed;
       }
 
+      .mini-logo {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 50px;
+        height: 80px;
+        width: auto;
+        transition: all 0.3s ease-in-out;
+      }
+      .mini-logo:hover {
+        height: 85px;
+      }
+      .logo-title {
+        display: block;
+        position: relative;
+        color: #c07809; /* Cor do texto semelhante à da imagem */
+        top: 25px;
+        left: 50px;
+        text-decoration: none;
+      }
+      .logo-title .frutos {
+        position: relative;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-family: "Playfair Display", serif;
+        margin: 5px;
+      }
+      .logo-title .feito-a-mao {
+        position: relative;
+        top: -10px;
+        font-size: 10px;
+        color: #c07809;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: "Dancing Script", cursive;
+      }
       nav {
+        position: relative;
+        left: 30%;
+        text-align: center;
         margin-top: 20px;
       }
 
       nav a {
         margin: 0 15px;
         text-decoration: none;
-        color: #8a504b;
+        color: #c47601;
         font-size: 20px;
         font-weight: bold;
       }
       nav a:hover {
-        color: #c07809;
+        color: #eea73d;
       }
 
-      section {
-        width: 80%;
-        margin: auto;
-        height: 100%;
+      .buttons {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        position: absolute;
+        top: 0px;
+        right: 0%;
+        width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
       }
 
+      .button {
+        display: flex;
+        position: relative;
+        margin: 0px;
+        padding: 10px 20px;
+        background-color: #e4cbb1;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 80px;
+        transition: all 0.5s ease-in-out;
+        width: 5px;
+        right: 20px;
+      }
+      .button:hover {
+        cursor: pointer;
+        border-radius: 25px;
+        width: 10px;
+        font-size: 25px;
+      }
       .logo {
         display: block;
         position: relative;
-        top: -80px;
+        top: 130px;
         margin: 0 auto;
-        text-align: center;
-        height: 300px;
+        height: 100px;
         width: auto;
         transition: all 0.3s ease-in-out;
       }
       .logo:hover {
-        height: 350px;
+        height: 120px;
       }
 
       .txt_intro {
         position: relative;
-        top: -50px;
+        top: 150px;
         margin-top: 20px;
         font-size: 20px;
+        text-align: center;
         font-weight: bold;
         color: #c07809;
+      }
+      .slogan {
+        position: relative;
+        top: 150px;
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #c07809;
+      }
+
+      .images {
+        display: flex;
+        position: relative;
+        top: 170px;
+        left: 180px;
+        width: 80%;
+        height: 600px;
+        overflow-x: hidden; /* esconde a barra de rolagem */
+        scroll-behavior: smooth; /* Faz a rolagem ser suave */
+      }
+
+      .product-card {
+        position: relative;
+        border: 1px solid #ddd; /* Borda em volta do card */
+        border-radius: 10px;
+        width: 300px;
+        margin: 10px;
+        height: 430px;
+      }
+
+      .product-card img {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+      }
+      .product-info {
+        text-align: center;
+        padding: 15px;
+        background-color: #fff;
+        border-top: 2px solid #a0c568; /* Linha delimitadora */
+      }
+
+      .product-info .title {
+        margin: 10px;
+        color: #6b6b6b;
+      }
+      .product-info .a-partir-de {
+        margin: 10px;
+        color: #6b6b6b;
+      }
+      .product-info .price {
+        margin: 0;
+        color: #a0c568;
+        font-size: large;
+        font-weight: bolder;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+      /* Setas de navegação */
+      .arrow {
+        position: absolute;
+        top: 70%;
+        border-radius: 25px;
+        background-color: #e4cbb1;
+        color: #c07809;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .arrow-left {
+        left: 2%;
+      }
+
+      .arrow-right {
+        right: 2%;
+      }
+
+      .arrow:hover {
+        background-color: #e4c5b1a1;
       }
       /* Icon styles */
       .icon {
@@ -140,51 +263,111 @@
       }
 
       .icon-instagram {
-        color: #e1306c;
+        color: #f8f5ed;
       }
       .icon-whatsapp {
-        color: #25d366;
+        color: #f8f5ed;
       }
       .icon-email {
-        color: #e74c3c;
+        color: #f8f5ed;
       }
 
       /* Media queries */
       @media (max-width: 768px) {
-        .logo {
-          height: 300px;
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 50%;
+          background-color: #e4cbb1;
         }
 
         nav a {
-          font-size: 16px;
+          padding: 15px;
+          text-align: center;
+          border-bottom: 1px solid #c07809;
+        }
+        .show {
+          display: flex;
         }
 
-        .intro-section h1 {
-          font-size: 28px;
+        .menu-icon {
+          display: block;
+        }
+        .mini-logo {
+          display: none;
         }
 
-        .intro-section p {
-          font-size: 18px;
+        .logo-title {
+          display: none;
+        }
+        .logo {
+          position: fixed;
+          left: 42%;
+          top: 10px;
+          height: 80px;
+          z-index: 6; /*layer number*/
+        }
+        .logo:hover {
+          height: 85px;
+        }
+        .buttons {
+          position: absolute;
+          top: 0px;
+          right: 15%;
+          width: 20%;
         }
         .button {
-          position: relative;
-          top: 15px;
-          right: 50%;
-          margin: 5px;
-          padding: 10px;
+          font-size: small;
+        }
+        .button:hover {
           font-size: 15px;
+        }
+        .txt_intro {
+          position: relative;
+          top: 15%;
+        }
+        .slogan {
+          display: none;
+        }
+        .arrow {
+          top: 50%;
+        }
+
+        .arrow-left {
+          left: 1%;
+        }
+
+        .arrow-right {
+          right: 1%;
+        }
+        /*product-card adjustment*/
+        .images {
+          left: 9%;
+          width: 80%;
+          top: 18%;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <nav>
+      <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+      <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
+      <div class="logo-title">
+        <a href="index.html" class="frutos">FRUTOS <br /></a>
+        <a href="index.html" class="feito-a-mao">. feito à mão .</a>
+      </div>
+
+      <nav id="nav-menu">
         <a href="index.html">Home</a>
         <a href="./cursos/index.html">Cursos</a>
         <a href="./sobre/index.html">Sobre</a>
         <a href="./contato/index.html">Contato</a>
       </nav>
+
       <div class="buttons">
         <a
           href="https://www.instagram.com/frutosfeitoamao"
@@ -206,14 +389,122 @@
         ></a>
       </div>
     </header>
+    <img src="./logo.png" alt="My Logo" class="logo" />
 
-    <section>
-      <img src="./logo.png" alt="My Logo" class="logo" />
+    <div class="txt_intro">Bordados feitos totalmente à mão.</div>
+    <div class="slogan">
+      “Bordando os Bons Frutos de Jesus com Amor e Arte.”
+    </div>
+    <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
+    <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
 
-      <div class="txt_intro">Bordados feitos totalmente mão.</div>
-      <div class="txt_intro">
-        “Bordando os Bons Frutos de Jesus com Amor e Arte.”
+    <div class="images">
+      <div class="product-card" id="image-01">
+        <img src="leticia.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Jardim Aberlhas - Porta Maternidade com Feltragem, Bastidor de
+            Silicone - 20 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$250,00</p>
+        </div>
       </div>
-    </section>
+
+      <div class="product-card" id="image-02">
+        <img src="Martin-Bruno.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Irmãos - Porta Maternidade com bastidor de bambu - 22 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$230,00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="image-03">
+        <img src="vovo.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Vovó e Vovô - Bordado com Bastidor de bambu (Unidade) - 14 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$180,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-04">
+        <img src="brunaefabio.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Iniciais - Porta Alianças com Bastidor de bambu - 14 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$180,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-05">
+        <img src="camisa-bebe2.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Body para bebê - Bordado Personalizável - Tamanhos de RN a G
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$190,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-06">
+        <img src="gabriel.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Harry Potter - Bordado com Bastidor de bambu - 20 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$208,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-07">
+        <img src="quadro-antonela2.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Quadro Bordado - Bordado com Moldura em Fundo Branco
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$ 350,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-08">
+        <img src="Renata-Andre.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Galhos de flores- Porta Alianças com Bastidor de bambu - 20 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$190,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-08">
+        <img src="zion.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Pezinhos - Bordado com Bastidor de Bambu e técnica de Feltragem - 16
+            cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$190,00</p>
+        </div>
+      </div>
+      <div class="product-card" id="image-08">
+        <img src="bastidor-frase.jpg" />
+        <div class="product-info">
+          <p class="title">
+            Folhas Mescladas - Bordado com Frase, Bastidor de Bambu - 20 cm
+          </p>
+          <p class="a-partir-de">A partir de:</p>
+          <p class="price">R$190,00</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
