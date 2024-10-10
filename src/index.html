@@ -58,8 +58,25 @@
         padding: 10px 0;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: 80px;
+        height: 105px;
         z-index: 5; /*numero da camada*/
+      }
+      .band {
+        display: flex;
+        position: absolute;
+        background-color: #ebd8c3;
+        height: 25px;
+        width: 100%;
+        top: 0%;
+        z-index: 0; /*numero da camada*/
+      }
+      .band p {
+        position: relative;
+        color: #f8f5ed;
+        font-size: small;
+        font-weight: 900;
+        top: -35%;
+        left: 25%;
       }
       .menu-icon {
         display: none;
@@ -68,16 +85,18 @@
         font-size: 30px;
         cursor: pointer;
         color: #f8f5ed;
+        z-index: 1; /*numero da camada*/
       }
 
       .mini-logo {
         display: block;
         position: relative;
-        top: 0px;
+        top: 25px;
         left: 50px;
         height: 80px;
         width: auto;
         transition: all 0.3s ease-in-out;
+        z-index: 1; /*numero da camada*/
       }
       .mini-logo:hover {
         height: 85px;
@@ -89,29 +108,35 @@
         top: 25px;
         left: 50px;
         text-decoration: none;
+        z-index: 1; /*numero da camada*/
       }
       .logo-title .frutos {
         position: relative;
+        top: 25px;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
         font-family: "Playfair Display", serif;
         margin: 5px;
+        z-index: 1; /*numero da camada*/
       }
       .logo-title .feito-a-mao {
         position: relative;
-        top: -10px;
+        top: 15px;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
         font-weight: bold;
         font-family: "Dancing Script", cursive;
+        z-index: 1; /*numero da camada*/
       }
       nav {
         position: relative;
+        top: 25px;
         left: 30%;
         text-align: center;
         margin-top: 20px;
+        z-index: 1; /*numero da camada*/
       }
 
       nav a {
@@ -120,11 +145,11 @@
         color: #c47601;
         font-size: 20px;
         font-weight: bold;
+        z-index: 1; /*numero da camada*/
       }
       nav a:hover {
         color: #eea73d;
       }
-
       .buttons {
         display: flex;
         position: absolute;
@@ -137,9 +162,9 @@
         display: flex;
         position: relative;
         margin: 0px;
-        padding: 10px 20px;
-        background-color: #e4cbb1;
-        font-size: 20px;
+        padding: 5px 20px;
+        background-color: #ebd8c3;
+        font-size: 15px;
         text-decoration: none;
         border-radius: 80px;
         transition: all 0.5s ease-in-out;
@@ -150,7 +175,7 @@
         cursor: pointer;
         border-radius: 25px;
         width: 10px;
-        font-size: 25px;
+        font-size: 20px;
       }
       .logo {
         display: block;
@@ -354,6 +379,32 @@
   </head>
   <body>
     <header>
+      <div class="band">
+        <p>
+          ♡ Pix ou boleto bancário tem 3% de desconto ♡ 5% de desconto nas
+          compras acima de R$300 com o cupom: 5FRUTOS
+        </p>
+        <div class="buttons">
+          <a
+            href="https://www.instagram.com/frutosfeitoamao"
+            target="_blank"
+            class="button"
+            ><i class="fab fa-instagram icon icon-instagram"></i
+          ></a>
+          <a
+            href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
+            target="_blank"
+            class="button"
+            ><i class="fab fa-whatsapp icon icon-whatsapp"></i
+          ></a>
+          <a
+            href="mailto:frutosfeitoamao@gmail.com"
+            target="_blank"
+            class="button"
+            ><i class="far fa-envelope icon icon-email"></i
+          ></a>
+        </div>
+      </div>
       <i class="fas fa-bars menu-icon" id="menu-icon"></i>
       <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
       <div class="logo-title">
@@ -367,27 +418,6 @@
         <a href="./sobre/index.html">Sobre</a>
         <a href="./contato/index.html">Contato</a>
       </nav>
-
-      <div class="buttons">
-        <a
-          href="https://www.instagram.com/frutosfeitoamao"
-          target="_blank"
-          class="button"
-          ><i class="fab fa-instagram icon icon-instagram"></i
-        ></a>
-        <a
-          href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
-          target="_blank"
-          class="button"
-          ><i class="fab fa-whatsapp icon icon-whatsapp"></i
-        ></a>
-        <a
-          href="mailto:frutosfeitoamao@gmail.com"
-          target="_blank"
-          class="button"
-          ><i class="far fa-envelope icon icon-email"></i
-        ></a>
-      </div>
     </header>
     <img src="./logo.png" alt="My Logo" class="logo" />
 
