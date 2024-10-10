@@ -6,10 +6,10 @@ let scrollAmount = 0;
 const scrollStep = 270;
 
 prevBtn.addEventListener("click", () => {
-  imagesContainer.scrollBy(-350, 0);
+  imagesContainer.scrollBy(-321, 0);
 });
 nextBtn.addEventListener("click", () => {
-  imagesContainer.scrollBy(350, 0);
+  imagesContainer.scrollBy(321, 0);
 });
 
 //toggling the menu-icon
