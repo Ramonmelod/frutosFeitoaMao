@@ -174,6 +174,15 @@
         font-weight: bold;
         color: #c07809;
       }
+      .slogan {
+        position: relative;
+        top: 150px;
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        color: #c07809;
+      }
 
       .images {
         display: flex;
@@ -227,7 +236,7 @@
       /* Setas de navegação */
       .arrow {
         position: absolute;
-        top: 550px;
+        top: 70%;
         border-radius: 25px;
         background-color: #e4cbb1;
         color: #c07809;
@@ -316,6 +325,16 @@
         .button:hover {
           font-size: 15px;
         }
+        .txt_intro {
+          position: relative;
+          top: 15%;
+        }
+        .slogan {
+          display: none;
+        }
+        .arrow {
+          top: 50%;
+        }
 
         .arrow-left {
           left: 1%;
@@ -326,8 +345,9 @@
         }
         /*product-card adjustment*/
         .images {
-          left: 10%;
+          left: 9%;
           width: 80%;
+          top: 18%;
         }
       }
     </style>
@@ -372,7 +392,7 @@
     <img src="./logo.png" alt="My Logo" class="logo" />
 
     <div class="txt_intro">Bordados feitos totalmente à mão.</div>
-    <div class="txt_intro">
+    <div class="slogan">
       “Bordando os Bons Frutos de Jesus com Amor e Arte.”
     </div>
     <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
