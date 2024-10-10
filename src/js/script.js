@@ -2,6 +2,7 @@ const imagesContainer = document.querySelector(".images");
 const logo = document.querySelector(".logo");
 const menuIcon = document.getElementById("menu-icon");
 const navMenu = document.getElementById("nav-menu");
+
 let scrollAmount = 0;
 const scrollStep = 270;
 
