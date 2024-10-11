@@ -26,6 +26,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -97,9 +101,9 @@
 
       .mini-logo {
         position: relative;
-        left: 50px;
+        left: 100px;
         height: 80px;
-        top: 15%;
+        top: 18%;
         width: auto;
         transition: all 0.3s ease-in-out;
         z-index: 1; /*Layer number*/
@@ -112,7 +116,7 @@
         position: relative;
         color: #c07809; /* text color the same as the image*/
         top: 25%;
-        left: 1%;
+        left: 3.5%;
         text-decoration: none;
         z-index: 1; /*Layer number*/
         height: 50px;
@@ -137,6 +141,17 @@
         font-weight: bold;
         font-family: "Dancing Script", cursive;
         z-index: 1; /*Layer number*/
+      }
+      .d-flex {
+        position: relative;
+        top: 20%;
+        left: 15%;
+        width: 90%;
+        height: 25%;
+      }
+      .custom-search-btn:hover {
+        border-color: #c07809;
+        background-color: #eea73d; /* changes the lend hover color */
       }
       .line {
         position: absolute;
@@ -350,9 +365,15 @@
         .logo {
           position: fixed;
           left: 42%;
-          top: 10px;
+          top: 40px;
           height: 80px;
           z-index: 6; /*layer number*/
+        }
+        .d-flex {
+          top: 70%;
+          left: 10%;
+          width: 100%;
+          height: 20%;
         }
         .logo:hover {
           height: 85px;
@@ -430,7 +451,25 @@
         <a href="index.html" class="frutos">FRUTOS <br /></a>
         <a href="index.html" class="feito-a-mao">. feito à mão .</a>
       </div>
-
+      <form
+        class="d-flex"
+        role="search"
+        style="margin-top: 15px; margin-left: 10px"
+      >
+        <input
+          class="form-control me-2 w-50"
+          type="search"
+          placeholder="O que você procura?"
+          aria-label="Search"
+        />
+        <button
+          class="btn custom-search-btn"
+          style="border: 2px solid #c07809"
+          type="submit"
+        >
+          <i class="fas fa-search" style="color: #c07809; font-size: 30px"></i>
+        </button>
+      </form>
       <div class="line">
         <nav id="nav-menu">
           <a href="index.html">Home</a>
