@@ -94,6 +94,7 @@
         position: relative;
         margin: 25px;
         font-size: 30px;
+        top: 20%;
         cursor: pointer;
         color: #f8f5ed;
         z-index: 1; /*Layer number*/
@@ -334,6 +335,17 @@
 
       /* Media queries */
       @media (max-width: 768px) {
+        .band {
+          height: 50px;
+        }
+        .band p {
+          position: relative;
+          color: #f8f5ed;
+          font-size: small;
+          font-weight: bolder;
+          top: 10%;
+          left: 25%;
+        }
         nav {
           display: none;
           flex-direction: column;
@@ -366,12 +378,12 @@
         .logo {
           position: fixed;
           left: 42%;
-          top: 40px;
+          top: 55px;
           height: 80px;
           z-index: 6; /*layer number*/
         }
         .d-flex {
-          top: 70%;
+          top: 73%;
           left: 10%;
           width: 100%;
           height: 20%;
