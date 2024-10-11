@@ -150,8 +150,9 @@
         height: 25%;
       }
       .custom-search-btn:hover {
-        border-color: #c07809;
-        background-color: #eea73d; /* changes the lend hover color */
+        background-color: inherit;
+        border-color: 2px solid transparent; /*disable the hover that comes from the bootstrap*/
+        color: inherit;
       }
       .line {
         position: absolute;
@@ -464,11 +465,16 @@
         />
         <button
           class="btn custom-search-btn"
-          style="border: 2px solid #c07809"
+          style="
+            border: 2px solid transparent #c07809;
+            position: relative;
+            right: 3.5%;
+          "
           type="submit"
         >
-          <i class="fas fa-search" style="color: #c07809; font-size: 30px"></i>
+          <i class="fas fa-search" style="color: #ebd8c3; font-size: 30px"></i>
         </button>
+        <!-- the right atribute puts the button in the input box -->
       </form>
       <div class="line">
         <nav id="nav-menu">
