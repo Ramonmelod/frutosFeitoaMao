@@ -19,6 +19,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <!-- BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
     <!-- Google tag (gtag.js) -->
     <script
@@ -41,7 +48,7 @@
 
       body {
         font-family: "Montserrat", sans-serif;
-        background-color: #f8f5ed; /* COR FUNDO*/
+        background-color: #f8f5ed;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -58,24 +65,24 @@
         padding: 10px 0;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        height: 105px;
-        z-index: 5; /*numero da camada*/
+        height: 190px;
+        z-index: 5; /*Layer number*/
       }
       .band {
         display: flex;
         position: absolute;
         background-color: #ebd8c3;
-        height: 25px;
+        height: 28px;
         width: 100%;
         top: 0%;
-        z-index: 0; /*numero da camada*/
+        z-index: 0; /*Layer number*/
       }
       .band p {
         position: relative;
         color: #f8f5ed;
         font-size: small;
-        font-weight: 900;
-        top: -35%;
+        font-weight: bolder;
+        top: 10%;
         left: 25%;
       }
       .menu-icon {
@@ -85,18 +92,17 @@
         font-size: 30px;
         cursor: pointer;
         color: #f8f5ed;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
       }
 
       .mini-logo {
-        display: block;
         position: relative;
-        top: 25px;
         left: 50px;
         height: 80px;
+        top: 15%;
         width: auto;
         transition: all 0.3s ease-in-out;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
       }
       .mini-logo:hover {
         height: 85px;
@@ -104,48 +110,60 @@
       .logo-title {
         display: block;
         position: relative;
-        color: #c07809; /* Cor do texto semelhante à da imagem */
-        top: 25px;
-        left: 50px;
+        color: #c07809; /* text color the same as the image*/
+        top: 25%;
+        left: 1%;
         text-decoration: none;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
+        height: 50px;
+        width: 150px;
       }
       .logo-title .frutos {
         position: relative;
-        top: 25px;
+        top: 0px;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
         font-family: "Playfair Display", serif;
         margin: 5px;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
       }
       .logo-title .feito-a-mao {
         position: relative;
-        top: 15px;
+        top: 0px;
         font-size: 10px;
         color: #c07809;
         text-decoration: none;
         font-weight: bold;
         font-family: "Dancing Script", cursive;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
+      }
+      .line {
+        position: absolute;
+        width: 100%;
+        background-color: #ebd8c3;
+        height: 2px;
+        top: 75%;
+        z-index: 0; /*Layer number*/
       }
       nav {
-        position: relative;
-        top: 25px;
-        left: 30%;
+        position: absolute;
+        top: -10px;
+        left: 40%;
         text-align: center;
         margin-top: 20px;
-        z-index: 1; /*numero da camada*/
+        z-index: 1; /*Layer number*/
       }
 
       nav a {
+        position: relative;
         margin: 0 15px;
         text-decoration: none;
         color: #c47601;
         font-size: 20px;
         font-weight: bold;
-        z-index: 1; /*numero da camada*/
+        top: 10%;
+        z-index: 1; /*Layer number*/
       }
       nav a:hover {
         color: #eea73d;
@@ -180,7 +198,7 @@
       .logo {
         display: block;
         position: relative;
-        top: 130px;
+        top: 200px;
         margin: 0 auto;
         height: 100px;
         width: auto;
@@ -192,7 +210,7 @@
 
       .txt_intro {
         position: relative;
-        top: 150px;
+        top: 200px;
         margin-top: 20px;
         font-size: 20px;
         text-align: center;
@@ -201,7 +219,7 @@
       }
       .slogan {
         position: relative;
-        top: 150px;
+        top: 200px;
         margin-top: 20px;
         font-size: 20px;
         text-align: center;
@@ -212,17 +230,17 @@
       .images {
         display: flex;
         position: relative;
-        top: 170px;
+        top: 210px;
         left: 180px;
         width: 80%;
         height: 600px;
-        overflow-x: hidden; /* esconde a barra de rolagem */
-        scroll-behavior: smooth; /* Faz a rolagem ser suave */
+        overflow-x: hidden; /* hides the scroll bar */
+        scroll-behavior: smooth; /* makes the scroll to be smooth */
       }
 
       .product-card {
         position: relative;
-        border: 1px solid #ddd; /* Borda em volta do card */
+        border: 1px solid #ddd; /* card border*/
         border-radius: 10px;
         width: 300px;
         margin: 10px;
@@ -238,7 +256,7 @@
         text-align: center;
         padding: 15px;
         background-color: #fff;
-        border-top: 2px solid #a0c568; /* Linha delimitadora */
+        border-top: 2px solid #a0c568; /* boundary line */
       }
 
       .product-info .title {
@@ -261,7 +279,7 @@
       /* Setas de navegação */
       .arrow {
         position: absolute;
-        top: 70%;
+        top: 55%;
         border-radius: 25px;
         background-color: #e4cbb1;
         color: #c07809;
@@ -411,13 +429,14 @@
         <a href="index.html" class="frutos">FRUTOS <br /></a>
         <a href="index.html" class="feito-a-mao">. feito à mão .</a>
       </div>
-
-      <nav id="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="./cursos/index.html">Cursos</a>
-        <a href="./sobre/index.html">Sobre</a>
-        <a href="./contato/index.html">Contato</a>
-      </nav>
+      <div class="line">
+        <nav id="nav-menu">
+          <a href="index.html">Home</a>
+          <a href="./cursos/index.html">Cursos</a>
+          <a href="./sobre/index.html">Sobre</a>
+          <a href="./contato/index.html">Contato</a>
+        </nav>
+      </div>
     </header>
     <img src="./logo.png" alt="My Logo" class="logo" />
 
@@ -427,7 +446,6 @@
     </div>
     <button class="arrow arrow-right" id="nextBtn">&#8250;</button>
     <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
-
     <div class="images">
       <div class="product-card" id="image-01">
         <img src="leticia.jpg" />
