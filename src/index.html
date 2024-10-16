@@ -469,7 +469,55 @@
           ></a>
         </div>
       </div>
-      <i class="fas fa-bars menu-icon" id="menu-icon"></i>
+      <!--Hambuguer menu-->
+      <i
+        class="fas fa-bars menu-icon"
+        style="left: 0%"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasLeft"
+        aria-controls="offcanvasLeft"
+      ></i>
+      <!-- Offcanvas component -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasLeft"
+        aria-labelledby="offcanvasLeftLabel"
+        style="width: 80%; background-color: #ebd8c3"
+      >
+        <div class="offcanvas-header">
+          <h5 id="offcanvasLeftLabel">Opções</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="list-group">
+            <li class="list-group-item"><a href="index.html">Home</a></li>
+            <li
+              class="list-group-item"
+              style="
+                text-decoration: none;
+                color: #c47601;
+                font-size: 20px;
+                font-weight: lighter;
+              "
+            >
+              <a href="./cursos/index.html">Cursos</a>
+            </li>
+            <li class="list-group-item">
+              <a href="./sobre/index.html">Sobre</a>
+            </li>
+            <li class="list-group-item">
+              <a href="./contato/index.html">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
       <div class="logo-title">
         <a href="index.html" class="frutos">FRUTOS <br /></a>
@@ -498,6 +546,7 @@
         >
           <i class="fas fa-search" style="color: #ebd8c3; font-size: 30px"></i>
         </button>
+
         <!-- the right atribute puts the button in the input box -->
       </form>
       <div class="line">
@@ -645,5 +694,7 @@
     </div>
 
     <script type="module" src="./js/script.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
