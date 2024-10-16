@@ -70,7 +70,7 @@
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         height: 190px;
-        z-index: 5; /*Layer number*/
+        z-index: 3; /*Layer number*/
       }
       .band {
         display: flex;
@@ -220,6 +220,9 @@
         height: 100px;
         width: auto;
         transition: all 0.3s ease-in-out;
+      }
+      .logo-mobile {
+        display: none;
       }
       .logo:hover {
         height: 120px;
@@ -377,12 +380,17 @@
           display: none;
         }
         .logo {
+          display: none;
+        }
+        .logo-mobile {
+          display: block;
           position: fixed;
           left: 42%;
           top: 55px;
           height: 80px;
-          z-index: 6; /*layer number*/
+          z-index: 4; /*layer number*/
         }
+
         .logo:hover {
           height: 85px;
         }
@@ -398,6 +406,7 @@
           width: 180%;
           height: 23%;
         }
+
         #loupe {
           left: -8%;
         }
@@ -487,7 +496,7 @@
         style="width: 80%; background-color: #ebd8c3"
       >
         <div class="offcanvas-header">
-          <h5 id="offcanvasLeftLabel">Opções</h5>
+          <h5 id="offcanvasLeftLabel"></h5>
           <button
             type="button"
             class="btn-close"
@@ -587,6 +596,8 @@
           <a href="./contato/index.html">Contato</a>
         </nav>
       </div>
+      <img src="./logo.png" alt="My Logo" class="logo-mobile" />
+      <!--logo used in the mobile phone mode-->
     </header>
     <img src="./logo.png" alt="My Logo" class="logo" />
 

@@ -30,8 +30,3 @@ nextBtn.addEventListener("click", () => {
     nextBtn.disabled = false; //reenable the nextBtn after 250ms
   }, 250);
 });
-
-//toggling the menu-icon
-menuIcon.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
