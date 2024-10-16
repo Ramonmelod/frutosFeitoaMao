@@ -410,18 +410,29 @@
         #loupe {
           left: -8%;
         }
+
         .buttons {
+          display: none;
+        }
+        .buttons-offset {
           display: flex;
           position: absolute;
-          top: 200%;
-          right: 15%;
-          width: 20%;
+          top: 1%;
+          left: 8%;
+          width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
         }
-        .button {
-          font-size: small;
-        }
-        .button:hover {
+        .button-offset {
+          display: flex;
+          position: relative;
+          margin: 0px;
+          padding: 5px 20px;
+          background-color: #ebd8c3;
           font-size: 15px;
+          text-decoration: none;
+          border-radius: 80px;
+          transition: all 0.5s ease-in-out;
+          width: 5px;
+          right: 20px;
         }
         .txt_intro {
           position: relative;
@@ -495,6 +506,26 @@
         aria-labelledby="offcanvasLeftLabel"
         style="width: 80%; background-color: #ebd8c3"
       >
+        <div class="buttons-offset">
+          <a
+            href="https://www.instagram.com/frutosfeitoamao"
+            target="_blank"
+            class="button-offset"
+            ><i class="fab fa-instagram icon icon-instagram"></i
+          ></a>
+          <a
+            href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
+            target="_blank"
+            class="button-offset"
+            ><i class="fab fa-whatsapp icon icon-whatsapp"></i
+          ></a>
+          <a
+            href="mailto:frutosfeitoamao@gmail.com"
+            target="_blank"
+            class="button-offset"
+            ><i class="far fa-envelope icon icon-email"></i
+          ></a>
+        </div>
         <div class="offcanvas-header">
           <h5 id="offcanvasLeftLabel"></h5>
           <button
