@@ -595,6 +595,7 @@
       </div>
       <form
         class="d-flex"
+        id="searchForm"
         role="search"
         style="margin-top: 15px; margin-left: 10px"
       >
@@ -603,6 +604,7 @@
           type="search"
           placeholder="O que você procura?"
           aria-label="Search"
+          id="searchInput"
         />
         <button
           class="btn custom-search-btn"
@@ -764,6 +766,11 @@
         </div>
       </div>
     </div>
+    <!-- Container to show the reasearch results -->
+    <div
+      id="searchResults"
+      style="margin-top: 20px; position: relative; left: 50%; top: 250px"
+    ></div>
 
     <script type="module" src="./js/script.js"></script>
     <!-- Bootstrap JS -->

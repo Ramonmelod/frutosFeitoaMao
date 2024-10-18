@@ -30,3 +30,32 @@ nextBtn.addEventListener("click", () => {
     nextBtn.disabled = false; //reenable the nextBtn after 250ms
   }, 250);
 });
+
+const products = [
+  { name: "Camiseta Bordada", id: 1 },
+  { name: "Toalha Bordada", id: 2 },
+  { name: "Almofada Personalizada", id: 3 },
+  // products here
+];
+
+document.getElementById("searchForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevents the default behavior of sending the forms
+
+  const query = document.getElementById("searchInput").value.toLowerCase();
+  const resultContainer = document.getElementById("searchResults");
+  resultContainer.innerHTML = ""; // Clean the previous results
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+
+  if (filteredProducts.length > 0) {
+    filteredProducts.forEach((product) => {
+      const productElement = document.createElement("div");
+      productElement.textContent = product.name;
+      resultContainer.appendChild(productElement);
+    });
+  } else {
+    resultContainer.textContent = "Nenhum produto encontrado.";
+  }
+});
