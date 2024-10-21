@@ -4,12 +4,10 @@ const navMenu = document.getElementById("nav-menu");
 const prevBtn = document.getElementById("prevBtn"); //the script works without the declaration of prevBtn and nextBtn, for it uses getElementById
 const nextBtn = document.getElementById("nextBtn");
 let data = null;
-// Acessing the json productCards.json
-const image100 = document.getElementById("image-100");
 
-const query = async () => {
+const queryJson = async () => {
   try {
-    const response = await fetch("./js/productCards.json");
+    const response = await fetch("../productCards.json");
     if (!response.ok) {
       throw new Error("Erro ao carregar o arquivo JSON");
     }
@@ -49,7 +47,7 @@ const query = async () => {
       productInfo.appendChild(aPartirDe);
       productInfo.appendChild(productPrice);
 
-      //--------------------------beggining of the seach logic------------------------------------------------------------------------------------------------------
+      //--------------------------beggining of the search logic------------------------------------------------------------------------------------------------------
 
       document
         .getElementById("searchForm")
@@ -61,6 +59,7 @@ const query = async () => {
             .value.toLowerCase();
           const resultContainer = document.getElementById("searchResults");
           resultContainer.innerHTML = ""; // Clean the previous results
+
           //-------------------------------------------------------------------------
           const filteredProducts = data.filter((product) =>
             product.title.toLowerCase().includes(query)
@@ -82,7 +81,7 @@ const query = async () => {
   }
 };
 
-query(); //calls the function
+queryJson(); //calls the function
 
 //-------begining of the scroll logic
 
