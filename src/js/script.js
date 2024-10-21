@@ -3,8 +3,10 @@ const menuIcon = document.getElementById("menu-icon");
 const navMenu = document.getElementById("nav-menu");
 const prevBtn = document.getElementById("prevBtn"); //the script works without the declaration of prevBtn and nextBtn, for it uses getElementById
 const nextBtn = document.getElementById("nextBtn");
-
+let data = null;
 // Acessing the json productCards.json
+const image100 = document.getElementById("image-100");
+
 const query = async () => {
   try {
     const response = await fetch("./js/productCards.json");
@@ -12,10 +14,42 @@ const query = async () => {
       throw new Error("Erro ao carregar o arquivo JSON");
     }
 
-    const data = await response.json();
-    // Captures and print the first title
-    const firstProductTitle = data[0].title;
-    console.log("Título do primeiro produto:", firstProductTitle);
+    data = await response.json();
+
+    //-----------------------------------------------------------------creating the div with apendChild--------------------------------------------------------------
+    const productCard = document.createElement("div");
+    productCard.classList.add("product-card");
+    productCard.id = data[0].id;
+    //adding image
+    const productImage = document.createElement("img");
+    productImage.src = data[0].image_url;
+    //creating product-info container
+    const productInfo = document.createElement("product-info");
+    productInfo.classList.add("product-info");
+    //creating a tag p for use in product-info title
+    const productTitle = document.createElement("p");
+    productTitle.classList.add("title");
+    productTitle.textContent = data[0].title;
+
+    //creating a tag p for use in product-info a-partir-de
+    const aPartirDe = document.createElement("p");
+    aPartirDe.classList.add("title");
+    aPartirDe.textContent = "A partir de";
+    //creating a tag p for use in product-info price
+    const productPrice = document.createElement("p");
+    productPrice.classList.add("price");
+    productPrice.textContent = data[0].price;
+
+    //apending the children
+    imagesContainer.appendChild(productCard); //here is added the new div to the images contatainer
+    productCard.appendChild(productImage);
+    productCard.appendChild(productInfo);
+    productCard.appendChild(productTitle);
+    productCard.appendChild(aPartirDe);
+    productCard.appendChild(productPrice);
+
+    console.log(imagesContainer.innerHTML);
+    //--------------------------------------------------------------------------------------------------------------------------------
   } catch (error) {
     console.error("Erro:", error);
   }
