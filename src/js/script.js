@@ -4,6 +4,25 @@ const navMenu = document.getElementById("nav-menu");
 const prevBtn = document.getElementById("prevBtn"); //the script works without the declaration of prevBtn and nextBtn, for it uses getElementById
 const nextBtn = document.getElementById("nextBtn");
 
+// Acessing the json productCards.json
+const query = async () => {
+  try {
+    const response = await fetch("./js/productCards.json");
+    if (!response.ok) {
+      throw new Error("Erro ao carregar o arquivo JSON");
+    }
+
+    const data = await response.json();
+    // Captures and print the first title
+    const firstProductTitle = data[0].title;
+    console.log("Título do primeiro produto:", firstProductTitle);
+  } catch (error) {
+    console.error("Erro:", error);
+  }
+};
+
+query(); //calls the function
+
 let scrollAmount = 0;
 const scrollStep = 270;
 
