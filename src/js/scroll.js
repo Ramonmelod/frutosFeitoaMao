@@ -1,5 +1,6 @@
 export const scroll = (prevBtn, nextBtn, imagesContainer) => {
-  const scrollStep = 321;
+  const scrollStep = 321; //adjust this value to control the step of the scroll
+  const disabledTime = 250;
 
   prevBtn.disabled = false; //declare the prevBtn.disabled for use in disabling feature
   nextBtn.disabled = false;
@@ -12,7 +13,7 @@ export const scroll = (prevBtn, nextBtn, imagesContainer) => {
     setTimeout(() => {
       prevBtn.disabled = false; //reenable the prevBtn after 250ms
       nextBtn.disabled = false;
-    }, 250);
+    }, disabledTime);
   });
   nextBtn.addEventListener("click", () => {
     //right
@@ -22,6 +23,6 @@ export const scroll = (prevBtn, nextBtn, imagesContainer) => {
     setTimeout(() => {
       prevBtn.disabled = false;
       nextBtn.disabled = false; //reenable the nextBtn after 250ms
-    }, 250);
+    }, disabledTime);
   });
 };
