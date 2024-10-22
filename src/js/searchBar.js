@@ -1,11 +1,7 @@
+import { query } from "./query.js";
 export const queryDoc = async (data) => {
   try {
-    const response = await fetch("./productCards.json");
-    if (!response.ok) {
-      throw new Error("Erro ao carregar o arquivo JSON");
-    }
-
-    data = await response.json();
+    const data = await query();
 
     document
       .getElementById("searchForm")

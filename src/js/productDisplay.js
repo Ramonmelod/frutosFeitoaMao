@@ -1,11 +1,14 @@
+import { query } from "./query.js";
 export const queryJson = async (imagesContainer, data) => {
-  try {
-    const response = await fetch("./productCards.json");
-    if (!response.ok) {
-      throw new Error("Erro ao carregar o arquivo JSON");
-    }
+  // try {
+  //   const response = await fetch("./productCards.json");
+  //   if (!response.ok) {
+  //     throw new Error("Erro ao carregar o arquivo JSON");
+  //   }
 
-    data = await response.json();
+  //   data = await response.json();
+  try {
+    const data = await query();
 
     //-----------------------------------------------------------------creating the div with apendChild--------------------------------------------------------------
     for (let i = 0; i < data.length; i++) {
