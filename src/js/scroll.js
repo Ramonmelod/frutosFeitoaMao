@@ -1,4 +1,4 @@
-export const scroll = (imagesContainer) => {
+export const scroll = (prevBtn, nextBtn, imagesContainer) => {
   const scrollStep = 321;
 
   prevBtn.disabled = false; //declare the prevBtn.disabled for use in disabling feature
