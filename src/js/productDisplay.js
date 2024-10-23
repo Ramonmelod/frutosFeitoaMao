@@ -1,5 +1,7 @@
 import { query } from "./query.js";
-export const productDisplay = async (imagesContainer, i) => {
+
+const imagesContainer = document.querySelector(".images");
+export const productDisplay = async (i) => {
   try {
     const data = await query();
 
@@ -8,6 +10,7 @@ export const productDisplay = async (imagesContainer, i) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.id = data[i].id;
+    console.log("here: " + productCard.id);
     //adding image
     const productImage = document.createElement("img");
     productImage.src = data[i].image_url;
@@ -38,5 +41,16 @@ export const productDisplay = async (imagesContainer, i) => {
     return productCard;
   } catch (error) {
     console.error("Erro:", error);
+  }
+};
+
+export const removeProductDisplay = (i) => {
+  const productCard = document.getElementById(`image-0${i}`); // id gerado na criação do card
+  console.log("here2: " + productCard.id);
+  if (productCard) {
+    productCard.remove();
+    console.log(`Product with id product-${i} removed`);
+  } else {
+    console.log(`Product with id product-${i} not found`);
   }
 };

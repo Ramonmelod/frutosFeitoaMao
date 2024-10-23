@@ -1,4 +1,4 @@
-import { productDisplay } from "./productDisplay.js";
+import { productDisplay, removeProductDisplay } from "./productDisplay.js";
 import { queryDoc } from "./searchBar.js";
 import { scroll } from "./scroll.js";
 import { query } from "./query.js";
@@ -9,11 +9,15 @@ const data = null;
 scroll(prevBtn, nextBtn, imagesContainer);
 
 //use data.lenth
-productDisplay(imagesContainer, 0); //calls the function
-productDisplay(imagesContainer, 1);
-productDisplay(imagesContainer, 2);
-productDisplay(imagesContainer, 3);
-productDisplay(imagesContainer, 4);
-productDisplay(imagesContainer, 5);
-productDisplay(imagesContainer, 6);
+productDisplay(0); //calls the function
+// setTimeout(() => {
+//   removeProductDisplay(0);
+// }, 1000);
+
+// productDisplay(1);
+// productDisplay(2);
+// productDisplay(3);
+// productDisplay(4);
+// productDisplay(5);
+// productDisplay(6);
 queryDoc();
