@@ -1,5 +1,7 @@
 import { query } from "./query.js";
-export const queryDoc = async (data) => {
+export const queryDoc = async () => {
+  //const imagesContainer = document.querySelector(".images");
+
   try {
     const data = await query();
 
@@ -21,6 +23,7 @@ export const queryDoc = async (data) => {
 
         if (filteredProducts.length > 0) {
           filteredProducts.forEach((product) => {
+            // imagesContainer.remove(); // images container removed here
             const productElement = document.createElement("div");
             productElement.textContent = product.title;
             resultContainer.appendChild(productElement);
