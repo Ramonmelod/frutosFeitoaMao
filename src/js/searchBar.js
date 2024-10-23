@@ -1,4 +1,5 @@
 import { query } from "./query.js";
+import { productDisplay, removeProductDisplay } from "./productDisplay.js";
 export const queryDoc = async () => {
   //const imagesContainer = document.querySelector(".images");
 
@@ -13,8 +14,6 @@ export const queryDoc = async () => {
         const query = document
           .getElementById("searchInput")
           .value.toLowerCase();
-        const resultContainer = document.getElementById("searchResults");
-        resultContainer.innerHTML = ""; // Clean the previous results
 
         //-------------------------------------------------------------------------
         const filteredProducts = data.filter((product) =>
@@ -23,10 +22,9 @@ export const queryDoc = async () => {
 
         if (filteredProducts.length > 0) {
           filteredProducts.forEach((product) => {
-            // imagesContainer.remove(); // images container removed here
-            const productElement = document.createElement("div");
-            productElement.textContent = product.title;
-            resultContainer.appendChild(productElement);
+            console.log("filteredProducts[i].id: " + product.id);
+            removeProductDisplay("image-00"); //here remove the current element
+            productDisplay(5); // here display another element
           });
         } else {
           resultContainer.textContent = "Nenhum produto encontrado.";
