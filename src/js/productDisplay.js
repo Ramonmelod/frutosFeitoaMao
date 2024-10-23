@@ -48,8 +48,8 @@ export const removeProductDisplay = (productId) => {
   const productCard = document.getElementById(`${productId}`);
   if (productCard) {
     productCard.remove();
-    console.log(`Product with id product-${productId} removed`);
+    console.log(`Product with id ${productId} removed`);
   } else {
-    console.log(`Product with id product-${productId} not found`);
+    console.log(`Product with id ${productId} not found`);
   }
 };
