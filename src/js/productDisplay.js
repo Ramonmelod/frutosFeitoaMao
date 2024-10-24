@@ -1,6 +1,7 @@
 import { query } from "./query.js";
 
 const imagesContainer = document.querySelector(".images");
+let displayedProducts = [];
 
 export const productDisplay = async (i) => {
   try {
@@ -38,18 +39,20 @@ export const productDisplay = async (i) => {
     productInfo.appendChild(productTitle);
     productInfo.appendChild(aPartirDe);
     productInfo.appendChild(productPrice);
-    return productCard;
+    displayedProducts.push(productCard.id); // here the displayed elements id are pushed to the displayedProducts array
   } catch (error) {
     console.error("Erro:", error);
   }
 };
 
-export const removeProductDisplay = (productId) => {
-  const productCard = document.getElementById(`${productId}`);
-  if (productCard) {
-    productCard.remove();
-    console.log(`Product with id ${productId} removed`);
-  } else {
-    console.log(`Product with id ${productId} not found`);
-  }
+export const removeProductDisplay = () => {
+  displayedProducts.forEach((product) => {
+    const productCard = document.getElementById(`${product}`);
+    if (productCard) {
+      productCard.remove();
+      console.log(`Product with id ${product} removed`);
+    } else {
+      console.log(`Product with id ${product} not found`);
+    }
+  });
 };
