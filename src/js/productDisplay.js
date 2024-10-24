@@ -7,7 +7,7 @@ export const productDisplay = async (i) => {
   try {
     const data = await query();
 
-    //-----------------------------------------------------------------creating the div with apendChild--------------------------------------------------------------
+    //-----------creating the div with apendChild-----------------------
 
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");

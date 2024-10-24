@@ -1,6 +1,11 @@
 import { query } from "./query.js";
 import { productDisplay, removeProductDisplay } from "./productDisplay.js";
 
+const logo = document.querySelector(".logo");
+const slogan = document.querySelector(".slogan");
+const txtIntro = document.querySelector(".txt_intro");
+const resultContainer = document.getElementById("searchResults");
+
 export const queryDoc = async () => {
   try {
     const data = await query();
@@ -20,12 +25,15 @@ export const queryDoc = async () => {
 
         if (filteredProducts.length > 0) {
           filteredProducts.forEach((product) => {
-            productDisplay(product.id); // here the reaseached in the bar elements are created and shown
+            logo.insertAdjacentElement("afterend", slogan); //appending slogan if it is not present
+            logo.insertAdjacentElement("afterend", txtIntro); //appending txt_intro if it is not present
+            productDisplay(product.id); // here the elements reaseached in the bar  are created and shown
           });
-
-          console.log("todos os produtos criados");
         } else {
-          const resultContainer = document.getElementById("searchResults");
+          console.log("agora1");
+          // logo.remove();
+          slogan.remove(); //remove the slogan
+          txtIntro.remove(); //remove the txt_intro
           resultContainer.textContent = "Nenhum produto encontrado.";
         }
       });

@@ -20,3 +20,4 @@ productDisplay(8);
 productDisplay(9);
 
 queryDoc();
+//console.log(imagesContainer.innerHTML);
