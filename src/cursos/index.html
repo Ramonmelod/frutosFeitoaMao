@@ -190,13 +190,17 @@
         id="searchForm"
         role="search"
         style="margin-top: 15px; margin-left: 10px"
+        action="../index.html"
+        method="get"
       >
+        <!--here action redirects to the home page-->
         <input
           class="form-control me-2 w-50"
           type="search"
           placeholder="O que você procura?"
           aria-label="Search"
           id="searchInput"
+          name="query"
         />
         <button
           class="btn custom-search-btn"
