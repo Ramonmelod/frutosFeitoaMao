@@ -47,11 +47,6 @@ export const queryDoc = async (urlQuery) => {
         cancelable: true,
       });
       const valid = form.dispatchEvent(submitEvent);
-
-      if (valid) {
-        // the envent was accepted and the formulary will be sent
-        form.submit();
-      }
     }
   } catch (error) {
     console.error("Erro:", error);
