@@ -40,7 +40,18 @@ export const queryDoc = async (urlQuery) => {
       }
     });
     if (urlQuery) {
-      form.dispatchEvent(new Event("submit")); // trigger the event of click in the loupe if urlQuery is not null
+      // create the required validations
+
+      const submitEvent = new Event("submit", {
+        bubbles: true,
+        cancelable: true,
+      });
+      const valid = form.dispatchEvent(submitEvent);
+
+      if (valid) {
+        // the envent was accepted and the formulary will be sent
+        form.submit();
+      }
     }
   } catch (error) {
     console.error("Erro:", error);

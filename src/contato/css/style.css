@@ -1,11 +1,16 @@
-/* Estilos comuns */
+/* Common styles */
+
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f8f5ed; /* Cor de fundo */
-  margin: 0;
-  padding: 0;
+  background-color: #f8f5ed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center;
 }
-
 header {
   display: flex;
   position: fixed;
@@ -14,26 +19,45 @@ header {
   padding: 10px 0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 80px;
-  z-index: 5; /*numero da camada*/
+  height: 190px;
+  z-index: 3; /*Layer number*/
+}
+.band {
+  display: flex;
+  position: absolute;
+  background-color: #ebd8c3;
+  height: 28px;
+  width: 100%;
+  top: 0%;
+  z-index: 0; /*Layer number*/
+}
+.band p {
+  position: relative;
+  color: #f8f5ed;
+  font-size: small;
+  font-weight: bolder;
+  top: 10%;
+  left: 25%;
 }
 .menu-icon {
   display: none;
   position: relative;
   margin: 25px;
   font-size: 30px;
+  top: 20%;
   cursor: pointer;
   color: #f8f5ed;
+  z-index: 1; /*Layer number*/
 }
 
 .mini-logo {
-  display: block;
   position: relative;
-  top: 0px;
-  left: 50px;
+  left: 100px;
   height: 80px;
+  top: 18%;
   width: auto;
   transition: all 0.3s ease-in-out;
+  z-index: 1; /*Layer number*/
 }
 .mini-logo:hover {
   height: 85px;
@@ -41,46 +65,76 @@ header {
 .logo-title {
   display: block;
   position: relative;
-  color: #c07809; /* Cor do texto semelhante à da imagem */
-  top: 25px;
-  left: 50px;
+  color: #c07809; /* text color the same as the image*/
+  top: 25%;
+  left: 3.5%;
   text-decoration: none;
+  z-index: 1; /*Layer number*/
+  height: 50px;
+  width: 150px;
 }
 .logo-title .frutos {
   position: relative;
+  top: 0px;
   font-size: 10px;
   color: #c07809;
   text-decoration: none;
   font-family: "Playfair Display", serif;
   margin: 5px;
+  z-index: 1; /*Layer number*/
 }
 .logo-title .feito-a-mao {
   position: relative;
-  top: -10px;
+  top: 0px;
   font-size: 10px;
   color: #c07809;
   text-decoration: none;
   font-weight: bold;
   font-family: "Dancing Script", cursive;
+  z-index: 1; /*Layer number*/
+}
+.d-flex {
+  position: relative;
+  top: 20%;
+  left: 15%;
+  width: 90%;
+  height: 25%;
+}
+.custom-search-btn:hover {
+  background-color: inherit;
+  border-color: 2px solid transparent; /*disable the hover that comes from the bootstrap*/
+  color: inherit;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  background-color: #ebd8c3;
+  height: 2px;
+  top: 75%;
+  z-index: 0; /*Layer number*/
 }
 nav {
-  position: relative;
-  left: 30%;
+  position: absolute;
+  top: -10px;
+  left: 37%;
   text-align: center;
   margin-top: 20px;
+  z-index: 1; /*Layer number*/
 }
 
 nav a {
+  position: relative;
   margin: 0 15px;
   text-decoration: none;
   color: #c47601;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: lighter;
+  top: 10%;
+  z-index: 1; /*Layer number*/
 }
 nav a:hover {
   color: #eea73d;
 }
-
 .buttons {
   display: flex;
   position: absolute;
@@ -93,9 +147,9 @@ nav a:hover {
   display: flex;
   position: relative;
   margin: 0px;
-  padding: 10px 20px;
-  background-color: #e4cbb1;
-  font-size: 20px;
+  padding: 5px 20px;
+  background-color: #ebd8c3;
+  font-size: 15px;
   text-decoration: none;
   border-radius: 80px;
   transition: all 0.5s ease-in-out;
@@ -106,25 +160,41 @@ nav a:hover {
   cursor: pointer;
   border-radius: 25px;
   width: 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
 .logo {
   display: block;
   position: relative;
-  top: 130px;
+  top: 220px;
   margin: 0 auto;
   text-align: center;
   height: 300px;
   width: auto;
   transition: all 0.3s ease-in-out;
 }
-.logo:hover {
-  height: 350px;
+.logo-mobile {
+  display: none;
+}
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
+.icon-instagram {
+  color: #f8f5ed;
+}
+.icon-whatsapp {
+  color: #f8f5ed;
+}
+.icon-email {
+  color: #f8f5ed;
 }
 
 /* Seção de introdução */
 .intro-section {
+  position: relative;
   text-align: center;
+  top: 10%;
   padding: 50px 20px;
   color: #8a504b;
 }
@@ -141,26 +211,11 @@ nav a:hover {
   margin-top: 20px;
   line-height: 1.5;
 }
-
-/* Ícones */
-.icon {
-  margin-right: 10px;
-}
-
-.icon-instagram {
-  color: #f8f5ed;
-}
-.icon-whatsapp {
-  color: #f8f5ed;
-}
-.icon-email {
-  color: #f8f5ed;
-}
 .form-container {
   margin-top: 150px;
 }
 
-form {
+.form {
   display: flex;
   position: relative;
   top: 0px;
@@ -168,8 +223,8 @@ form {
   align-items: center;
 }
 
-form input,
-form textarea {
+.form input,
+.form textarea {
   width: 100%;
   max-width: 600px;
   padding: 15px;
@@ -179,7 +234,7 @@ form textarea {
   font-size: 16px;
 }
 
-form input[type="submit"] {
+.form input[type="submit"] {
   background-color: #c07809;
   color: white;
   border: none;
@@ -187,17 +242,28 @@ form input[type="submit"] {
   transition: background-color 0.3s;
 }
 
-form input[type="submit"]:hover {
+.form input[type="submit"]:hover {
   background-color: #a56707;
 }
 
-/* Media queries para dispositivos móveis */
+/* Media queries */
 @media (max-width: 768px) {
+  .band {
+    height: 50px;
+  }
+  .band p {
+    position: relative;
+    color: #f8f5ed;
+    font-size: small;
+    font-weight: bolder;
+    top: 10%;
+    left: 0%;
+  }
   nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0;
     width: 50%;
     background-color: #e4cbb1;
@@ -206,7 +272,8 @@ form input[type="submit"]:hover {
   nav a {
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #c07809;
+    color: #f8f5ed;
+    border-bottom: 1px solid #f8f5ed;
   }
   .show {
     display: flex;
@@ -222,33 +289,52 @@ form input[type="submit"]:hover {
   .logo-title {
     display: none;
   }
-  .logo {
+  .logo-mobile {
+    display: block;
     position: fixed;
     left: 42%;
-    top: 10px;
+    top: 55px;
     height: 80px;
-    z-index: 6; /*layer number*/
+    z-index: 4; /*layer number*/
   }
-  .logo:hover {
-    height: 85px;
-  }
-  .buttons {
-    position: absolute;
-    top: 0px;
-    right: 15%;
-    width: 20%;
-  }
-  .button {
-    font-size: small;
-  }
-  .button:hover {
-    font-size: 15px;
-  }
-  .intro-section h1 {
-    font-size: 28px;
+  .line {
+    display: flex;
+    top: 0%; /*hides the line bar in the top*/
   }
 
-  .intro-section p {
-    font-size: 18px;
+  .d-flex {
+    position: absolute;
+    top: 66%;
+    left: 3%;
+    width: 180%;
+    height: 23%;
+  }
+
+  #loupe {
+    left: -8%;
+  }
+
+  .buttons {
+    display: none;
+  }
+  .buttons-offset {
+    display: flex;
+    position: absolute;
+    top: 1%;
+    left: 8%;
+    width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+  }
+  .button-offset {
+    display: flex;
+    position: relative;
+    margin: 0px;
+    padding: 5px 20px;
+    background-color: #ebd8c3;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 80px;
+    transition: all 0.5s ease-in-out;
+    width: 5px;
+    right: 20px;
   }
 }
