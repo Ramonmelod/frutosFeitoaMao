@@ -1,0 +1,292 @@
+/* Common styles */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f5ed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center;
+}
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  background-color: #e4cbb1;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 190px;
+  z-index: 3; /*Layer number*/
+}
+.band {
+  display: flex;
+  position: absolute;
+  background-color: #ebd8c3;
+  height: 28px;
+  width: 100%;
+  top: 0%;
+  z-index: 0; /*Layer number*/
+}
+.band p {
+  position: relative;
+  color: #f8f5ed;
+  font-size: small;
+  font-weight: bolder;
+  top: 10%;
+  left: 25%;
+}
+.menu-icon {
+  display: none;
+  position: relative;
+  margin: 25px;
+  font-size: 30px;
+  top: 20%;
+  cursor: pointer;
+  color: #f8f5ed;
+  z-index: 1; /*Layer number*/
+}
+
+.mini-logo {
+  position: relative;
+  left: 100px;
+  height: 80px;
+  top: 18%;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  z-index: 1; /*Layer number*/
+}
+.mini-logo:hover {
+  height: 85px;
+}
+.logo-title {
+  display: block;
+  position: relative;
+  color: #c07809; /* text color the same as the image*/
+  top: 25%;
+  left: 3.5%;
+  text-decoration: none;
+  z-index: 1; /*Layer number*/
+  height: 50px;
+  width: 150px;
+}
+.logo-title .frutos {
+  position: relative;
+  top: 0px;
+  font-size: 10px;
+  color: #c07809;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  margin: 5px;
+  z-index: 1; /*Layer number*/
+}
+.logo-title .feito-a-mao {
+  position: relative;
+  top: 0px;
+  font-size: 10px;
+  color: #c07809;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
+  z-index: 1; /*Layer number*/
+}
+.d-flex {
+  position: relative;
+  top: 20%;
+  left: 15%;
+  width: 90%;
+  height: 25%;
+}
+.custom-search-btn:hover {
+  background-color: inherit;
+  border-color: 2px solid transparent; /*disable the hover that comes from the bootstrap*/
+  color: inherit;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  background-color: #ebd8c3;
+  height: 2px;
+  top: 75%;
+  z-index: 0; /*Layer number*/
+}
+nav {
+  position: absolute;
+  top: -10px;
+  left: 37%;
+  text-align: center;
+  margin-top: 20px;
+  z-index: 1; /*Layer number*/
+}
+
+nav a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #c47601;
+  font-size: 20px;
+  font-weight: lighter;
+  top: 10%;
+  z-index: 1; /*Layer number*/
+}
+nav a:hover {
+  color: #eea73d;
+}
+.buttons {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 0%;
+  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+}
+
+.button {
+  display: flex;
+  position: relative;
+  margin: 0px;
+  padding: 5px 20px;
+  background-color: #ebd8c3;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 80px;
+  transition: all 0.5s ease-in-out;
+  width: 5px;
+  right: 20px;
+}
+.button:hover {
+  cursor: pointer;
+  border-radius: 25px;
+  width: 10px;
+  font-size: 20px;
+}
+
+.logo-mobile {
+  display: none;
+}
+.logo:hover {
+  height: 120px;
+}
+.comoSurgiu {
+  position: relative;
+  height: 550px;
+  transition: all 0.3s ease-in-out;
+  top: 20%;
+  left: 37%;
+}
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
+.icon-instagram {
+  color: #f8f5ed;
+}
+.icon-whatsapp {
+  color: #f8f5ed;
+}
+.icon-email {
+  color: #f8f5ed;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .band {
+    height: 50px;
+  }
+  .band p {
+    position: relative;
+    color: #f8f5ed;
+    font-size: small;
+    font-weight: bolder;
+    top: 10%;
+    left: 0%;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 50%;
+    background-color: #e4cbb1;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: center;
+    color: #f8f5ed;
+    border-bottom: 1px solid #f8f5ed;
+  }
+  .show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .mini-logo {
+    display: none;
+  }
+
+  .logo-title {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    position: fixed;
+    left: 42%;
+    top: 55px;
+    height: 80px;
+    z-index: 4; /*layer number*/
+  }
+
+  .logo:hover {
+    height: 85px;
+  }
+  .line {
+    display: flex;
+    top: 0%; /*hides the line bar in the top*/
+  }
+
+  .d-flex {
+    position: absolute;
+    top: 66%;
+    left: 3%;
+    width: 180%;
+    height: 23%;
+  }
+
+  #loupe {
+    left: -8%;
+  }
+
+  .buttons {
+    display: none;
+  }
+  .buttons-offset {
+    display: flex;
+    position: absolute;
+    top: 1%;
+    left: 8%;
+    width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+  }
+  .button-offset {
+    display: flex;
+    position: relative;
+    margin: 0px;
+    padding: 5px 20px;
+    background-color: #ebd8c3;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 80px;
+    transition: all 0.5s ease-in-out;
+    width: 5px;
+    right: 20px;
+  }
+  .comoSurgiu {
+    left: 10%;
+  }
+}

@@ -1,37 +1,24 @@
+import { productDisplay, removeProductDisplay } from "./productDisplay.js";
+import { queryDoc } from "./searchBar.js";
+import { scroll } from "./scroll.js";
 const imagesContainer = document.querySelector(".images");
-const menuIcon = document.getElementById("menu-icon");
-const navMenu = document.getElementById("nav-menu");
-const prevBtn = document.getElementById("prevBtn"); //the script works without the declaration of prevBtn and nextBtn, for it uses getElementById
+const prevBtn = document.getElementById("prevBtn"); //the scroll works without the declaration of prevBtn and nextBtn, for it uses getElementById
 const nextBtn = document.getElementById("nextBtn");
+let query = null;
+scroll(prevBtn, nextBtn, imagesContainer);
 
-let scrollAmount = 0;
-const scrollStep = 270;
+//--
 
-prevBtn.disabled = false; //declare the prevBtn.disabled for use in disabling feature
-nextBtn.disabled = false;
-
-prevBtn.addEventListener("click", () => {
-  //left
-  imagesContainer.scrollBy(-321, 0);
-  prevBtn.disabled = true; //disable the prevBtn for avoiding fast double click to cause the picture scrolling to desalign
-  nextBtn.disabled = true;
-  setTimeout(() => {
-    prevBtn.disabled = false; //reenable the prevBtn after 250ms
-    nextBtn.disabled = false;
-  }, 250);
+document.addEventListener("DOMContentLoaded", () => {
+  //makes this scope waits until the DOM be totally loaded
+  const params = new URLSearchParams(window.location.search);
+  query = params.get("query");
+  queryDoc(query);
 });
-nextBtn.addEventListener("click", () => {
-  //right
-  prevBtn.disabled = true;
-  nextBtn.disabled = true; //disable the nextBtn for avoiding fast double click to cause the picture scrolling to desalign
-  imagesContainer.scrollBy(321, 0);
-  setTimeout(() => {
-    prevBtn.disabled = false;
-    nextBtn.disabled = false; //reenable the nextBtn after 250ms
-  }, 250);
-});
+//--
 
-//toggling the menu-icon
-menuIcon.addEventListener("click", () => {
-  navMenu.classList.toggle("show");
-});
+for (let i = 0; i < 10; i++) {
+  productDisplay(i); //calls the function that assembly the product card div
+}
+
+//console.log(imagesContainer.innerHTML);
