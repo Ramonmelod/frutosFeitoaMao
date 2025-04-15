@@ -4,11 +4,17 @@ export function productDisplay() {
   const productDetailContainer = document.querySelector(".productDetail");
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
+  productCard.classList.add("img-fluid"); //from bootstrap
   const productImage = document.createElement("img");
-  productImage.src = "https://picsum.photos/seed/luana/300/300";
+  productImage.src = "https://picsum.photos/seed/luana/720/720";
+  // productImage.classList.add("img-fluid");
+  const productInfo = document.createElement("div");
+  productInfo.classList.add("product-info");
 
+  // apend children
   productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
   productCard.appendChild(productImage);
+  productCard.appendChild(productInfo);
   console.log("Ramon");
 }
 
