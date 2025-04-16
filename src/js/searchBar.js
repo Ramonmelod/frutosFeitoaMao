@@ -10,7 +10,8 @@ const form = document.getElementById("searchForm");
 
 export const queryDoc = async (urlQuery) => {
   try {
-    const data = await query();
+    const path = "./productCards.json";
+    const data = await query(path);
 
     form.addEventListener("submit", function (e) {
       // form is decrared globally in the top of the script
