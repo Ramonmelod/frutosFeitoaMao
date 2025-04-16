@@ -4,17 +4,14 @@ export function productDisplay() {
   const productDetailContainer = document.querySelector(".productDetail");
   const productPictures = document.createElement("div");
   productPictures.classList.add("product-pictures");
+
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
-  //productCard.classList.add("img-fluid"); //from bootstrap
+
   const productImage = document.createElement("img");
   productImage.src = "https://picsum.photos/seed/luana/720/720";
-  // productImage.classList.add("img-fluid");
   const productInfo = document.createElement("div");
   productInfo.classList.add("product-info");
-
-  const productDescription = document.createElement("div");
-  productDescription.classList.add("product-description");
 
   //creating a tag p for use in product-info title
   const productTitle = document.createElement("p");
@@ -28,6 +25,12 @@ export function productDisplay() {
   productPrice.classList.add("price");
   productPrice.textContent = "R$260,00";
 
+  const productDescription = document.createElement("div");
+  productDescription.classList.add("product-description");
+  const productDescriptionText = document.createElement("p");
+  productDescriptionText.textContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+
   // 👉 creating the button
   const buyButton = document.createElement("button");
   buyButton.textContent = "Solicitar Orçamento";
@@ -39,6 +42,12 @@ export function productDisplay() {
   // apend children
   productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
   productDetailContainer.appendChild(productPictures);
+  for (let i = 0; i < 5; i++) {
+    const thumbNail = document.createElement("img");
+    thumbNail.src = `https://picsum.photos/seed/thumb${i}/50/50`;
+    thumbNail.classList.add("thumbnail-img"); // se quiser estilizar depois
+    productPictures.appendChild(thumbNail);
+  }
   productCard.appendChild(productImage);
   productCard.appendChild(productInfo);
   productInfo.appendChild(productTitle);
@@ -46,6 +55,7 @@ export function productDisplay() {
   productInfo.appendChild(productPrice);
   productInfo.appendChild(buyButton);
   productCard.appendChild(productDescription);
+  productDescription.appendChild(productDescriptionText);
 
   console.log("Ramon");
 }
