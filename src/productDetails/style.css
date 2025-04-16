@@ -179,12 +179,20 @@ nav a:hover {
 .icon-email {
   color: #f8f5ed;
 }
+.product-pictures {
+  position: absolute;
+  height: 70%;
+  width: 8%;
+  background-color: #0943c0;
+  top: 33%;
+  left: 12%;
+}
 
 .product-card {
   display: flex; /* Usando flexbox */
   position: absolute;
   left: 10vw; /* Ajusta a distância à esquerda de acordo com a largura da tela */
-  top: 30vh;
+  top: 30%;
   border: 1px solid #ddd; /* card border*/
   border-radius: 10px;
   width: auto;

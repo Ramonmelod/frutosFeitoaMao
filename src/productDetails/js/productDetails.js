@@ -2,6 +2,8 @@ import { query } from "../../js/query.js";
 export function productDisplay() {
   const productId = 0;
   const productDetailContainer = document.querySelector(".productDetail");
+  const productPictures = document.createElement("div");
+  productPictures.classList.add("product-pictures");
   const productCard = document.createElement("div");
   productCard.classList.add("product-card");
   //productCard.classList.add("img-fluid"); //from bootstrap
@@ -36,6 +38,7 @@ export function productDisplay() {
 
   // apend children
   productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
+  productDetailContainer.appendChild(productPictures);
   productCard.appendChild(productImage);
   productCard.appendChild(productInfo);
   productInfo.appendChild(productTitle);
