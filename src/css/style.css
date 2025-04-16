@@ -207,6 +207,7 @@ nav a:hover {
   overflow-x: hidden; /* hides the axis-x scroll bar */
   overflow-y: hidden; /* hides the axis-y scroll bar */
   scroll-behavior: smooth; /* makes the scroll to be smooth */
+  cursor: pointer;
 }
 
 .product-card {

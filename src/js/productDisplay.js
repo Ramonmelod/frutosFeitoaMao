@@ -12,6 +12,11 @@ export const productDisplay = async (i) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.id = data[i].id;
+
+    const productLink = document.createElement("a");
+    productLink.href = `../src/productDetails/index.html?productId=${i}`;
+    productLink.target = "_blank"; //opens a new tab
+
     //adding image
     const productImage = document.createElement("img");
     productImage.src = data[i].image_url;
@@ -33,7 +38,8 @@ export const productDisplay = async (i) => {
     productPrice.textContent = data[i].price;
 
     //apending the children
-    imagesContainer.appendChild(productCard); //here is added the new div to the images contatainer
+    imagesContainer.appendChild(productLink); //here is added the new div to the images contatainer
+    productLink.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);
