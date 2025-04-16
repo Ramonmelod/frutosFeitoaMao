@@ -195,11 +195,11 @@ nav a:hover {
   left: 12%;
 }
 .product-pictures img {
-  position: flex;
   height: auto;
   width: 100%;
   padding: 5% 0;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .product-card {
