@@ -187,25 +187,28 @@ nav a:hover {
   top: 30vh;
   border: 1px solid #ddd; /* card border*/
   border-radius: 10px;
-  width: 70vw;
+  width: auto;
   margin: 10px;
-  height: 100vh;
+  height: 70vw;
+  aspect-ratio: 1 / 1;
   background-color: #c07809;
 }
 
 .product-card img {
   position: relative;
   left: 10vw;
-  width: 40vw;
-  height: auto;
+  width: auto;
+  height: 40vw;
+  aspect-ratio: 1 / 1;
   border-radius: 10px;
 }
 .product-info {
   position: relative;
 
   left: 12vw;
-  width: 15vw;
-  height: 80vh;
+  width: auto;
+  aspect-ratio: 0.4/ 1;
+  height: 40vw;
   padding: 8px;
   background-color: #fff;
   border-top: 2px solid #a0c568; /* boundary line */
@@ -227,6 +230,13 @@ nav a:hover {
 }
 .product-card img:hover {
   transform: scale(1.05);
+}
+.product-description {
+  position: absolute;
+  height: 30%;
+  width: 75%;
+  background-color: #0943c0;
+  top: 60%;
 }
 
 /* Media queries */
