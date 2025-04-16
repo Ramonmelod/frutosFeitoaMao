@@ -77,9 +77,10 @@ header {
   position: relative;
   top: 0px;
   font-size: 10px;
-  color: #c07809;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Playfair Display", serif;
+  font-weight: bolder;
   margin: 5px;
   z-index: 1; /*Layer number*/
 }
@@ -87,9 +88,9 @@ header {
   position: relative;
   top: 0px;
   font-size: 10px;
-  color: #c07809;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bolder;
   font-family: "Dancing Script", cursive;
   z-index: 1; /*Layer number*/
 }
@@ -126,14 +127,14 @@ nav a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #c47601;
+  color: #ffffff;
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: bold;
   top: 10%;
   z-index: 1; /*Layer number*/
 }
 nav a:hover {
-  color: #eea73d;
+  color: #e7bb78;
 }
 .buttons {
   display: flex;
@@ -179,16 +180,23 @@ nav a:hover {
 .icon-email {
   color: #f8f5ed;
 }
+.productDetail {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  left: 10%;
+}
 .product-pictures {
   position: absolute;
-  height: 70%;
+  height: auto;
   width: 8%;
   top: 33%;
   left: 12%;
 }
 .product-pictures img {
   position: flex;
-  height: 20%;
+  height: auto;
   width: 100%;
   padding: 5% 0;
   border-radius: 10px;
@@ -211,13 +219,12 @@ nav a:hover {
   top: 1%;
   left: 10vw;
   width: auto;
-  height: 40vw;
-  aspect-ratio: 1 / 1;
+  height: 55%;
+  aspect-ratio: 0.75 / 1;
   border-radius: 10px;
 }
 .product-info {
   position: relative;
-
   left: 12vw;
   width: auto;
   aspect-ratio: 0.4/ 1;
@@ -228,10 +235,14 @@ nav a:hover {
 .product-info .title {
   margin: 10px;
   color: #3b3a3a;
+  font-weight: 900;
+  font-size: 20px;
 }
 .product-info .a-partir-de {
   margin: 10px;
   color: #6b6b6b;
+  font-weight: 500;
+  font-size: 1rem;
 }
 .product-info .price {
   margin: 0;
@@ -250,7 +261,7 @@ nav a:hover {
 }
 .product-description p {
   color: #6b6b6b;
-  padding: 3%;
+  padding: 2% 0;
 }
 
 /* Media queries */

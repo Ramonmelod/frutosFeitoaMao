@@ -1,63 +1,67 @@
 import { query } from "../../js/query.js";
-export function productDisplay() {
-  const productId = 0;
-  const productDetailContainer = document.querySelector(".productDetail");
-  const productPictures = document.createElement("div");
-  productPictures.classList.add("product-pictures");
+export async function productDisplay() {
+  try {
+    let displayedProducts = [];
+    const path = "../productCards.json";
+    const data = await query(path);
+    const productId = 0;
 
-  const productCard = document.createElement("div");
-  productCard.classList.add("product-card");
+    const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
+    const productPictures = document.createElement("div"); // create the div that receives the thumbnail
+    const productCard = document.createElement("div"); //create the div that receives the productImage element
+    const productImage = document.createElement("img");
+    const productTitle = document.createElement("p");
+    const aPartirDe = document.createElement("p");
+    const productPrice = document.createElement("p");
+    const productInfo = document.createElement("div");
+    const productDescription = document.createElement("div");
+    const buyButton = document.createElement("button");
+    const productDescriptionText = document.createElement("p");
 
-  const productImage = document.createElement("img");
-  productImage.src = "https://picsum.photos/seed/luana/720/720";
-  const productInfo = document.createElement("div");
-  productInfo.classList.add("product-info");
+    productCard.classList.add("product-card");
+    productPictures.classList.add("product-pictures");
+    productInfo.classList.add("product-info");
 
-  //creating a tag p for use in product-info title
-  const productTitle = document.createElement("p");
-  productTitle.classList.add("title");
-  productTitle.textContent =
-    "Jardim Abelhas - Porta Maternidade com Feltragem, Bastidor de Silicone - 20 cm";
-  const aPartirDe = document.createElement("p");
-  aPartirDe.classList.add("title");
-  aPartirDe.textContent = "A partir de";
-  const productPrice = document.createElement("p");
-  productPrice.classList.add("price");
-  productPrice.textContent = "R$260,00";
+    productImage.src = data[0].image_url;
 
-  const productDescription = document.createElement("div");
-  productDescription.classList.add("product-description");
-  const productDescriptionText = document.createElement("p");
-  productDescriptionText.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+    //Insert elements in the productInfo div
+    productTitle.classList.add("title");
+    productTitle.textContent = data[0].title;
+    aPartirDe.classList.add("a-partir-de");
+    aPartirDe.textContent = "A partir de";
+    productPrice.classList.add("price");
+    productPrice.textContent = data[1].price;
 
-  // 👉 creating the button
-  const buyButton = document.createElement("button");
-  buyButton.textContent = "Solicitar Orçamento";
-  buyButton.classList.add("btn", "btn-success", "rounded-pill", "py-2"); // se estiver usando Bootstrap
-  buyButton.style.backgroundColor = "#a0c568";
-  buyButton.style.borderColor = "#a0c568"; // se quiser que a borda combine também
-  buyButton.style.marginTop = "10px"; // estilo opcional
+    productDescription.classList.add("product-description");
+    productDescriptionText.textContent = data[0].description;
 
-  // apend children
-  productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
-  productDetailContainer.appendChild(productPictures);
-  for (let i = 0; i < 5; i++) {
-    const thumbNail = document.createElement("img");
-    thumbNail.src = `https://picsum.photos/seed/thumb${i}/50/50`;
-    thumbNail.classList.add("thumbnail-img"); // se quiser estilizar depois
-    productPictures.appendChild(thumbNail);
+    // 👉 creating the button
+    buyButton.textContent = "Solicitar Orçamento"; //button text
+    buyButton.classList.add("btn", "btn-success", "rounded-pill", "py-2");
+    buyButton.style.backgroundColor = "#a0c568";
+    buyButton.style.borderColor = "#a0c568";
+    buyButton.style.marginTop = "10px";
+
+    // append children
+    productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
+    productDetailContainer.appendChild(productPictures);
+    for (let i = 0; i < 3; i++) {
+      const thumbNail = document.createElement("img");
+      thumbNail.src = data[i].image_url;
+      thumbNail.classList.add("thumbnail-img");
+      productPictures.appendChild(thumbNail);
+    }
+    productCard.appendChild(productImage);
+    productCard.appendChild(productInfo);
+    productInfo.appendChild(productTitle);
+    productInfo.appendChild(aPartirDe);
+    productInfo.appendChild(productPrice);
+    productInfo.appendChild(buyButton);
+    productCard.appendChild(productDescription);
+    productDescription.appendChild(productDescriptionText);
+  } catch (error) {
+    console.log(error);
   }
-  productCard.appendChild(productImage);
-  productCard.appendChild(productInfo);
-  productInfo.appendChild(productTitle);
-  productInfo.appendChild(aPartirDe);
-  productInfo.appendChild(productPrice);
-  productInfo.appendChild(buyButton);
-  productCard.appendChild(productDescription);
-  productDescription.appendChild(productDescriptionText);
-
-  console.log("Ramon");
 }
 
 /*import { query } from "../../js/productDisplay.js";

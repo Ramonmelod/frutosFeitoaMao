@@ -3,60 +3,70 @@
     "id": "0",
     "title": "Jardim Abelhas - Porta Maternidade com Feltragem, Bastidor de Silicone - 20 cm",
     "price": "R$260,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/fhoft1ppt2cr1vg6vleu.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/fhoft1ppt2cr1vg6vleu.jpg",
+    "description": "O porta Maternidade \"Jardim Abelhas\" é um peça artesanal para porta de maternidade, confeccionado com bastidor de silicone de 20 cm e tecido de algodão cru. Ele é bordado à mão, podendo ser personalizado com o nome do bebê, cores e elementos decorativos conforme a preferência do cliente."
   },
   {
     "id": "1",
     "title": "Irmãos - Porta Maternidade com bastidor de bambu - 22 cm",
     "price": "R$240,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/cwjtuxfazcdxisqc4lor.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/cwjtuxfazcdxisqc4lor.jpg",
+    "description": "O porta Maternidade \"Irmãos\" é uma peça artesanal com bastidor de bambu de 22 cm, ideal para celebrar a chegada de um novo irmão ou irmã. Feito com tecido de algodão cru e bordado à mão, permite personalização com nome, cores e elementos simbólicos da família."
   },
   {
     "id": "2",
     "title": "Vovó e Vovô - Bordado com Bastidor de bambu (Unidade) - 14 cm",
     "price": "R$190,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042399/frutosfeitoamao/p4woczkqoij1ufrxp88k.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042399/frutosfeitoamao/p4woczkqoij1ufrxp88k.jpg",
+    "description": "O bordado \"Vovó e Vovô\" é um presente afetivo e artesanal, feito com bastidor de bambu de 14 cm. Bordado à mão, é ideal para homenagear os avós, com possibilidade de personalização com nomes ou frases carinhosas."
   },
   {
     "id": "3",
     "title": "Iniciais - Porta Alianças com Bastidor de bambu - 14 cm",
     "price": "R$190,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042389/frutosfeitoamao/t4m7gnvbqqfbedrxocwk.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042389/frutosfeitoamao/t4m7gnvbqqfbedrxocwk.jpg",
+    "description": "O porta alianças \"Iniciais\" é uma peça elegante e delicada, feita com bastidor de bambu de 14 cm. Bordado à mão com as iniciais dos noivos, é ideal para cerimônias, trazendo um toque artesanal e personalizado ao momento do sim."
   },
   {
     "id": "4",
     "title": "Body para bebê - Bordado Personalizável - Tamanhos de RN a G",
     "price": "R$200,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/jh903trhjvzpnsb6qn8o.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/jh903trhjvzpnsb6qn8o.jpg",
+    "description": "O body para bebê bordado é feito com tecido macio e confortável, ideal para a pele delicada dos pequenos. Bordado à mão, ele pode ser personalizado com nome, frases ou elementos especiais, disponível nos tamanhos RN a G."
   },
   {
     "id": "5",
     "title": "Harry Potter - Bordado com Bastidor de bambu - 20 cm",
     "price": "R$220,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042392/frutosfeitoamao/it3akx0v0akjd0lhyhc8.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042392/frutosfeitoamao/it3akx0v0akjd0lhyhc8.jpg",
+    "description": "Inspirado no universo de Harry Potter, este bordado artesanal utiliza bastidor de bambu de 20 cm e é feito à mão com detalhes que remetem à saga. Uma peça decorativa única e personalizada para fãs do bruxinho mais famoso do mundo."
   },
   {
     "id": "6",
     "title": "Quadro Bordado - Bordado com Moldura em Fundo Branco",
     "price": "R$365,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/iohmctnrop50q1q5fxhw.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/iohmctnrop50q1q5fxhw.jpg",
+    "description": "O quadro bordado com moldura em fundo branco é uma peça sofisticada e artesanal, perfeita para decorar ambientes com delicadeza e personalidade. Bordado à mão com frases ou desenhos personalizados, emoldurado com acabamento fino."
   },
   {
     "id": "7",
     "title": "Galhos de flores - Porta Alianças com Bastidor de bambu - 20 cm",
     "price": "R$200,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/mxj8ism8q9azxvzbiqcd.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042390/frutosfeitoamao/mxj8ism8q9azxvzbiqcd.jpg",
+    "description": "O porta alianças \"Galhos de flores\" traz delicadeza e natureza para o momento do casamento. Feito com bastidor de bambu de 20 cm e bordado à mão com ramos florais, é uma peça romântica e personalizável."
   },
   {
     "id": "8",
     "title": "Pezinhos - Bordado com Bastidor de Bambu e técnica de Feltragem - 16 cm",
     "price": "R$200,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/rxj71r1rdprem05jfskx.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042398/frutosfeitoamao/rxj71r1rdprem05jfskx.jpg",
+    "description": "O bordado \"Pezinhos\" combina a delicadeza do bastidor de bambu de 16 cm com a técnica de feltragem para criar uma peça encantadora e afetiva. Ideal para lembranças de nascimento ou decoração de quarto infantil."
   },
   {
     "id": "9",
     "title": "Folhas Mescladas - Bordado com Frase, Bastidor de Bambu - 20 cm",
     "price": "R$200,00",
-    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042392/frutosfeitoamao/njbjexswtmtzlemiukrj.jpg"
+    "image_url": "https://res.cloudinary.com/dhayneykx/image/upload/w_315,h_420/v1729042392/frutosfeitoamao/njbjexswtmtzlemiukrj.jpg",
+    "description": "O bordado \"Folhas Mescladas\" é uma peça decorativa com bastidor de bambu de 20 cm, bordado à mão com frase e elementos botânicos. Ideal para compor ambientes acolhedores, transmite leveza e naturalidade."
   }
 ]

@@ -5,7 +5,7 @@ let displayedProducts = [];
 
 export const productDisplay = async (i) => {
   try {
-    const data = await query();
+    const data = await query("./productCards.json");
 
     //-----------creating the div with apendChild-----------------------
 
