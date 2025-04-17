@@ -17,6 +17,10 @@ export async function productDisplay(productId) {
     const buyButton = document.createElement("button");
     const productDescriptionText = document.createElement("p");
 
+    const productLink = document.createElement("a");
+    productLink.href = `https://res.cloudinary.com/dhayneykx/image/upload/v1729042398/frutosfeitoamao/fhoft1ppt2cr1vg6vleu.jpg`;
+    productLink.target = "_blank"; //opens a new tab
+
     productCard.classList.add("product-card");
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
@@ -42,7 +46,8 @@ export async function productDisplay(productId) {
     buyButton.style.marginTop = "10px";
 
     // append children
-    productDetailContainer.appendChild(productCard); //here is added the new div to the images contatainer
+    productDetailContainer.appendChild(productLink); //here is added the new div to the images container
+    productLink.appendChild(productCard);
     productDetailContainer.appendChild(productPictures);
     for (let i = 0; i < 3; i++) {
       const thumbNail = document.createElement("img");

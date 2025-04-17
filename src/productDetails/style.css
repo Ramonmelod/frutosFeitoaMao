@@ -33,11 +33,11 @@ header {
 }
 .band p {
   position: relative;
-  color: #f8f5ed;
+  color: #ffffff;
   font-size: small;
   font-weight: bolder;
   top: 10%;
-  left: 25%;
+  left: 33%;
 }
 .menu-icon {
   display: none;
@@ -53,8 +53,8 @@ header {
 .mini-logo {
   position: relative;
   left: 100px;
-  height: 80px;
-  top: 18%;
+  height: 100px;
+  top: 15%;
   width: auto;
   transition: all 0.3s ease-in-out;
   z-index: 1; /*Layer number*/
@@ -66,8 +66,8 @@ header {
   display: block;
   position: relative;
   color: #c07809; /* text color the same as the image*/
-  top: 25%;
-  left: 3.5%;
+  top: 32%;
+  left: 5%;
   text-decoration: none;
   z-index: 1; /*Layer number*/
   height: 50px;
@@ -76,7 +76,7 @@ header {
 .logo-title .frutos {
   position: relative;
   top: 0px;
-  font-size: 10px;
+  font-size: 20px;
   color: #ffffff;
   text-decoration: none;
   font-family: "Playfair Display", serif;
@@ -86,8 +86,8 @@ header {
 }
 .logo-title .feito-a-mao {
   position: relative;
-  top: 0px;
-  font-size: 10px;
+  top: -5px;
+  font-size: 22px;
   color: #ffffff;
   text-decoration: none;
   font-weight: bolder;
