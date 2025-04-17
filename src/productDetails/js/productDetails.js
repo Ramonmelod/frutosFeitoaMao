@@ -41,8 +41,8 @@ export async function productDisplay(productId) {
     // 👉 creating the button
     buyButton.textContent = "Solicitar Orçamento"; //button text
     buyButton.classList.add("btn", "btn-success", "rounded-pill", "py-2");
-    buyButton.style.backgroundColor = "#a0c568";
-    buyButton.style.borderColor = "#a0c568";
+    buyButton.style.backgroundColor = "#a3a882";
+    buyButton.style.borderColor = "#a3a882";
     buyButton.style.marginTop = "10px";
 
     // append children
