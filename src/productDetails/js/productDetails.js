@@ -25,7 +25,7 @@ export async function productDisplay(productId) {
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
 
-    productImage.src = data[productId].image_url;
+    productImage.src = data[productId].image_url[0];
     productTitle.textContent = data[productId].title;
     productPrice.textContent = data[productId].price;
     productDescriptionText.textContent = data[productId].description;
@@ -49,9 +49,10 @@ export async function productDisplay(productId) {
     productDetailContainer.appendChild(productLink); //here is added the new div to the images container
     productLink.appendChild(productCard);
     productDetailContainer.appendChild(productPictures);
-    for (let i = 0; i < 3; i++) {
+
+    for (let i = 1; i < data[productId].image_url.length; i++) {
       const thumbNail = document.createElement("img");
-      thumbNail.src = data[i].image_url;
+      thumbNail.src = data[productId].image_url[i];
       thumbNail.classList.add("thumbnail-img");
       productPictures.appendChild(thumbNail);
     }

@@ -19,7 +19,7 @@ export const productDisplay = async (i) => {
 
     //adding image
     const productImage = document.createElement("img");
-    productImage.src = data[i].image_url;
+    productImage.src = data[i].image_url[0];
     //creating product-info container
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");
