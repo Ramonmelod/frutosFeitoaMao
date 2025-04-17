@@ -15,6 +15,7 @@ header {
   display: flex;
   position: fixed;
   width: 100%;
+  gap: 30px;
   background-color: #e4cbb1;
   padding: 10px 0;
   text-align: center;
@@ -67,7 +68,7 @@ header {
   position: relative;
   color: #c07809; /* text color the same as the image*/
   top: 32%;
-  left: 5%;
+  left: 3%;
   text-decoration: none;
   z-index: 1; /*Layer number*/
   height: 50px;
@@ -87,10 +88,10 @@ header {
 .logo-title .feito-a-mao {
   position: relative;
   top: -5px;
-  font-size: 22px;
+  font-size: 18px;
   color: #ffffff;
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: bold;
   font-family: "Dancing Script", cursive;
   z-index: 1; /*Layer number*/
 }
