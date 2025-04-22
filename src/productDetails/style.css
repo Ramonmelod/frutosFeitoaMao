@@ -227,7 +227,7 @@ nav a:hover {
 }
 .product-info {
   position: relative;
-  left: 18%;
+  left: 10%;
   width: 30%;
   height: auto;
   padding: 8px;
@@ -365,7 +365,25 @@ nav a:hover {
     left: 0%;
   }
   .product-pictures {
-    display: none;
+    position: absolute;
+    display: flex;
+    height: auto;
+    width: 60%;
+    flex-direction: row;
+    top: 62%;
+  }
+  .product-pictures a {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-pictures img {
+    height: auto;
+    width: 85%;
+    border-radius: 10px;
+    cursor: pointer;
   }
 
   .product-card {
@@ -388,6 +406,7 @@ nav a:hover {
     width: 90%;
     height: auto;
     padding: 8px;
+    top: 13%;
   }
 
   .product-info .title {
@@ -404,7 +423,7 @@ nav a:hover {
   }
   .product-description {
     position: relative;
-    top: 0;
+    top: 13%;
     left: 10%;
   }
   .product-description p {
