@@ -227,6 +227,9 @@ nav a:hover {
   scroll-behavior: smooth; /* makes the scroll to be smooth */
   cursor: pointer;
 }
+.images a {
+  text-decoration: none;
+}
 
 .product-card {
   position: relative;
