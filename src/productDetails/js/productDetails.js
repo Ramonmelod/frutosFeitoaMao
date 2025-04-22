@@ -16,8 +16,10 @@ export async function productDisplay(productId, imageIndex) {
     const buyButton = document.createElement("button");
     const productDescriptionText = document.createElement("p");
 
+    // 👉 creating the full image link
     const productLink = document.createElement("a");
-    productLink.href = `https://res.cloudinary.com/dhayneykx/image/upload/v1729042398/frutosfeitoamao/fhoft1ppt2cr1vg6vleu.jpg`;
+    const sizeParameterImagelink = data[productId].image_url[imageIndex];
+    productLink.href = removeCloudinarySizeParameters(sizeParameterImagelink); //getting the full image link
     productLink.target = "_blank"; //opens a new tab
 
     // 👉 creating the WhatsApp button link
@@ -50,12 +52,12 @@ export async function productDisplay(productId, imageIndex) {
     buyButton.style.marginTop = "10px";
 
     // appending the children
-    productDetailContainer.appendChild(productLink); //here is added the new div to the images container
-    productLink.appendChild(productCard);
+    productDetailContainer.appendChild(productCard); //here is added the new div to the images container
     productDetailContainer.appendChild(productPictures);
 
     thumbNailsCreate();
-    productCard.appendChild(productImage);
+    productCard.appendChild(productLink);
+    productLink.appendChild(productImage);
     productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);
     productInfo.appendChild(aPartirDe);
@@ -64,6 +66,10 @@ export async function productDisplay(productId, imageIndex) {
     whatsappLink.appendChild(buyButton);
     productCard.appendChild(productDescription);
     productDescription.appendChild(productDescriptionText);
+
+    function removeCloudinarySizeParameters(url) {
+      return url.replace(/\/w_\d+,h_\d+/g, "");
+    }
 
     function thumbNailsCreate() {
       try {
