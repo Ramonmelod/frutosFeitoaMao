@@ -246,7 +246,7 @@ nav a:hover {
   text-align: center;
   padding: 15px;
   background-color: #fff;
-  border-top: 2px solid #a0c568; /* boundary line */
+  border-top: 2px solid #a3a882; /* boundary line */
 }
 
 .product-info .title {
@@ -259,7 +259,7 @@ nav a:hover {
 }
 .product-info .price {
   margin: 0;
-  color: #a0c568;
+  color: #a3a882;
   font-size: large;
   font-weight: bolder;
 }

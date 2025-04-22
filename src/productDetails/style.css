@@ -368,20 +368,14 @@ nav a:hover {
     left: 0%;
   }
   .product-pictures {
+    order: 2;
     position: relative;
     display: flex;
     height: auto;
     width: 60%;
+    left: 5%;
     flex-direction: row;
-    top: 100%;
   }
-  .product-pictures a {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .product-pictures img {
     height: auto;
     width: 85%;
@@ -389,6 +383,7 @@ nav a:hover {
   }
 
   .product-card {
+    order: 1;
     flex-direction: column;
     position: relative;
     left: 1%;
@@ -403,6 +398,7 @@ nav a:hover {
   }
 
   .product-info {
+    order: 3;
     position: relative;
     left: 1%;
     width: 90%;
