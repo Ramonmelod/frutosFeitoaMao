@@ -21,6 +21,11 @@ export async function productDisplay(productId) {
     productLink.href = `https://res.cloudinary.com/dhayneykx/image/upload/v1729042398/frutosfeitoamao/fhoft1ppt2cr1vg6vleu.jpg`;
     productLink.target = "_blank"; //opens a new tab
 
+    // 👉 creating the WhatsApp button link
+    const whatsappLink = document.createElement("a");
+    whatsappLink.href = `https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto+${data[productId].title}`;
+    whatsappLink.target = "_blank"; // opens in a new tab
+
     productCard.classList.add("product-card");
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
@@ -61,7 +66,8 @@ export async function productDisplay(productId) {
     productInfo.appendChild(productTitle);
     productInfo.appendChild(aPartirDe);
     productInfo.appendChild(productPrice);
-    productInfo.appendChild(buyButton);
+    productInfo.appendChild(whatsappLink);
+    whatsappLink.appendChild(buyButton);
     productCard.appendChild(productDescription);
     productDescription.appendChild(productDescriptionText);
   } catch (error) {
