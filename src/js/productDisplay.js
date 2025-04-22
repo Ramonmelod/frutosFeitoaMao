@@ -5,16 +5,21 @@ let displayedProducts = [];
 
 export const productDisplay = async (i) => {
   try {
-    const data = await query();
+    const data = await query("./productCards.json");
 
     //-----------creating the div with apendChild-----------------------
 
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.id = data[i].id;
+
+    const productLink = document.createElement("a");
+    productLink.href = `../src/productDetails/index.html?productId=${i}&imageIndex=0`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageNumber=2
+    productLink.target = "_blank"; //opens a new tab
+
     //adding image
     const productImage = document.createElement("img");
-    productImage.src = data[i].image_url;
+    productImage.src = data[i].image_url[0];
     //creating product-info container
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");
@@ -33,7 +38,8 @@ export const productDisplay = async (i) => {
     productPrice.textContent = data[i].price;
 
     //apending the children
-    imagesContainer.appendChild(productCard); //here is added the new div to the images contatainer
+    imagesContainer.appendChild(productLink); //here is added the new div to the images contatainer
+    productLink.appendChild(productCard);
     productCard.appendChild(productImage);
     productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);

@@ -15,6 +15,7 @@ header {
   display: flex;
   position: fixed;
   width: 100%;
+  gap: 30px;
   background-color: #e4cbb1;
   padding: 10px 0;
   text-align: center;
@@ -33,11 +34,11 @@ header {
 }
 .band p {
   position: relative;
-  color: #f8f5ed;
+  color: #ffffff;
   font-size: small;
   font-weight: bolder;
   top: 10%;
-  left: 25%;
+  left: 33%;
 }
 .menu-icon {
   display: none;
@@ -53,8 +54,8 @@ header {
 .mini-logo {
   position: relative;
   left: 100px;
-  height: 80px;
-  top: 18%;
+  height: 100px;
+  top: 15%;
   width: auto;
   transition: all 0.3s ease-in-out;
   z-index: 1; /*Layer number*/
@@ -65,9 +66,8 @@ header {
 .logo-title {
   display: block;
   position: relative;
-  color: #c07809; /* text color the same as the image*/
-  top: 25%;
-  left: 3.5%;
+  top: 32%;
+  left: 3%;
   text-decoration: none;
   z-index: 1; /*Layer number*/
   height: 50px;
@@ -76,18 +76,19 @@ header {
 .logo-title .frutos {
   position: relative;
   top: 0px;
-  font-size: 10px;
-  color: #c07809;
+  font-size: 20px;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Playfair Display", serif;
+  font-weight: bolder;
   margin: 5px;
   z-index: 1; /*Layer number*/
 }
 .logo-title .feito-a-mao {
   position: relative;
-  top: 0px;
-  font-size: 10px;
-  color: #c07809;
+  top: -5px;
+  font-size: 20px;
+  color: #ffffff;
   text-decoration: none;
   font-weight: bold;
   font-family: "Dancing Script", cursive;
@@ -126,14 +127,14 @@ nav a {
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #c47601;
+  color: #ffffff;
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: bold;
   top: 10%;
   z-index: 1; /*Layer number*/
 }
 nav a:hover {
-  color: #eea73d;
+  color: #e7bb78;
 }
 .buttons {
   display: flex;
@@ -162,6 +163,39 @@ nav a:hover {
   width: 10px;
   font-size: 20px;
 }
+.logo-mobile {
+  display: none;
+}
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
+.icon-instagram {
+  color: #f8f5ed;
+}
+.icon-whatsapp {
+  color: #f8f5ed;
+}
+.icon-email {
+  color: #f8f5ed;
+}
+/*final of the header*/
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
+.icon-instagram {
+  color: #f8f5ed;
+}
+.icon-whatsapp {
+  color: #f8f5ed;
+}
+.icon-email {
+  color: #f8f5ed;
+}
+
 .logo {
   display: block;
   position: relative;
@@ -171,13 +205,6 @@ nav a:hover {
   width: auto;
   transition: all 0.3s ease-in-out;
 }
-.logo-mobile {
-  display: none;
-}
-.logo:hover {
-  height: 120px;
-}
-
 .txt_intro {
   position: relative;
   top: 200px;
@@ -195,21 +222,6 @@ nav a:hover {
   text-align: center;
   font-weight: bold;
   color: #c07809;
-}
-
-/* Icon styles */
-.icon {
-  margin-right: 10px;
-}
-
-.icon-instagram {
-  color: #f8f5ed;
-}
-.icon-whatsapp {
-  color: #f8f5ed;
-}
-.icon-email {
-  color: #f8f5ed;
 }
 
 /* Media queries */

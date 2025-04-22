@@ -1,6 +1,6 @@
-export const query = async () => {
+export const query = async (path) => {
   try {
-    const response = await fetch("./productCards.json");
+    const response = await fetch(path);
     if (!response.ok) {
       throw new Error("Erro ao carregar o arquivo JSON");
     }
@@ -9,6 +9,6 @@ export const query = async () => {
     return data;
   } catch (error) {
     console.error("Erro:", error);
-    return error; // maybe remove this
+    throw error;
   }
 };
