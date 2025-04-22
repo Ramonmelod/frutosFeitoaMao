@@ -5,6 +5,7 @@ export async function productDisplay(productId, imageIndex) {
     const data = await query(path);
 
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
+    const main = document.createElement("main"); // create the div that receives the thumbnail
     const productPictures = document.createElement("div"); // create the div that receives the thumbnail
     const productCard = document.createElement("div"); //create the div that receives the productImage element
     const productImage = document.createElement("img");
@@ -27,6 +28,7 @@ export async function productDisplay(productId, imageIndex) {
     whatsappLink.href = `https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto+${data[productId].title}`;
     whatsappLink.target = "_blank"; // opens in a new tab
 
+    main.classList.add("main");
     productCard.classList.add("product-card");
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
@@ -52,19 +54,22 @@ export async function productDisplay(productId, imageIndex) {
     buyButton.style.marginTop = "10px";
 
     // appending the children
-    productDetailContainer.appendChild(productCard); //here is added the new div to the images container
-    productDetailContainer.appendChild(productPictures);
 
+    document.body.appendChild(main);
+    main.appendChild(productDetailContainer);
+    main.appendChild(productDescription);
+    productDetailContainer.appendChild(productPictures);
+    productDetailContainer.appendChild(productCard); //here is added the new div to the images container
+    productDetailContainer.appendChild(productInfo); //here is added the new div to the images container
     thumbNailsCreate();
+
     productCard.appendChild(productLink);
     productLink.appendChild(productImage);
-    productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);
     productInfo.appendChild(aPartirDe);
     productInfo.appendChild(productPrice);
     productInfo.appendChild(whatsappLink);
     whatsappLink.appendChild(buyButton);
-    productCard.appendChild(productDescription);
     productDescription.appendChild(productDescriptionText);
 
     function removeCloudinarySizeParameters(url) {

@@ -181,53 +181,56 @@ nav a:hover {
   color: #f8f5ed;
 }
 /*final of the header*/
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 10%;
+  top: 210px;
+}
+
 .productDetail {
   display: flex;
   position: relative;
-  margin-top: 190px;
-  top: 5px;
   height: 100%;
   width: 100%;
-  left: 10%;
 }
 .product-pictures {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   height: auto;
-  width: 8%;
-  top: 10%;
-  left: 12%;
+  width: 15%;
+  top: 0%;
+  left: 1%;
 }
 .product-pictures img {
   height: auto;
-  width: 100%;
-  padding: 5% 0;
+  width: 80%;
+  margin: 5% 5%;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .product-card {
   display: flex; /* Usando flexbox */
-  position: absolute;
-  left: 10vw; /* Ajusta a distância à esquerda de acordo com a largura da tela */
+  position: relative;
+  left: 0%; /* Ajusta a distância à esquerda de acordo com a largura da tela */
   top: 7%;
   border-radius: 10px;
   width: auto;
-  margin: 10px;
-  height: 70vw;
+  height: 60%;
 }
 
 .product-card img {
   position: relative;
-  top: 1%;
-  left: 10vw;
   width: auto;
-  height: 55%;
+  height: 95%;
   aspect-ratio: 0.75 / 1;
   border-radius: 10px;
 }
 .product-info {
   position: relative;
-  left: 10%;
   width: 30%;
   height: auto;
   padding: 8px;
@@ -255,10 +258,10 @@ nav a:hover {
   transform: scale(1.05);
 }
 .product-description {
-  position: absolute;
+  position: relative;
   height: 30%;
   width: 75%;
-  top: 60%;
+  top: 0%;
 }
 .product-description p {
   color: #6b6b6b;
