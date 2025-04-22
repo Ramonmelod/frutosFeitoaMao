@@ -1,7 +1,6 @@
 import { query } from "../../js/query.js";
-export async function productDisplay(productId) {
+export async function productDisplay(productId, imageNumber) {
   try {
-    let displayedProducts = [];
     const path = "../productCards.json";
     const data = await query(path);
 
@@ -30,7 +29,7 @@ export async function productDisplay(productId) {
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
 
-    productImage.src = data[productId].image_url[0];
+    productImage.src = data[productId].image_url[imageNumber];
     productTitle.textContent = data[productId].title;
     productPrice.textContent = data[productId].price;
     productDescriptionText.textContent = data[productId].description;
@@ -55,12 +54,26 @@ export async function productDisplay(productId) {
     productLink.appendChild(productCard);
     productDetailContainer.appendChild(productPictures);
 
-    for (let i = 1; i < data[productId].image_url.length; i++) {
-      const thumbNail = document.createElement("img");
-      thumbNail.src = data[productId].image_url[i];
-      thumbNail.classList.add("thumbnail-img");
-      productPictures.appendChild(thumbNail);
+    //-------------------------------thumbnail append-------------------
+    let productImageIndexes = [];
+    for (let i = 0; i < data[productId].image_url.length; i++) {
+      productImageIndexes.push(i); // push all the imageNumbers to the array. The image numbers is used to access the right image in the file productCards.json
     }
+
+    const thumbnailImageIndexes = productImageIndexes.filter(
+      (item) => item !== Number(imageNumber) // removes only the imageIndex of the image that will be showed in the main card
+    );
+
+    thumbnailImageIndexes.forEach((imageIndex) => {
+      const productThumbNailLink = document.createElement("a");
+      productThumbNailLink.href = `./index.html?productId=${productId}&imageNumber=${imageIndex}`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageNumber=2
+      const thumbNail = document.createElement("img");
+      thumbNail.src = data[productId].image_url[imageIndex];
+      thumbNail.classList.add("thumbnail-img");
+      productPictures.appendChild(productThumbNailLink);
+      productThumbNailLink.appendChild(thumbNail);
+    });
+    //------------------------------------------------------
     productCard.appendChild(productImage);
     productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);

@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //makes this scope waits until the DOM be totally loaded
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("productId");
+    const imageNumber = params.get("imageNumber");
+    console.log(imageNumber);
+
     if (productId == 10) {
       /* const productDetailContainer = document.querySelector(".productDetail");
       const notFound = document.createElement("p");
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       productDetailContainer.style.color = "#000";*/
       throw new Error("Page not Found");
     }
-    productDisplay(productId);
+    productDisplay(productId, imageNumber);
   } catch (error) {
     console.log(error);
   }
