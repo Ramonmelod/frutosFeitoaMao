@@ -1,5 +1,5 @@
 import { query } from "../../js/query.js";
-export async function productDisplay(productId, imageNumber) {
+export async function productDisplay(productId, imageIndex) {
   try {
     const path = "../productCards.json";
     const data = await query(path);
@@ -29,7 +29,7 @@ export async function productDisplay(productId, imageNumber) {
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
 
-    productImage.src = data[productId].image_url[imageNumber];
+    productImage.src = data[productId].image_url[imageIndex];
     productTitle.textContent = data[productId].title;
     productPrice.textContent = data[productId].price;
     productDescriptionText.textContent = data[productId].description;
@@ -49,31 +49,12 @@ export async function productDisplay(productId, imageNumber) {
     buyButton.style.borderColor = "#a3a882";
     buyButton.style.marginTop = "10px";
 
-    // append children
+    // appending the children
     productDetailContainer.appendChild(productLink); //here is added the new div to the images container
     productLink.appendChild(productCard);
     productDetailContainer.appendChild(productPictures);
 
-    //-------------------------------thumbnail append-------------------
-    let productImageIndexes = [];
-    for (let i = 0; i < data[productId].image_url.length; i++) {
-      productImageIndexes.push(i); // push all the imageNumbers to the array. The image numbers is used to access the right image in the file productCards.json
-    }
-
-    const thumbnailImageIndexes = productImageIndexes.filter(
-      (item) => item !== Number(imageNumber) // removes only the imageIndex of the image that will be showed in the main card
-    );
-
-    thumbnailImageIndexes.forEach((imageIndex) => {
-      const productThumbNailLink = document.createElement("a");
-      productThumbNailLink.href = `./index.html?productId=${productId}&imageNumber=${imageIndex}`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageNumber=2
-      const thumbNail = document.createElement("img");
-      thumbNail.src = data[productId].image_url[imageIndex];
-      thumbNail.classList.add("thumbnail-img");
-      productPictures.appendChild(productThumbNailLink);
-      productThumbNailLink.appendChild(thumbNail);
-    });
-    //------------------------------------------------------
+    thumbNailsCreate();
     productCard.appendChild(productImage);
     productCard.appendChild(productInfo);
     productInfo.appendChild(productTitle);
@@ -83,6 +64,32 @@ export async function productDisplay(productId, imageNumber) {
     whatsappLink.appendChild(buyButton);
     productCard.appendChild(productDescription);
     productDescription.appendChild(productDescriptionText);
+
+    function thumbNailsCreate() {
+      try {
+        let productImageIndexes = [];
+        for (let i = 0; i < data[productId].image_url.length; i++) {
+          productImageIndexes.push(i); // push all the imageNumbers to the array. The image numbers is used to access the right image in the file productCards.json
+        }
+
+        const thumbnailImageIndexes = productImageIndexes.filter(
+          (item) => item !== Number(imageIndex) // removes only the imageIndex of the image that will be showed in the main card
+        );
+
+        thumbnailImageIndexes.forEach((imageIndex) => {
+          const productThumbNailLink = document.createElement("a");
+          productThumbNailLink.href = `./index.html?productId=${productId}&imageIndex=${imageIndex}`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageIndex=2
+          const thumbNail = document.createElement("img");
+          thumbNail.src = data[productId].image_url[imageIndex];
+          thumbNail.classList.add("thumbnail-img");
+          productPictures.appendChild(productThumbNailLink);
+          productThumbNailLink.appendChild(thumbNail);
+        });
+      } catch (error) {
+        console.log("in thumbNailCreate: " + error);
+        throw error;
+      }
+    }
   } catch (error) {
     console.log(error);
   }
