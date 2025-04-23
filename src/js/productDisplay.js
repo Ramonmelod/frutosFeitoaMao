@@ -11,8 +11,6 @@ export const productDisplay = async (i) => {
     productCard.classList.add("product-card");
     productCard.id = data[i].id;
 
-    const baseUrl = ""; //../src/"
-
     const productLink = document.createElement("a");
     productLink.href = `productDetails/index.html?productId=${i}&imageIndex=0`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageNumber=2
     productLink.target = "_blank"; //opens a new tab

@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("productId");
     const imageIndex = params.get("imageIndex");
-    console.log(imageIndex);
 
     if (productId == 10) {
       /* const productDetailContainer = document.querySelector(".productDetail");
