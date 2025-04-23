@@ -185,8 +185,8 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 10%;
-  top: 210px;
+  margin-top: 210px;
+  margin-left: 10%;
 }
 
 .productDetail {
