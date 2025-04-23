@@ -180,6 +180,8 @@ nav a:hover {
 .icon-email {
   color: #f8f5ed;
 }
+
+/*final of the header*/
 .logo {
   display: block;
   position: relative;
@@ -218,7 +220,7 @@ nav a:hover {
 .images {
   display: flex;
   position: relative;
-  top: 210px;
+  margin-top: 210px;
   left: 180px;
   width: 80%;
   height: 600px;
@@ -269,7 +271,7 @@ nav a:hover {
 .product-card:hover {
   transform: scale(1.05);
 }
-/* Setas de navegação */
+/* navegation arrows */
 .arrow {
   position: absolute;
   top: 55%;
@@ -388,7 +390,6 @@ nav a:hover {
     position: relative;
     margin: 0px;
     padding: 5px 20px;
-    background-color: #ebd8c3;
     font-size: 15px;
     text-decoration: none;
     border-radius: 80px;
@@ -396,9 +397,10 @@ nav a:hover {
     width: 5px;
     right: 20px;
   }
+
+  /*final of the header*/
   .txt_intro {
-    position: relative;
-    top: 15%;
+    display: none;
   }
   .slogan {
     display: none;
@@ -418,6 +420,7 @@ nav a:hover {
   .images {
     left: 9%;
     width: 80%;
-    top: 18%;
+    top: 0;
+    margin-top: 54%;
   }
 }
