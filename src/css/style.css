@@ -8,7 +8,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 0;
   justify-content: center;
 }
 header {
@@ -182,10 +182,12 @@ nav a:hover {
 }
 
 /*final of the header*/
+.main {
+  margin-top: 210px;
+}
 .logo {
   display: block;
   position: relative;
-  top: 200px;
   margin: 0 auto;
   height: 100px;
   width: auto;
@@ -200,7 +202,6 @@ nav a:hover {
 
 .txt_intro {
   position: relative;
-  top: 200px;
   margin-top: 20px;
   font-size: 20px;
   text-align: center;
@@ -209,7 +210,6 @@ nav a:hover {
 }
 .slogan {
   position: relative;
-  top: 200px;
   margin-top: 20px;
   font-size: 20px;
   text-align: center;
@@ -220,10 +220,10 @@ nav a:hover {
 .images {
   display: flex;
   position: relative;
-  margin-top: 210px;
-  left: 180px;
+  margin-top: 510px;
+  margin: auto;
   width: 80%;
-  height: 600px;
+  height: 700px;
   overflow-x: hidden; /* hides the axis-x scroll bar */
   overflow-y: hidden; /* hides the axis-y scroll bar */
   scroll-behavior: smooth; /* makes the scroll to be smooth */
