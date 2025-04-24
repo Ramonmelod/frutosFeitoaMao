@@ -1,14 +1,7 @@
-/* Common styles */
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f8f5ed;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
+  position: relative;
   justify-content: center;
 }
 header {
@@ -16,6 +9,7 @@ header {
   position: fixed;
   width: 100%;
   gap: 30px;
+  top: 0;
   background-color: #e4cbb1;
   padding: 10px 0;
   text-align: center;
@@ -37,7 +31,6 @@ header {
   color: #ffffff;
   font-size: small;
   font-weight: bolder;
-  top: 10%;
   left: 33%;
 }
 .menu-icon {
@@ -183,7 +176,7 @@ nav a:hover {
 
 /*final of the header*/
 .main {
-  margin-top: 210px;
+  margin-top: 240px;
 }
 .logo {
   display: block;
@@ -218,7 +211,33 @@ nav a:hover {
 }
 
 .section {
-  /*display: flex;*/
+  display: flex;
+  flex-direction: row;
+}
+/* navegation arrows */
+.arrow {
+  position: relative;
+  margin: auto;
+  border-radius: 25px;
+  height: 60px;
+  background-color: #e4cbb1;
+  color: #c07809;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow-left {
+  margin-left: 2%;
+}
+
+.arrow-right {
+  margin-right: 2%;
+}
+
+.arrow:hover {
+  background-color: #e4c5b1a1;
 }
 .images {
   display: flex;
@@ -272,30 +291,6 @@ nav a:hover {
 }
 .product-card:hover {
   transform: scale(1.05);
-}
-/* navegation arrows */
-.arrow {
-  position: absolute;
-  top: 55%;
-  border-radius: 25px;
-  background-color: #e4cbb1;
-  color: #c07809;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.arrow-left {
-  left: 2%;
-}
-
-.arrow-right {
-  right: 2%;
-}
-
-.arrow:hover {
-  background-color: #e4c5b1a1;
 }
 .notFoundContainer {
   display: none;
@@ -407,6 +402,9 @@ nav a:hover {
   }
 
   /*final of the header*/
+  .main {
+    margin-top: 0px;
+  }
   .txt_intro {
     display: none;
   }
