@@ -217,11 +217,13 @@ nav a:hover {
   color: #e6c8a9;
 }
 
+.section {
+  /*display: flex;*/
+}
 .images {
   display: flex;
   position: relative;
-  margin-top: 510px;
-  margin: auto;
+  margin: 0 auto;
   width: 80%;
   height: 700px;
   overflow-x: hidden; /* hides the axis-x scroll bar */
@@ -295,11 +297,17 @@ nav a:hover {
 .arrow:hover {
   background-color: #e4c5b1a1;
 }
-/* Icon styles */
-.icon {
-  margin-right: 10px;
+.notFoundContainer {
+  display: none;
+  position: relative;
+  margin-top: 210px;
+  margin-left: 35%;
+  height: 20%;
+  width: 40%;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #e6c8a9;
 }
-
 /* Media queries */
 @media (max-width: 768px) {
   .band {
@@ -418,8 +426,6 @@ nav a:hover {
   }
   /*product-card adjustment*/
   .images {
-    left: 9%;
-    width: 80%;
     top: 0;
     margin-top: 54%;
   }
