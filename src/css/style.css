@@ -213,13 +213,14 @@ nav a:hover {
 .section {
   display: flex;
   flex-direction: row;
+  height: 700px;
 }
 /* navegation arrows */
 .arrow {
   position: relative;
-  margin: auto;
   border-radius: 25px;
   height: 60px;
+  top: 0;
   background-color: #e4cbb1;
   color: #c07809;
   border: none;
@@ -230,10 +231,12 @@ nav a:hover {
 
 .arrow-left {
   margin-left: 2%;
+  margin-top: 210px;
 }
 
 .arrow-right {
   margin-right: 2%;
+  margin-top: 210px;
 }
 
 .arrow:hover {
@@ -243,6 +246,7 @@ nav a:hover {
   display: flex;
   position: relative;
   margin: 0 auto;
+  top: 0;
   width: 80%;
   height: 700px;
   overflow-x: hidden; /* hides the axis-x scroll bar */
@@ -412,9 +416,11 @@ nav a:hover {
     display: none;
   }
   .arrow {
-    top: 50%;
+    top: 0;
   }
-
+  .section {
+    margin-top: 190px;
+  }
   .arrow-left {
     left: 1%;
   }
@@ -425,6 +431,6 @@ nav a:hover {
   /*product-card adjustment*/
   .images {
     top: 0;
-    margin-top: 54%;
+    margin-top: 0;
   }
 }
