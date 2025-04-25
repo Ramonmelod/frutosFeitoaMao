@@ -33,6 +33,12 @@ header {
   font-weight: bolder;
   left: 33%;
 }
+.logo-title-search {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 50px;
+}
 .menu-icon {
   display: none;
   position: relative;
