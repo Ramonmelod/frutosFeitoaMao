@@ -6,9 +6,9 @@ body {
 }
 header {
   display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
-  gap: 30px;
   top: 0;
   background-color: #e4cbb1;
   padding: 10px 0;
@@ -19,11 +19,10 @@ header {
 }
 .band {
   display: flex;
-  position: absolute;
+  position: relative;
   background-color: #ebd8c3;
   height: 28px;
   width: 100%;
-  top: 0%;
   z-index: 0; /*Layer number*/
 }
 .band p {
@@ -38,13 +37,14 @@ header {
   flex-direction: row;
   width: 100%;
   gap: 50px;
+  top: 0px;
+  align-items: center; /* align itens vertically */
 }
 .menu-icon {
   display: none;
   position: relative;
   margin: 25px;
   font-size: 30px;
-  top: 20%;
   cursor: pointer;
   color: #f8f5ed;
   z-index: 1; /*Layer number*/
@@ -54,7 +54,6 @@ header {
   position: relative;
   left: 100px;
   height: 100px;
-  top: 15%;
   width: auto;
   transition: all 0.3s ease-in-out;
   z-index: 1; /*Layer number*/
@@ -65,7 +64,6 @@ header {
 .logo-title {
   display: block;
   position: relative;
-  top: 32%;
   left: 3%;
   text-decoration: none;
   z-index: 1; /*Layer number*/
@@ -85,7 +83,6 @@ header {
 }
 .logo-title .feito-a-mao {
   position: relative;
-  top: -5px;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
@@ -106,30 +103,30 @@ header {
   color: inherit;
 }
 .line {
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: #ebd8c3;
   height: 2px;
-  top: 75%;
+  top: 0%;
   z-index: 0; /*Layer number*/
+  margin-bottom: 10px;
 }
 nav {
-  position: absolute;
-  top: -10px;
-  left: 37%;
-  text-align: center;
-  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* align itens horizontally */
+  align-items: center; /* align itens vertically */
   z-index: 1; /*Layer number*/
+  gap: 15px;
 }
 
 nav a {
   position: relative;
-  margin: 0 15px;
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
-  top: 10%;
   z-index: 1; /*Layer number*/
 }
 nav a:hover {
