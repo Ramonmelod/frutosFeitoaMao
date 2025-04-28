@@ -19,6 +19,7 @@ header {
 }
 .band {
   display: flex;
+  top: -10px;
   position: relative;
   background-color: #ebd8c3;
   height: 28px;
@@ -33,12 +34,11 @@ header {
   left: 33%;
 }
 .logo-title-search {
+  position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
-  gap: 50px;
-  top: 0px;
-  align-items: center; /* align itens vertically */
+  top: -5px;
 }
 .menu-icon {
   display: none;
@@ -52,27 +52,26 @@ header {
 
 .mini-logo {
   position: relative;
-  left: 100px;
+  margin-left: 100px;
   height: 100px;
   width: auto;
   transition: all 0.3s ease-in-out;
   z-index: 1; /*Layer number*/
 }
-.mini-logo:hover {
-  height: 110px;
-}
 .logo-title {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  left: 3%;
+  margin: auto;
   text-decoration: none;
   z-index: 1; /*Layer number*/
-  height: 50px;
-  width: 150px;
+  height: 70px;
+  width: 100px;
 }
 .logo-title .frutos {
   position: relative;
   top: 0px;
+  left: 0;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
@@ -369,8 +368,7 @@ nav a:hover {
     height: 85px;
   }
   .line {
-    display: flex;
-    top: 0%; /*hides the line bar in the top*/
+    display: none;
   }
 
   .d-flex {
