@@ -85,7 +85,9 @@
       </div>
       <!-- logo-title-search -->
       <div class="logo-title-search">
-        <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
+        <a href="index.html"
+          ><img src="./clean-logo.png" alt="My Logo" class="mini-logo"
+        /></a>
         <div class="logo-title">
           <a href="index.html" class="frutos">FRUTOS <br /></a>
           <a href="index.html" class="feito-a-mao">. feito à mão .</a>
@@ -96,29 +98,36 @@
           role="search"
           style="margin-top: 15px; margin-left: 10px"
         >
-          <input
-            class="form-control me-2 w-50"
-            type="search"
-            placeholder="O que você procura?"
-            aria-label="Search"
-            id="searchInput"
-            style="height: 40px"
-          />
-          <button
-            class="btn custom-search-btn"
-            id="loupe"
-            style="
-              border: 2px solid transparent #c07809;
-              position: relative;
-              right: 3.5%;
-            "
-            type="submit"
-          >
-            <i
-              class="fas fa-search"
-              style="color: #ebd8c3; font-size: 30px"
-            ></i>
-          </button>
+          <div style="position: relative; width: 50%">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="O que você procura?"
+              aria-label="Search"
+              id="searchInput"
+              style="height: 40px"
+            />
+            <button
+              class="btn custom-search-btn"
+              id="loupe"
+              type="submit"
+              style="
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                height: 30px;
+                width: 30px;
+                border: none;
+                background: none;
+              "
+            >
+              <i
+                class="fas fa-search"
+                style="color: #ebd8c3; font-size: 30px"
+              ></i>
+            </button>
+          </div>
 
           <!-- the right atribute puts the button in the input box -->
         </form>

@@ -364,23 +364,16 @@ nav a:hover {
     z-index: 4; /*layer number*/
   }
 
-  .logo:hover {
-    height: 85px;
-  }
   .line {
     display: none;
   }
 
   .d-flex {
     position: absolute;
-    top: 66%;
+    top: 90%;
     left: 3%;
     width: 180%;
     height: 23%;
-  }
-
-  #loupe {
-    left: -8%;
   }
 
   .buttons {
