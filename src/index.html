@@ -59,6 +59,7 @@
   </head>
   <body>
     <header>
+      <!-- top band -->
       <div class="band">
         <p>♡ Faça o seu orçamento conosco através do nosso whatsapp!</p>
         <div class="buttons">
@@ -82,15 +83,66 @@
           ></a>
         </div>
       </div>
-      <!--Hambuguer menu-->
-      <i
-        class="fas fa-bars menu-icon"
-        style="left: 0%"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasLeft"
-        aria-controls="offcanvasLeft"
-      ></i>
+      <!-- logo-title-search -->
+      <div class="logo-title-search">
+        <a href="index.html"
+          ><img src="./clean-logo.png" alt="My Logo" class="mini-logo"
+        /></a>
+        <div class="logo-title">
+          <a href="index.html" class="frutos">FRUTOS <br /></a>
+          <a href="index.html" class="feito-a-mao">feito à mão</a>
+        </div>
+        <form
+          class="d-flex"
+          id="searchForm"
+          role="search"
+          style="margin-top: 15px; margin-left: 10px"
+        >
+          <div style="position: relative; width: 50%">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="O que você procura?"
+              aria-label="Search"
+              id="searchInput"
+              style="height: 40px"
+              name="query"
+            />
+            <button
+              class="btn custom-search-btn"
+              id="loupe"
+              type="submit"
+              style="
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                height: 30px;
+                width: 30px;
+                border: none;
+                background: none;
+              "
+            >
+              <i
+                class="fas fa-search"
+                style="color: #ebd8c3; font-size: 30px"
+              ></i>
+            </button>
+          </div>
+
+          <!-- the right atribute puts the button in the input box -->
+        </form>
+        <!--Hambuguer menu-->
+        <i
+          class="fas fa-bars menu-icon"
+          style="left: 0%"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasLeft"
+          aria-controls="offcanvasLeft"
+        ></i>
+      </div>
+
       <!-- Offcanvas component -->
       <div
         class="offcanvas offcanvas-start"
@@ -181,47 +233,16 @@
           </ul>
         </div>
       </div>
-      <img src="./clean-logo.png" alt="My Logo" class="mini-logo" />
-      <div class="logo-title">
-        <a href="index.html" class="frutos">FRUTOS <br /></a>
-        <a href="index.html" class="feito-a-mao">. feito à mão .</a>
-      </div>
-      <form
-        class="d-flex"
-        id="searchForm"
-        role="search"
-        style="margin-top: 15px; margin-left: 10px"
-      >
-        <input
-          class="form-control me-2 w-50"
-          type="search"
-          placeholder="O que você procura?"
-          aria-label="Search"
-          id="searchInput"
-        />
-        <button
-          class="btn custom-search-btn"
-          id="loupe"
-          style="
-            border: 2px solid transparent #c07809;
-            position: relative;
-            right: 3.5%;
-          "
-          type="submit"
-        >
-          <i class="fas fa-search" style="color: #ebd8c3; font-size: 30px"></i>
-        </button>
+      <!-- line -->
+      <div class="line"></div>
 
-        <!-- the right atribute puts the button in the input box -->
-      </form>
-      <div class="line">
-        <nav id="nav-menu">
-          <a href="index.html">Home</a>
-          <a href="./cursos/index.html">Cursos</a>
-          <a href="./sobre/index.html">Sobre</a>
-          <a href="./contato/index.html">Contato</a>
-        </nav>
-      </div>
+      <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="./cursos/index.html">Cursos</a>
+        <a href="./sobre/index.html">Sobre</a>
+        <a href="./contato/index.html">Contato</a>
+      </nav>
+
       <img src="./logo.png" alt="My Logo" class="logo-mobile" />
       <!--logo used in the mobile phone mode-->
     </header>
