@@ -113,6 +113,7 @@ header {
   z-index: 1; /*Layer number*/
   height: 70px;
   width: 100px;
+  top: 10px;
 }
 .logo-title .frutos {
   position: relative;
@@ -123,7 +124,6 @@ header {
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-weight: bolder;
-  margin: 5px;
   z-index: 1; /*Layer number*/
 }
 .logo-title .feito-a-mao {
@@ -163,7 +163,7 @@ nav {
   justify-content: center; /* align itens horizontally */
   align-items: center; /* align itens vertically */
   z-index: 1; /*Layer number*/
-  gap: 15px;
+  gap: 30px;
 }
 
 nav a {
