@@ -19,20 +19,66 @@ header {
 }
 .band {
   display: flex;
+  flex-direction: row;
   top: -10px;
   position: relative;
   background-color: #ebd8c3;
   height: 28px;
   width: 100%;
   z-index: 0; /*Layer number*/
+  gap: 20px;
 }
 .band p {
   position: relative;
   color: #ffffff;
-  font-size: small;
+  font-size: 15px;
   font-weight: bolder;
-  left: 33%;
+  margin: auto;
 }
+.buttons {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 35px;
+  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+  margin-right: 1%;
+}
+
+.button {
+  display: flex;
+  position: relative;
+  padding: 5px 20px;
+  background-color: #ebd8c3;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 80px;
+  transition: all 0.5s ease-in-out;
+  width: 5px;
+}
+.icon-instagram {
+  color: #ffffff;
+}
+.icon-whatsapp {
+  color: #ffffff;
+}
+.icon-email {
+  color: #ffffff;
+}
+.logo-mobile {
+  display: none;
+}
+.button:hover {
+  cursor: pointer;
+  border-radius: 25px;
+  width: 10px;
+  font-size: 20px;
+}
+
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
 .logo-title-search {
   position: relative;
   display: flex;
@@ -130,50 +176,6 @@ nav a {
 }
 nav a:hover {
   color: #e7bb78;
-}
-.buttons {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  right: 0%;
-  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
-}
-
-.button {
-  display: flex;
-  position: relative;
-  margin: 0px;
-  padding: 5px 20px;
-  background-color: #ebd8c3;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 80px;
-  transition: all 0.5s ease-in-out;
-  width: 5px;
-  right: 20px;
-}
-.button:hover {
-  cursor: pointer;
-  border-radius: 25px;
-  width: 10px;
-  font-size: 20px;
-}
-.logo-mobile {
-  display: none;
-}
-/* Icon styles */
-.icon {
-  margin-right: 10px;
-}
-
-.icon-instagram {
-  color: #f8f5ed;
-}
-.icon-whatsapp {
-  color: #f8f5ed;
-}
-.icon-email {
-  color: #f8f5ed;
 }
 
 /*final of the header*/
