@@ -1,21 +1,15 @@
-/* Common styles */
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f8f5ed;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  position: relative;
   justify-content: center;
 }
 header {
   display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
-  gap: 30px;
+  top: 0;
   background-color: #e4cbb1;
   padding: 10px 0;
   text-align: center;
@@ -25,27 +19,78 @@ header {
 }
 .band {
   display: flex;
-  position: absolute;
+  flex-direction: row;
+  top: -10px;
+  position: relative;
   background-color: #ebd8c3;
   height: 28px;
   width: 100%;
-  top: 0%;
   z-index: 0; /*Layer number*/
+  gap: 20px;
 }
 .band p {
   position: relative;
   color: #ffffff;
-  font-size: small;
+  font-size: 15px;
   font-weight: bolder;
-  top: 10%;
-  left: 33%;
+  margin: auto;
+}
+.buttons {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 35px;
+  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+  margin-right: 1%;
+}
+
+.button {
+  display: flex;
+  position: relative;
+  padding: 5px 20px;
+  background-color: #ebd8c3;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 80px;
+  transition: all 0.5s ease-in-out;
+  width: 5px;
+}
+.icon-instagram {
+  color: #ffffff;
+}
+.icon-whatsapp {
+  color: #ffffff;
+}
+.icon-email {
+  color: #ffffff;
+}
+.logo-mobile {
+  display: none;
+}
+.button:hover {
+  cursor: pointer;
+  border-radius: 25px;
+  width: 10px;
+  font-size: 20px;
+}
+
+/* Icon styles */
+.icon {
+  margin-right: 10px;
+}
+
+.logo-title-search {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  top: -5px;
 }
 .menu-icon {
   display: none;
   position: relative;
   margin: 25px;
   font-size: 30px;
-  top: 20%;
   cursor: pointer;
   color: #f8f5ed;
   z-index: 1; /*Layer number*/
@@ -53,40 +98,36 @@ header {
 
 .mini-logo {
   position: relative;
-  left: 100px;
+  margin-left: 100px;
   height: 100px;
-  top: 15%;
   width: auto;
   transition: all 0.3s ease-in-out;
   z-index: 1; /*Layer number*/
 }
-.mini-logo:hover {
-  height: 85px;
-}
 .logo-title {
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  top: 32%;
-  left: 3%;
+  margin: auto;
   text-decoration: none;
   z-index: 1; /*Layer number*/
-  height: 50px;
-  width: 150px;
+  height: 70px;
+  width: 100px;
+  top: 10px;
 }
 .logo-title .frutos {
   position: relative;
   top: 0px;
+  left: 0;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-weight: bolder;
-  margin: 5px;
   z-index: 1; /*Layer number*/
 }
 .logo-title .feito-a-mao {
   position: relative;
-  top: -5px;
   font-size: 20px;
   color: #ffffff;
   text-decoration: none;
@@ -107,85 +148,41 @@ header {
   color: inherit;
 }
 .line {
-  position: absolute;
+  position: relative;
   width: 100%;
   background-color: #ebd8c3;
   height: 2px;
-  top: 75%;
+  top: 0%;
   z-index: 0; /*Layer number*/
+  margin-bottom: 10px;
 }
 nav {
-  position: absolute;
-  top: -10px;
-  left: 37%;
-  text-align: center;
-  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* align itens horizontally */
+  align-items: center; /* align itens vertically */
   z-index: 1; /*Layer number*/
+  gap: 30px;
 }
 
 nav a {
   position: relative;
-  margin: 0 15px;
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
   font-weight: bold;
-  top: 10%;
   z-index: 1; /*Layer number*/
 }
 nav a:hover {
   color: #e7bb78;
-}
-.buttons {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  right: 0%;
-  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
-}
-
-.button {
-  display: flex;
-  position: relative;
-  margin: 0px;
-  padding: 5px 20px;
-  background-color: #ebd8c3;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 80px;
-  transition: all 0.5s ease-in-out;
-  width: 5px;
-  right: 20px;
-}
-.button:hover {
-  cursor: pointer;
-  border-radius: 25px;
-  width: 10px;
-  font-size: 20px;
-}
-.logo-mobile {
-  display: none;
-}
-/* Icon styles */
-.icon {
-  margin-right: 10px;
-}
-
-.icon-instagram {
-  color: #f8f5ed;
-}
-.icon-whatsapp {
-  color: #f8f5ed;
-}
-.icon-email {
-  color: #f8f5ed;
 }
 /*final of the header*/
 .comoSurgiu {
   position: relative;
   height: 550px;
   transition: all 0.3s ease-in-out;
-  top: 20%;
+  top: 200px;
   left: 37%;
 }
 
@@ -232,6 +229,9 @@ nav a:hover {
   .logo-title {
     display: none;
   }
+  .logo {
+    display: none;
+  }
   .logo-mobile {
     display: block;
     position: fixed;
@@ -241,24 +241,16 @@ nav a:hover {
     z-index: 4; /*layer number*/
   }
 
-  .logo:hover {
-    height: 85px;
-  }
   .line {
-    display: flex;
-    top: 0%; /*hides the line bar in the top*/
+    display: none;
   }
 
   .d-flex {
     position: absolute;
-    top: 66%;
+    top: 90%;
     left: 3%;
     width: 180%;
     height: 23%;
-  }
-
-  #loupe {
-    left: -8%;
   }
 
   .buttons {
@@ -276,7 +268,6 @@ nav a:hover {
     position: relative;
     margin: 0px;
     padding: 5px 20px;
-    background-color: #ebd8c3;
     font-size: 15px;
     text-decoration: none;
     border-radius: 80px;
@@ -284,6 +275,7 @@ nav a:hover {
     width: 5px;
     right: 20px;
   }
+  /*final of the header*/
   .comoSurgiu {
     left: 10%;
   }
