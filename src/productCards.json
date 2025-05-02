@@ -1,7 +1,7 @@
 [
   {
     "id": "0",
-    "title": "Jardim Abelhas - Porta Maternidade com Feltragem, Bastidor de Bambu - 18 cm",
+    "title": "Jardim Abelhas - Porta maternidade com feltragem, Bastidor de Bambu - 18 cm",
     "price": "R$260,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1745411552/IMG-20250422-WA0014_r8tsix.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "id": "2",
-    "title": "Vovó e Vovô - Bordado com Bastidor de bambu (Unidade) - 14 cm",
+    "title": "Vovó e Vovô - Bordado com bastidor de bambu (Unidade) - 14 cm",
     "price": "R$220,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1729042399/frutosfeitoamao/p4woczkqoij1ufrxp88k.jpg",
@@ -48,7 +48,7 @@
   },
   {
     "id": "4",
-    "title": "Body para bebê - Bordado Personalizável - Tamanhos de RN a G",
+    "title": "Body para bebê - Bordado personalizável - Tamanhos de RN a G",
     "price": "R$200,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1744917559/IMG-20250416-WA0038_cgbo0o.jpg",
@@ -59,7 +59,7 @@
   },
   {
     "id": "5",
-    "title": "Harry Potter - Bordado com Bastidor de bambu - 20 cm",
+    "title": "Harry Potter - Bordado com bastidor de bambu - 20 cm",
     "price": "R$330,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1745265410/IMG-20250417-WA0030_zfvwz2.jpg",
@@ -82,7 +82,7 @@
   },
   {
     "id": "7",
-    "title": "Galhos de flores - Porta Alianças com Bastidor de bambu - 20 cm",
+    "title": "Ramos de flores delicadas - Porta Alianças com bastidor de bambu - 20 cm",
     "price": "R$256,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1745267458/IMG-20250421-WA0042_tf9sll.jpg",
@@ -94,7 +94,7 @@
   },
   {
     "id": "8",
-    "title": "Pezinhos - Bordado com Bastidor de Bambu e técnica de Feltragem - 16 cm",
+    "title": "Pezinhos - Bordado com bastidor de bambu e técnica de Feltragem - 16 cm",
     "price": "R$230,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1745267520/IMG-20250421-WA0053_qnsprz.jpg",
@@ -106,7 +106,7 @@
   },
   {
     "id": "9",
-    "title": "Folhas Mescladas - Bordado com Frase, Bastidor de Bambu - 20 cm",
+    "title": "Folhas Mescladas - Bordado com Frase, bastidor de Bambu - 20 cm",
     "price": "R$260,00",
     "image_url": [
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1745267565/IMG-20250421-WA0054_wq2xqn.jpg",
@@ -114,5 +114,130 @@
       "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1729042392/frutosfeitoamao/njbjexswtmtzlemiukrj.jpg"
     ],
     "description": "O bastidor perfeito para quem busca uma decoração sofisticada que se adapta a qualquer ambiente. Com ramos de folhas delicadamente detalhados em dourado e a frase ou versículo de sua escolha, este bastidor é uma maneira encantadora de tornar seu espaço mais acolhedor e cheio de personalidade. Ideal para dar um toque único e elegante a qualquer cômodo da sua casa ou para presentear alguém especial com um toque de sofisticação e carinho."
+  },
+  {
+    "id": "10",
+    "title": "Mapa mundi - Porta Alianças, bastidor de Bambu - 18 a 20 cm",
+    "price": "R$220,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746197209/IMG-20250502-WA0023_v2knsb.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746197208/IMG-20250502-WA0019_y6skgu.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746197209/IMG-20250502-WA0021_uosd3k.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746197208/IMG-20250502-WA0020_iwoptf.jpg"
+    ],
+    "description": "O Porta Alianças Mapa Mundi é perfeito para casais que sonham em explorar o mundo juntos ou celebram a união de culturas diferentes. Com um design delicado, é bordado com as iniciais dos noivos e a data do casamento, destacando um mapa em aquarela com corações em dois locais especiais à sua escolha, conectados por um avião que simboliza a jornada única e o amor que une essas histórias. Uma peça encantadora para eternizar um momento inesquecível com elegância e significado."
+  },
+  {
+    "id": "11",
+    "title": "Dois ramos, um amor - Porta Alianças, bastidor de Bambu - 18 a 20 cm",
+    "price": "R$259,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746198607/IMG-20250502-WA0031_yvahvu.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746198607/IMG-20250502-WA0028_bpvrtg.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746198607/IMG-20250502-WA0029_ax7siz.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746198607/IMG-20250502-WA0030_itqo4z.jpg"
+    ],
+    "description": "O Porta Alianças 'Dois ramos, um amor' é a escolha perfeita para quem busca uma cerimônia de casamento minimalista e sofisticada. O projeto é delicadamente bordado com os nomes dos noivos em fonte fina e a data do casamento, acompanhado por dois grupos de ramos florais e folhas, que trazem um toque de elegância sutil e refinada. Ideal para celebrar o amor de maneira simples, mas inesquecível."
+  },
+  {
+    "id": "12",
+    "title": "Margaridas brancas - Porta Alianças, bastidor de Bambu - 18 a 20 cm",
+    "price": "R$300,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200978/IMG-20250502-WA0041_hiufie.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200100/IMG-20250502-WA0024_hwvlgv.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200100/IMG-20250502-WA0026_t3ngzh.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200100/IMG-20250502-WA0027_gpodt3.jpg"
+    ],
+    "description": "O Porta Alianças 'Margaridas brancas' é ideal para casais que desejam adicionar um toque romântico e cheio de significado ao seu casamento, além de sempre recordar o versículo que marca a história de amor. O projeto é bordado com os nomes dos noivos em fonte fina na parte superior, a data do casamento e o versículo escolhido no centro (consultar tamanho do versículo permitido). Na parte inferior, delicadas folhas em aquarela e flores bordadas complementam a peça, trazendo sofisticação a esse momento especial."
+  },
+  {
+    "id": "13",
+    "title": "Guirlanda Floral - Porta Alianças, bastidor de Bambu - 20 ou 22 cm",
+    "price": "R$310,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200814/IMG-20250502-WA0034_ckosmh.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200814/IMG-20250502-WA0037_orapmx.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746200814/IMG-20250502-WA0032_jcldit.jpg"
+    ],
+    "description": "O Porta Alianças 'Guirlanda Floral' é perfeito para casamentos elegantes e românticos. Bordado com os nomes dos noivos em fonte fina e a data do casamento no centro, é rodeado por uma delicada guirlanda dourada e complementado com ramos de folhas e flores em suaves tons de rosa, trazendo um toque sofisticado e encantador que torna o momento ainda mais especial e inesquecível."
+  },
+  {
+    "id": "14",
+    "title": "Pássaros - Porta maternidade, bastidor de Bambu - 20 ou 22 cm",
+    "price": "R$290,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746553181/IMG-20250506-WA0002_rng4as.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746553193/IMG-20250506-WA0003_i1ks9r.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746553198/IMG-20250506-WA0001_rfqri4.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746553203/IMG-20250506-WA0000_smholg.jpg"
+    ],
+    "description": "O Porta Maternidade 'Pássaros' é ideal para celebrar a chegada de um bebê com delicadeza e charme. Bordado em bastidor de bambu de 20 ou 22 cm, traz quatro passarinhos rodeados por ramos e folhagens suaves, com o nome do bebê em destaque. Cores harmoniosas e elementos naturais compõem uma peça acolhedora, perfeita para dar as boas-vindas ao novo membro da família com ternura e elegância."
+  },
+  {
+    "id": "15",
+    "title": "Ursinho - Porta maternidade, bastidor de Bambu - 18 ou 20 cm",
+    "price": "R$333,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746813580/IMG-20250506-WA0022_qfxigw.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746813580/IMG-20250506-WA0020_hmbetz.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746813580/IMG-20250506-WA0016_a6bmar.jpg"
+    ],
+    "description": "O Porta Maternidade 'Ursinho' é um bastidor repleto de detalhes encantadores, perfeito para dar boas-vindas ao seu bebê. O design combina elementos em aquarela, como nuvens, estrelas e um adorável ursinho segurando balões, com delicados detalhes bordados que conferem um acabamento perfeito. O nome do bebê, acompanhado de seu significado, é bordado na parte superior, tornando a peça ainda mais especial e personalizada para este momento único."
+  },
+  {
+    "id": "16",
+    "title": "Borboleta no jardim - Porta maternidade, bastidor de Bambu - 18 ou 20 cm",
+    "price": "R$330,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746816808/IMG-20250506-WA0018_zdd1jq.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746816808/IMG-20250506-WA0019_p7o6ai.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746816808/IMG-20250506-WA0013_wv80vo.jpg"
+    ],
+    "description": "O Porta Maternidade 'Borboleta no jardim' é uma peça única e delicada, ideal para dar boas-vindas ao bebê e decorar o quartinho com carinho; com flores bordadas em tons de rosa na parte inferior, o nome do bebê no centro e uma borboleta graciosa no topo, transmite leveza e doçura a esse momento especial."
+  },
+  {
+    "id": "17",
+    "title": "Folhas do outono - Porta maternidade, bastidor de Bambu - 18 ou 20 cm",
+    "price": "R$263,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746817322/IMG-20250506-WA0025_vgjtw4.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746817322/IMG-20250506-WA0021_ppxnak.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746817322/IMG-20250506-WA0027_ca44tf.jpg"
+    ],
+    "description": "O Porta Maternidade 'Folhas do outono' é perfeito para quem busca um estilo minimalista com personalidade, unindo tons terrosos, o nome do bebê em destaque com meia guirlanda de folhas e um verso poético que traz emoção e significado à chegada do recém-nascido."
+  },
+  {
+    "id": "18",
+    "title": "Margaridas rosas - Porta maternidade, bastidor de Bambu - 20 cm",
+    "price": "R$250,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821211/IMG-20250506-WA0028_c7itfr.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821211/IMG-20250506-WA0029_fccusf.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821210/IMG-20250506-WA0031_hsbr55.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821211/IMG-20250506-WA0030_bknaep.jpg"
+    ],
+    "description": "O Porta Maternidade 'Margaridas rosas' é a escolha perfeita para mamães que buscam uma peça delicada e cheia de significado. Com flores em estilo aquarela e detalhes bordados, o design encanta pelos toques especiais e pela mensagem emocionante. No centro, o nome do bebê é destacado junto à frase: 'Por esta filha eu orava, e o Senhor ouviu minha oração', uma expressão de gratidão a Deus pela bênção recebida. Ideal para marcar esse momento tão preciosos."
+  },
+  {
+    "id": "19",
+    "title": "Buquê de lavandas - Porta maternidade, bastidor de Bambu - 16 a 18 cm",
+    "price": "R$255,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821567/IMG-20250506-WA0032_e7krnw.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746821567/IMG-20250506-WA0036_fjs1bg.jpg"
+    ],
+    "description": "O Porta Maternidade 'Buquê de lavandas' é perfeito para mamães que buscam um toque minimalista e cheio de delicadeza. Com um design encantador, a peça apresenta o nome do bebê no centro superior e três ramos de lavanda formando um buquê no centro inferior. Pequenas bolinhas delicadas ao redor complementam o visual, trazendo ainda mais charme e leveza. Uma escolha sofisticada para dar boas-vindas ao bebê e decorar o quartinho com carinho."
+  },
+  {
+    "id": "20",
+    "title": "Flores brancas - Porta maternidade, bastidor de Bambu - 14 a 16 cm",
+    "price": "R$210,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746822050/IMG-20250506-WA0033_wluhou.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746822050/IMG-20250506-WA0035_t4yc2z.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1746822058/IMG-20250506-WA0038_t7kx92.jpg"
+    ],
+    "description": "O Porta Maternidade 'Flores brancas' foi criado especialmente para mamães que buscam uma peça minimalista e repleta de delicadeza. Com um design encantador, a peça destaca o nome do bebê no centro, cercado por diversas margaridas cuidadosamente dispostas ao redor, transmitindo leveza e pureza. Uma escolha perfeita para celebrar a chegada do bebê com simplicidade e elegância."
   }
 ]

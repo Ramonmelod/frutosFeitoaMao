@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productId = params.get("productId");
     const imageIndex = params.get("imageIndex");
 
-    if (productId == 10) {
+    if (productId > 25) {
       /* const productDetailContainer = document.querySelector(".productDetail");
       const notFound = document.createElement("p");
       notFound.textContent = "Page not Found!";

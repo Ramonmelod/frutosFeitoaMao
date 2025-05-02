@@ -6,7 +6,6 @@ let displayedProducts = [];
 export const productDisplay = async (i) => {
   try {
     const data = await query("./productCards.json");
-
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
     productCard.id = data[i].id;

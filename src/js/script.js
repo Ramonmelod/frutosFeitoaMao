@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //--
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 21; i++) {
   productDisplay(i); //calls the function that assembly the product card div
 }
 
