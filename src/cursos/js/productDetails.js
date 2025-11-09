@@ -25,7 +25,7 @@ export async function productDisplay(productId, imageIndex) {
 
     // 👉 creating the WhatsApp button link
     const whatsappLink = document.createElement("a");
-    whatsappLink.href = `https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto+${data[productId].title}`;
+    whatsappLink.href = `../pagamentos/index.html`;
     whatsappLink.target = "_blank"; // opens in a new tab
 
     main.classList.add("main");
