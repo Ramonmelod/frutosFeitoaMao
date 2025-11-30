@@ -1,7 +1,7 @@
 import { query } from "../../js/query.js";
 export async function productDisplay(productId, imageIndex) {
   try {
-    const path = "../productCards.json";
+    const path = "../coursesCards.json";
     const data = await query(path);
 
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
