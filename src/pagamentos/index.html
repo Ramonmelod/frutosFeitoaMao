@@ -167,7 +167,7 @@
             ><i class="fab fa-whatsapp icon icon-whatsapp"></i
           ></a>
           <a
-            href="mailto:frutosfeitoamao@gmail.com"
+            href="mailto:contato@frutosfeitoamao.com.br"
             target="_blank"
             class="button-offset"
             ><i class="far fa-envelope icon icon-email"></i
@@ -284,11 +284,15 @@
           type="submit"
           class="btn btn-outline-light text-white px-4"
           style="background-color: #a3a882"
+          id="pixBtn"
         >
           Gerar PIX
         </button>
       </div>
     </form>
+    <div id="spinner">
+      <div class="loader"></div>
+    </div>
     <!-- Área para exibir o QR Code -->
     <div
       id="pixResult"
@@ -307,6 +311,7 @@
       ></div>
       <p class="text-muted" id="pixCopyPaste"></p>
     </div>
+
     <!-- QRCode generator -->
     <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
     <script type="module" src="./js/script.js"></script>
