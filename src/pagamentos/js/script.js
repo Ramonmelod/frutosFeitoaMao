@@ -1,3 +1,4 @@
+import { waitForPayment } from "./waitForPayment.js";
 const form = document.getElementById("pixForm");
 const resultDiv = document.getElementById("pixResult");
 const copyPaste = document.getElementById("pixCopyPaste");
@@ -29,6 +30,8 @@ form.addEventListener("submit", async (e) => {
     emailField.value = "";
 
     const data = await response.json();
+    const paymentId = data.payment_id;
+    console.log(data.payment_id);
     console.log(data.message);
     console.log(data.qr_code);
 
@@ -48,7 +51,7 @@ form.addEventListener("submit", async (e) => {
       spinner.style.display = "none";
       pixBtn.style.display = "none";
     }
-    console.log("a");
+    waitForPayment(paymentId); // here is called the function tests if the payment was approved and if it is, it redirect to pagamentos/pagamento-confirmado.html
   } catch (error) {
     console.error("Erro ao enviar dados:", error);
     alert("Falha na conexão com o servidor.");
