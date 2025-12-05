@@ -204,6 +204,14 @@ nav a:hover {
   color: #cfcfcf;
   opacity: 1;
 }
+#name::placeholder {
+  color: #cfcfcf;
+  opacity: 1;
+}
+#email::placeholder {
+  color: #cfcfcf;
+  opacity: 1;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

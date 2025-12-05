@@ -20,11 +20,14 @@ form.addEventListener("submit", async (e) => {
     const email = emailField.value;
 
     // call /verify-email
-    await fetch("http://localhost:8080/verify-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email }), //put the name?????
-    });
+    await fetch(
+      'https://api.frutosfeitoamao.com.br/verify-email"', //"http://localhost:8080/verify-email"
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }), //put the name?????
+      }
+    );
 
     // Oculta o form inicial e mostra o form do código
     spinner.style.display = "none";
@@ -41,7 +44,7 @@ form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
       const response = await fetch(
-        "http://localhost:8080/create-pix", //"https://api.frutosfeitoamao.com.br/create-pix",
+        "https://api.frutosfeitoamao.com.br/create-pix", //"http://localhost:8080/create-pix"
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
