@@ -1,7 +1,8 @@
 export function waitForPayment(paymentId) {
   const interval = setInterval(async () => {
     const res = await fetch(
-      `https://mercadopago-integration-three.vercel.app/payments/${paymentId}/status`
+      `https://api.frutosfeitoamao.com.br/payments/${paymentId}/status`,
+      { cache: "no-store" }
     );
 
     const data = await res.json();

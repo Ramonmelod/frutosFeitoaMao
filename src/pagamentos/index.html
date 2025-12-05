@@ -249,6 +249,16 @@
       <!--logo used in the mobile phone mode-->
     </header>
     <form id="pixForm" style="position: relative; height: 300px; top: 220px">
+      <div style="text-align: center">
+        <h2 style="color: #e6c8a9; margin-bottom: 15px; font-weight: 600">
+          Primeiro confirme seu E-mail
+        </h2>
+
+        <h4 style="color: #e6c8a9; margin-bottom: 25px; font-weight: 600">
+          Enviar código para meu e-mail:
+        </h4>
+      </div>
+
       <!-- Nome (opcional) -->
       <div class="mb-3" style="padding-left: 30%; padding-right: 30%">
         <label for="name" class="form-label" style="color: #a3a882"
@@ -286,8 +296,47 @@
           style="background-color: #a3a882"
           id="pixBtn"
         >
-          Gerar PIX
+          Enviar código
         </button>
+      </div>
+    </form>
+    <!-- Formulário para inserir o código recebido por e-mail -->
+    <form
+      id="verificationForm"
+      style="display: none; width: 100%; position: relative; margin-top: 240px"
+    >
+      <div class="mb-3 d-flex justify-content-center" style="width: 100%">
+        <div class="text-center" style="max-width: 250px; width: 100%">
+          <label
+            for="verificationCode"
+            class="form-label"
+            style="color: #a3a882"
+          >
+            Digite o código recebido por e-mail *
+          </label>
+
+          <input
+            type="text"
+            id="verificationCode"
+            name="verificationCode"
+            class="form-control"
+            placeholder="Ex: 654321"
+            required
+          />
+          <button
+            type="submit"
+            class="btn btn-outline-light text-white btn-small"
+            style="
+              background-color: #a3a882;
+              max-width: 250px;
+              width: 30%;
+              margin-top: 5px;
+            "
+            id="verifyBtn"
+          >
+            Validar
+          </button>
+        </div>
       </div>
     </form>
     <div id="spinner">
@@ -297,7 +346,7 @@
     <div
       id="pixResult"
       class="text-center mt-4"
-      style="display: none; position: relative; top: 120px"
+      style="display: none; position: relative; margin-top: 120px"
     >
       <h5 style="color: #c47601">Use o QR Code abaixo para pagar:</h5>
       <div
@@ -306,10 +355,25 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-top: 15px;
+          margin-top: 0px;
         "
       ></div>
       <p class="text-muted" id="pixCopyPaste"></p>
+    </div>
+    <div id="wrongCodeAlert" style="display: none">
+      <h4
+        style="
+          position: relative;
+          color: #e6c8a9;
+          margin-bottom: 15px;
+          font-weight: 600;
+          margin-top: 50px;
+          text-align: center;
+        "
+      >
+        O código informado não confere. Digite o código novamente e clique em
+        Validar.
+      </h4>
     </div>
 
     <!-- QRCode generator -->
