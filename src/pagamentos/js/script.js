@@ -1,5 +1,4 @@
 import { waitForPayment } from "./waitForPayment.js";
-const form = document.getElementById("pixForm");
 const resultDiv = document.getElementById("pixResult");
 const copyPaste = document.getElementById("pixCopyPaste");
 const pixBtn = document.getElementById("pixBtn");
@@ -8,8 +7,11 @@ const pixForm = document.getElementById("pixForm");
 const verificationForm = document.getElementById("verificationForm");
 const verifyBtn = document.getElementById("verifyBtn");
 const wrongCodeAlert = document.getElementById("wrongCodeAlert");
+const wrongEmailAlert = document.getElementById("wrongEmailAlert");
+const pixFormNamefield = document.getElementById("name");
+const pixFormEmailfield = document.getElementById("email");
 
-form.addEventListener("submit", async (e) => {
+pixForm.addEventListener("submit", async (e) => {
   try {
     e.preventDefault();
     spinner.style.display = "flex";
@@ -20,18 +22,33 @@ form.addEventListener("submit", async (e) => {
     const email = emailField.value;
 
     // call /verify-email
-    await fetch(
-      'https://api.frutosfeitoamao.com.br/verify-email"', //"http://localhost:8080/verify-email"
+    const response1 = await fetch(
+      "https://api.frutosfeitoamao.com.br/verify-email", //"http://localhost:8080/create-pix", //
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }), //put the name?????
       }
     );
+    //read the received json
+    const data = await response1.json();
 
-    // Oculta o form inicial e mostra o form do código
-    spinner.style.display = "none";
+    if (!response1.ok) {
+      spinner.style.display = "none";
+      pixFormNamefield.value = "";
+      pixFormEmailfield.value = "";
+      wrongEmailAlert.textContent =
+        data.message ||
+        "O endereço de email informado não é válido. Por favor, tente novamente.";
+      wrongEmailAlert.style.display = "block";
+      return;
+    }
+
+    // hide the initial form and show the email code verify form
     pixForm.style.display = "none";
+    spinner.style.display = "none";
+    wrongEmailAlert.style.display = "none";
+
     verificationForm.style.display = "block";
 
     verificationForm.addEventListener("submit", async (e) => {
@@ -43,8 +60,8 @@ form.addEventListener("submit", async (e) => {
 
       e.preventDefault();
 
-      const response = await fetch(
-        "https://api.frutosfeitoamao.com.br/create-pix", //"http://localhost:8080/create-pix"
+      const response2 = await fetch(
+        "https://api.frutosfeitoamao.com.br/create-pix", //"http://localhost:8080/create-pix",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -55,10 +72,10 @@ form.addEventListener("submit", async (e) => {
       emailField.value = "";
 
       //read the received json
-      const data = await response.json();
+      const data = await response2.json();
 
       // when the code is not found in the api
-      if (!response.ok) {
+      if (!response2.ok) {
         spinner.style.display = "none";
         codeField.value = "";
         verifyBtn.textContent = "Validar";
@@ -95,6 +112,5 @@ form.addEventListener("submit", async (e) => {
     });
   } catch (error) {
     console.error("Erro ao enviar dados:", error);
-    alert("Falha na conexão com o servidor.");
   }
 });

@@ -42,6 +42,7 @@ export async function productDisplay(productId, imageIndex) {
     productTitle.classList.add("title");
     aPartirDe.classList.add("a-partir-de");
     aPartirDe.textContent = "A partir de";
+    productPrice.classList.add("price");
 
     productDescription.classList.add("product-description");
 
