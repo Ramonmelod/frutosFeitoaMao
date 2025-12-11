@@ -311,7 +311,7 @@ nav a:hover {
   }
   #pixResult {
     position: relative;
-    top: 100px;
+    margin-top: 120px;
   }
   #pixCopyPaste {
     max-width: 100%;

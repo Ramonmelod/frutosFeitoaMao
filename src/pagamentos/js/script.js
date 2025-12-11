@@ -34,7 +34,7 @@ pixForm.addEventListener("submit", async (e) => {
 
     // call /verify-email with timeout
     const response1 = await fetchWithTimeout(
-      "https://api.frutosfeitoamao.com.br/verify-email", //"http://localhost:8080/verify-email",
+      "https://api.frutosfeitoamao.com.br/verify-email", // "http://localhost:8080/verify-email", //
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -90,7 +90,7 @@ pixForm.addEventListener("submit", async (e) => {
       try {
         // call /create-pix with timeout
         const response2 = await fetchWithTimeout(
-          "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix",
+          "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix", //
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -137,6 +137,7 @@ pixForm.addEventListener("submit", async (e) => {
 
         if (data) {
           spinner.style.display = "none";
+          verificationForm.style.display = "none";
           resultDiv.style.display = "block";
           copyPaste.textContent = "Código Copia e Cola: " + data.qr_code;
 
