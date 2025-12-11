@@ -138,6 +138,7 @@ header {
 .d-flex {
   position: relative;
   top: 20%;
+  left: 15%;
   width: 90%;
   height: 25%;
 }
