@@ -11,15 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const productId = params.get("productId");
     const imageIndex = params.get("imageIndex");
 
-    if (productId > 25) {
-      /* const productDetailContainer = document.querySelector(".productDetail");
-      const notFound = document.createElement("p");
-      notFound.textContent = "Page not Found!";
-      productDetailContainer.appendChild(notFound);
-      productDetailContainer.style.Top = "50%";
-      productDetailContainer.style.color = "#000";*/
-      throw new Error("Page not Found");
-    }
+    //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
     productDisplay(
       false,
       coursesPath,
