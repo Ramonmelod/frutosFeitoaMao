@@ -1,7 +1,14 @@
-import { query } from "../../js/query.js";
-export async function productDisplay(productId, imageIndex) {
+import { query } from "./query.js";
+export async function productDisplay(
+  isPriceRequestNedded,
+  itensPath,
+  productId,
+  imageIndex,
+  paymentLink,
+  buyButtonText
+) {
   try {
-    const path = "../coursesCards.json";
+    const path = itensPath;
     const data = await query(path);
 
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
@@ -25,7 +32,10 @@ export async function productDisplay(productId, imageIndex) {
 
     // 👉 creating the WhatsApp button link
     const whatsappLink = document.createElement("a");
-    whatsappLink.href = `../pagamentos/index.html`;
+    whatsappLink.href = isPriceRequestNedded
+      ? paymentLink + data[productId].title
+      : paymentLink;
+
     whatsappLink.target = "_blank"; // opens in a new tab
 
     main.classList.add("main");
@@ -47,7 +57,7 @@ export async function productDisplay(productId, imageIndex) {
     productDescription.classList.add("product-description");
 
     // 👉 creating the button
-    buyButton.textContent = "Comprar"; //button text
+    buyButton.textContent = buyButtonText; //button text
     buyButton.classList.add("btn", "btn-success", "rounded-pill", "py-2");
     buyButton.style.backgroundColor = "#a3a882";
     buyButton.style.borderColor = "#a3a882";

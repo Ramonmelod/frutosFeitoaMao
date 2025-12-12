@@ -1,4 +1,9 @@
-import { productDisplay } from "./productDetails.js";
+import { productDisplay } from "../../js/productDetails.js";
+
+const ProductsPath = "../productCards.json";
+const whatsappLink =
+  "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto";
+const buyButtonText = "Solicitar Orçamento";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -16,7 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
       productDetailContainer.style.color = "#000";*/
       throw new Error("Page not Found");
     }
-    productDisplay(productId, imageIndex);
+    productDisplay(
+      true,
+      ProductsPath,
+      productId,
+      imageIndex,
+      whatsappLink,
+      buyButtonText
+    );
   } catch (error) {
     console.log(error);
   }

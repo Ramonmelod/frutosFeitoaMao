@@ -1,4 +1,8 @@
-import { productDisplay } from "./productDetails.js";
+import { productDisplay } from "../../js/productDetails.js";
+
+const coursesPath = "/src/coursesCards.json";
+const buyPageLink = "../pagamentos/index.html";
+const buyButtonText = "Comprar";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -16,7 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
       productDetailContainer.style.color = "#000";*/
       throw new Error("Page not Found");
     }
-    productDisplay(productId, imageIndex);
+    productDisplay(
+      false,
+      coursesPath,
+      productId,
+      imageIndex,
+      buyPageLink,
+      buyButtonText
+    );
   } catch (error) {
     console.log(error);
   }
