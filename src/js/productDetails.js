@@ -1,4 +1,4 @@
-import { query } from "./query.js";
+import { query } from "/js/query.js";
 export async function productDisplay(
   isPriceRequestNedded,
   itensPath,
@@ -10,6 +10,7 @@ export async function productDisplay(
   try {
     const path = itensPath;
     const data = await query(path);
+    console.log(data);
 
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
     const main = document.createElement("main"); // create the div that receives the thumbnail

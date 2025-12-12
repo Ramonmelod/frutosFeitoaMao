@@ -1,4 +1,4 @@
-import { query } from "./query.js";
+import { query } from "/js/query.js";
 import { productDisplay, removeProductDisplay } from "./productShowCase.js";
 
 const logo = document.querySelector(".logo");

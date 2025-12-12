@@ -1,7 +1,7 @@
-import { productDisplay } from "../../js/productDetails.js";
+import { productDisplay } from "/js/productDetails.js";
 
-const coursesPath = "/src/coursesCards.json";
-const buyPageLink = "../pagamentos/index.html";
+const coursesPath = "/coursesCards.json";
+const buyPageLink = "/pagamentos/index.html";
 const buyButtonText = "Comprar";
 
 document.addEventListener("DOMContentLoaded", () => {
