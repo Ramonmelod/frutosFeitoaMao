@@ -57,7 +57,8 @@ export async function productDisplay(productId, imageIndex) {
 
     document.body.appendChild(main);
     main.appendChild(productDetailContainer);
-    main.appendChild(productDescription);
+    //main.appendChild(productDescription);
+    productDetailContainer.classList.add("productDetailContainer");
     productDetailContainer.appendChild(productPictures);
     productDetailContainer.appendChild(productCard); //here is added the new div to the images container
     productDetailContainer.appendChild(productInfo); //here is added the new div to the images container
@@ -70,6 +71,7 @@ export async function productDisplay(productId, imageIndex) {
     productInfo.appendChild(productPrice);
     productInfo.appendChild(whatsappLink);
     whatsappLink.appendChild(buyButton);
+    productInfo.appendChild(productDescription);
     productDescription.appendChild(productDescriptionText);
 
     function removeCloudinarySizeParameters(url) {
