@@ -34,7 +34,7 @@ export async function productDisplay(
     // 👉 creating the WhatsApp button link
     const whatsappLink = document.createElement("a");
     whatsappLink.href = isPriceRequestNedded
-      ? paymentLink + data[productId].title
+      ? paymentLink + ": " + data[productId].title
       : paymentLink;
 
     whatsappLink.target = "_blank"; // opens in a new tab
