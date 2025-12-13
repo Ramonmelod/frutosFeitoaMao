@@ -142,11 +142,6 @@ header {
   width: 90%;
   height: 25%;
 }
-.custom-search-btn:hover {
-  background-color: inherit;
-  border-color: 2px solid transparent; /*disable the hover that comes from the bootstrap*/
-  color: inherit;
-}
 .line {
   position: relative;
   width: 100%;
