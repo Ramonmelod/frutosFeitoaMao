@@ -1,6 +1,6 @@
 async function loadHeader() {
   try {
-    const response = await fetch("/components/header.html");
+    const response = await fetch("/components/header/header.html");
     const headerHtml = await response.text();
     document.body.insertAdjacentHTML("afterbegin", headerHtml);
   } catch (error) {
