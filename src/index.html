@@ -62,14 +62,34 @@
     <!-------------------------- HEADER.JS ------------------------------->
     <script src="/components/header/header.js" type="module"></script>
     <main class="main">
-      <img src="/assets/logo.png" alt="My Logo" class="logo" />
+      <!-------------------------- sectionCarousel ------------------------------->
+      <link
+        rel="stylesheet"
+        href="/components/sectionCarousel/sectionCarousel.css"
+      />
+      <div id="section-carousel"></div>
+      <script src="/js/loadHomeSectionCarousel.js" type="module"></script>
 
-      <div class="txt_intro">
-        Bordados personalizados feitos totalmente à mão sob encomenda.
-      </div>
-      <div class="slogan">
-        “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-      </div>
+      <!--link thumbnails-->
+      <section class="home-shortcuts">
+        <a href="/cursos/index.html" class="home-shortcut">
+          <img
+            src="https://res.cloudinary.com/dhayneykx/image/upload/v1762440042/IMG-20251106-WA0028_mjawzm.jpg"
+            alt="Cursos"
+          />
+          <span class="home-shortcut-title">Cursos</span>
+        </a>
+
+        <a href="/riscos-para-bordar/index.html" class="home-shortcut">
+          <img
+            src="https://res.cloudinary.com/dhayneykx/image/upload/v1729042399/frutosfeitoamao/p4woczkqoij1ufrxp88k.jpg"
+            alt="Riscos para Bordar"
+          />
+          <span class="home-shortcut-title">Riscos para Bordar</span>
+        </a>
+      </section>
+
+      <div class="firstText">Destaques</div>
       <section class="section">
         <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
         <div class="images">
