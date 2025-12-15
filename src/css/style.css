@@ -186,13 +186,13 @@
     display: none;
   }
   .firstText {
-    display: block;
+    margin-top: 40px;
   }
   .arrow {
     top: 0;
   }
   .section {
-    margin-top: 190px;
+    margin-top: 30px;
   }
   .arrow-left {
     left: 1%;
