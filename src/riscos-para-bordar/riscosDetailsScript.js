@@ -1,6 +1,6 @@
 import { productDisplay } from "/js/productDetails.js";
 
-const coursesPath = "/embroideryPaternsCards.json";
+const coursesPath = "/embroideryPatternsCards.json";
 const buyPageLink = "/pagamentos/index.html";
 const buyButtonText = "Comprar";
 
