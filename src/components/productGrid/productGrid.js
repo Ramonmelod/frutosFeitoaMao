@@ -3,6 +3,7 @@ import { query } from "/js/query.js";
 export async function loadProductGrid({
   containerSelector,
   productsPath = "/productCards.json",
+  baseLink,
   columns = 4,
 }) {
   try {
@@ -23,7 +24,7 @@ export async function loadProductGrid({
       card.classList.add("product-grid-card");
 
       const link = document.createElement("a");
-      link.href = `/productDetails/index.html?productId=${index}&imageIndex=0`;
+      link.href = `${baseLink}=${index}&imageIndex=0`; //`/productDetails/index.html?productId=${index}&imageIndex=0`;
       link.style.textDecoration = "none";
 
       const img = document.createElement("img");
