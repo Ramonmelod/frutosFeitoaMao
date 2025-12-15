@@ -19,13 +19,13 @@ loadSectionCarousel({
     {
       title: "Riscos para Bordar",
       image:
-        "https://res.cloudinary.com/dhayneykx/image/upload/v1765797232/1e21f4f8-ce6e-4b4b-83e0-b382e7c94ed0_tqynjl.jpg",
+        "https://res.cloudinary.com/dhayneykx/image/upload/v1765808731/risco-para-bordar-thumbnail_a8spuo.jpg",
       link: "/riscos-para-bordar/index.html",
     },
     {
       title: "Decoração",
       image:
-        "https://res.cloudinary.com/dhayneykx/image/upload/v1745411552/IMG-20250422-WA0014_r8tsix.jpg",
+        "https://res.cloudinary.com/dhayneykx/image/upload/v1765809664/IMG-20251203-WA0010_bbyr1s.jpg",
       link: "/decoracao/index.html",
     },
     {
