@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
     productDisplay(
-      false, // when the the true option is enabled the buyButton redirects to whatsapp
+      true, // when the the true option is enabled the buyPageLink goes to whatsapp
       coursesPath,
       productId,
       imageIndex,

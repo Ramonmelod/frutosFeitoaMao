@@ -36,7 +36,6 @@ export async function productDisplay(
     whatsappLink.href = isPriceRequestNedded
       ? paymentLink + ": " + data[productId].title
       : paymentLink;
-
     whatsappLink.target = "_blank"; // opens in a new tab
 
     main.classList.add("main");
