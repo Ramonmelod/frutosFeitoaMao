@@ -1,7 +1,7 @@
 import { query } from "/js/query.js";
 import { productDisplay, removeProductDisplay } from "./productShowCase.js";
 
-const logo = document.querySelector(".logo");
+const logo = document.querySelector(".firstText");
 const slogan = document.querySelector(".slogan");
 const txtIntro = document.querySelector(".txt_intro");
 const prevBtn = document.getElementById("prevBtn");
