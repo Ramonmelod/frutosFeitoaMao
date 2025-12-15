@@ -14,7 +14,7 @@ loadSectionCarousel({
       title: "Cursos",
       image:
         "https://res.cloudinary.com/dhayneykx/image/upload/v1762440042/IMG-20251106-WA0024_lxrrzr.jpg",
-      link: "/cursos/index.html",
+      link: "/cursos/index.html?productId=0&imageIndex=0",
     },
     {
       title: "Riscos para Bordar",
@@ -32,7 +32,7 @@ loadSectionCarousel({
       title: "Materiais",
       image:
         "https://res.cloudinary.com/dhayneykx/image/upload/v1762440042/IMG-20251106-WA0028_mjawzm.jpg",
-      link: "/assets/sections/materiais.jpg",
+      link: "/materiais/index.html",
     },
   ],
 });
