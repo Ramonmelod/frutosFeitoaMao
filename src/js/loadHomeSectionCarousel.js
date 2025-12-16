@@ -8,7 +8,7 @@ loadSectionCarousel({
       title: "Bordados",
       image:
         "https://res.cloudinary.com/dhayneykx/image/upload/v1745411552/IMG-20250422-WA0014_r8tsix.jpg",
-      link: "/index.html",
+      link: "/bordados/index.html",
     },
     {
       title: "Cursos",
