@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 //--
 
-for (let i = 0; i < 23; i++) {
-  productDisplay(i); //calls the function that assembly the product card div
-}
+const featuredProducts = [21, 0, 1, 4, 5, 6, 8, 10, 14, 15, 16, 22]; // here are the products that will be shown in the destaque showcase
+
+featuredProducts.forEach((id) => productDisplay(id));
 
 //console.log(imagesContainer.innerHTML);
