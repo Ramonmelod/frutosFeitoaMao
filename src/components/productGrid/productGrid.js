@@ -3,6 +3,7 @@ import { query } from "/js/query.js";
 export async function loadProductGrid({
   containerSelector,
   productsPath = "/productCards.json",
+  products = null, // when defined select the products to be shown
   baseLink,
   columns = 4,
 }) {
@@ -13,7 +14,11 @@ export async function loadProductGrid({
       throw new Error(`Container "${containerSelector}" not found in DOM`);
     }
 
-    const data = await query(productsPath);
+    // clear previous grid
+    container.innerHTML = "";
+    console.log(products);
+    const data = products ?? (await query(productsPath));
+    console.log(data);
 
     const grid = document.createElement("section");
     grid.classList.add("product-grid");
@@ -24,7 +29,7 @@ export async function loadProductGrid({
       card.classList.add("product-grid-card");
 
       const link = document.createElement("a");
-      link.href = `${baseLink}=${index}&imageIndex=0`; //`/productDetails/index.html?productId=${index}&imageIndex=0`;
+      link.href = `${baseLink}=${product.id}&imageIndex=0`;
       link.style.textDecoration = "none";
 
       const img = document.createElement("img");
