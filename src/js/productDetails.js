@@ -5,7 +5,8 @@ export async function productDisplay(
   productId,
   imageIndex,
   paymentLink,
-  buyButtonText
+  buyButtonText,
+  thumbNailLink
 ) {
   try {
     const path = itensPath;
@@ -101,7 +102,7 @@ export async function productDisplay(
 
         thumbnailImageIndexes.forEach((imageIndex) => {
           const productThumbNailLink = document.createElement("a");
-          productThumbNailLink.href = `./index.html?productId=${productId}&imageIndex=${imageIndex}`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageIndex=2
+          productThumbNailLink.href = `${thumbNailLink}=${productId}&imageIndex=${imageIndex}`;
           const thumbNail = document.createElement("img");
           thumbNail.src = data[productId].image_url[imageIndex];
           thumbNail.classList.add("thumbnail-img");

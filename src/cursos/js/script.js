@@ -3,6 +3,7 @@ import { productDisplay } from "/js/productDetails.js";
 const coursesPath = "/coursesCards.json";
 const buyPageLink = "/pagamentos/index.html";
 const buyButtonText = "Comprar";
+const thumbNailLink = "./index.html?productId";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
       productId,
       imageIndex,
       buyPageLink,
-      buyButtonText
+      buyButtonText,
+      thumbNailLink
     );
   } catch (error) {
     console.log(error);

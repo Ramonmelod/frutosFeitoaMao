@@ -4,6 +4,7 @@ const coursesPath = "/embroideryPatternsCards.json";
 const buyPageLink =
   "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto"; //"/pagamentos/index.html"; //change for using the api
 const buyButtonText = "Comprar";
+const thumbNailLink = "./riscosDetails.html?productId";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -19,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       productId,
       imageIndex,
       buyPageLink,
-      buyButtonText
+      buyButtonText,
+      thumbNailLink
     );
   } catch (error) {
     console.log(error);
