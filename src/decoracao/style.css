@@ -1,0 +1,38 @@
+.title {
+  position: relative;
+  margin-top: 15%;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+  color: #e6c8a9;
+}
+
+.title-description {
+  margin-left: 30%;
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .title {
+    margin-top: 35%;
+  }
+  .title-description {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    margin-top: 45%;
+  }
+  .title-description {
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .title {
+    margin-top: 60%;
+  }
+  .title-description {
+    display: none;
+  }
+}
