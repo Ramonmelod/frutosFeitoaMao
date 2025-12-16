@@ -41,14 +41,14 @@
 
 @media (max-width: 768px) {
   .product-grid {
-    margin: 40% auto 0;
+    margin: 10% auto 0;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
   .product-grid {
-    margin: 50% auto 0;
-    grid-template-columns: 1fr;
+    margin: 10% auto 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
