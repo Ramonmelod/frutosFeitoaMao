@@ -1,4 +1,4 @@
-import { productDisplay, removeProductDisplay } from "./productShowCase.js";
+import { productDisplay } from "./productShowCase.js";
 import { queryDoc } from "./searchBar.js";
 import { scroll } from "./scroll.js";
 const imagesContainer = document.querySelector(".images");
