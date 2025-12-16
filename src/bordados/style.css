@@ -1,6 +1,5 @@
 .title {
   position: relative;
-  margin-top: 15%;
   font-size: 35px;
   text-align: center;
   font-weight: bold;
@@ -8,14 +7,5 @@
 }
 
 .title-description {
-  margin-left: 30%;
-}
-/* Mobile */
-@media (max-width: 768px) {
-  .title {
-    margin-top: 60%;
-  }
-  .title-description {
-    display: none;
-  }
+  margin-left: 39%;
 }

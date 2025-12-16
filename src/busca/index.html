@@ -55,22 +55,25 @@
       gtag("config", "G-FDTMYG4CXL");
     </script>
     <!-- style.css-->
+
     <link rel="stylesheet" href="/components/header/header.css" />
     <link rel="stylesheet" href="/components/productGrid/productGrid.css" />
-    <link rel="stylesheet" href="/bordados/style.css" />
   </head>
   <body>
     <!-------------------------- HEADER.JS ------------------------------->
     <script src="/components/header/header.js" type="module"></script>
     <main class="main" style="margin-top: 230px">
-      <h1 class="title">Bordados</h1>
-      <p class="title-description">
-        Quadros bordados personalisáveis feitos à mão
-      </p>
-      <div id="products-section"></div>
+      <h1
+        id="search-title"
+        style="text-align: center; font-weight: bold; color: #e6c8a9"
+      >
+        Resultados da busca
+      </h1>
+      <section id="search-results"></section>
     </main>
-    <script src="/bordados/script.js" type="module"></script>
-    <!-- Bootstrap JS -->
+
+    <script type="module" src="./script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
