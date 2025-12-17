@@ -16,9 +16,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   title.textContent = `Resultados para "${term}"`;
 
   try {
-    const data = await query("/productCards.json");
+    const dataProducts = await query("/productCards.json");
+    const dataCourses = await query("/coursesCards.json");
+    const dataDecor = await query("/decorationProducts.json");
+    const dataPatterns = await query("/embroideryPatternsCards.json");
 
-    const results = data.filter((product) =>
+    const unifiedData = [
+      ...dataProducts,
+      ...dataCourses,
+      ...dataDecor,
+      ...dataPatterns,
+    ];
+
+    const results = unifiedData.filter((product) =>
       product.title.toLowerCase().includes(term.toLowerCase())
     );
 
