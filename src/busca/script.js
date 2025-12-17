@@ -37,11 +37,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         "<p>Nenhum produto encontrado.</p>";
       return;
     }
-
     await loadProductGrid({
       containerSelector,
       products: results,
-      baseLink: "/destaqueDetails/index.html?productId",
       columns: 4,
     });
   } catch (error) {

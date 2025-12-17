@@ -4,7 +4,6 @@ export async function loadProductGrid({
   containerSelector,
   productsPath = "/productCards.json",
   products = null, // when defined select the products to be shown
-  baseLink,
   columns = 4,
 }) {
   try {
@@ -29,7 +28,7 @@ export async function loadProductGrid({
       card.classList.add("product-grid-card");
 
       const link = document.createElement("a");
-      link.href = `${baseLink}=${product.id}&imageIndex=0`;
+      link.href = `${product.detailsPage}?productId=${product.id}&imageIndex=0`;
       link.style.textDecoration = "none";
 
       const img = document.createElement("img");
