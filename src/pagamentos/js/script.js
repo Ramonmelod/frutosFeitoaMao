@@ -1,7 +1,6 @@
 import { waitForPayment } from "./waitForPayment.js";
 
 const resultDiv = document.getElementById("pixResult");
-const copyPaste = document.getElementById("pixCopyPaste");
 const pixBtn = document.getElementById("pixBtn");
 const spinner = document.getElementById("spinner");
 const pixForm = document.getElementById("pixForm");
@@ -11,6 +10,43 @@ const wrongCodeAlert = document.getElementById("wrongCodeAlert");
 const wrongEmailAlert = document.getElementById("wrongEmailAlert");
 const pixFormNamefield = document.getElementById("name");
 const pixFormEmailfield = document.getElementById("email");
+const pixCopyPasteBtn = document.getElementById("pixCopyPasteBtn");
+
+/* ------------------ state ------------------ */
+
+let pixCode = "";
+
+/* ------------------ COPY PIX BUTTON ------------------ */
+
+pixCopyPasteBtn.style.display = "none";
+
+pixCopyPasteBtn.addEventListener("click", async () => {
+  if (!pixCode) return;
+
+  try {
+    await navigator.clipboard.writeText(pixCode);
+    pixCopyPasteBtn.textContent = "Código copiado!";
+    pixCopyPasteBtn.classList.remove("btn-outline-secondary");
+    pixCopyPasteBtn.classList.add("btn-success");
+    /* Google Analytics Event */
+
+    if (typeof gtag === "function") {
+      gtag("event", "copy_pix_code", {
+        event_category: "payment",
+
+        event_label: "pix_copy_paste",
+      });
+    }
+
+    setTimeout(() => {
+      pixCopyPasteBtn.textContent = "Copiar código PIX";
+      pixCopyPasteBtn.classList.remove("btn-success");
+      pixCopyPasteBtn.classList.add("btn-outline-secondary");
+    }, 2500);
+  } catch (error) {
+    alert("Não foi possível copiar o código. Copie manualmente.");
+  }
+});
 
 function fetchWithTimeout(url, options = {}, timeout = 15000) {
   const controller = new AbortController();
@@ -139,13 +175,14 @@ pixForm.addEventListener("submit", async (e) => {
           spinner.style.display = "none";
           verificationForm.style.display = "none";
           resultDiv.style.display = "block";
-          copyPaste.textContent = "Código Copia e Cola: " + data.qr_code;
+          pixCopyPasteBtn.style.display = "inline-block";
 
           // clean previous QR code
           QRCode.innerHTML = "";
+          pixCode = data.qr_code;
 
           new QRCode(document.getElementById("qrCodeCanvas"), {
-            text: data.qr_code,
+            text: pixCode,
             width: 250,
             height: 250,
           });

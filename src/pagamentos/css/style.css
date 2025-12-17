@@ -33,6 +33,10 @@
   color: #cfcfcf;
   opacity: 1;
 }
+#pixCopyPasteBtn {
+  color: #fff;
+  background-color: #a3a882;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -46,12 +50,6 @@
   #pixResult {
     position: relative;
     margin-top: 120px;
-  }
-  #pixCopyPaste {
-    max-width: 100%;
-    overflow-wrap: break-word; /* break long texts */
-    word-break: break-all;
-    white-space: normal;
   }
   #wrongCodeAlert {
     position: absolute;
