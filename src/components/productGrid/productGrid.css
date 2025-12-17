@@ -1,0 +1,54 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin: 5% auto 0;
+  max-width: 70%;
+  background-color: #f8f5ed;
+}
+
+.product-grid-card {
+  background-color: #fff;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.product-grid-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.product-grid-title {
+  margin-top: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+.product-grid-price {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #a3a882;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    margin: 10% auto 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    margin: 10% auto 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

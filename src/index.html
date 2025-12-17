@@ -11,7 +11,7 @@
 
     <title>Frutos Feito a Mão - Home</title>
     <!-- Favicon -->
-    <link rel="icon" href="./logo.png" type="image/png" />
+    <link rel="icon" href="/assets/logo.png" type="image/png" />
     <!-- Google Fonts -->
 
     <link
@@ -55,206 +55,44 @@
       gtag("config", "G-FDTMYG4CXL");
     </script>
     <!-- style.css-->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/components/header/header.css" />
   </head>
   <body>
-    <header>
-      <!-- top band -->
-      <div class="band">
-        <p>♡ Faça o seu orçamento conosco através do nosso whatsapp!</p>
-        <div class="buttons">
-          <a
-            href="https://www.instagram.com/frutosfeitoamao"
-            target="_blank"
-            class="button"
-            ><i class="fab fa-instagram icon icon-instagram"></i
-          ></a>
-          <a
-            href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
-            target="_blank"
-            class="button"
-            ><i class="fab fa-whatsapp icon icon-whatsapp"></i
-          ></a>
-          <a
-            href="mailto:contato@frutosfeitoamao.com.br"
-            target="_blank"
-            class="button"
-            ><i class="far fa-envelope icon icon-email"></i
-          ></a>
-        </div>
-      </div>
-      <!-- logo-title-search -->
-      <div class="logo-title-search">
-        <a href="index.html"
-          ><img src="./clean-logo.png" alt="My Logo" class="mini-logo"
-        /></a>
-        <div class="logo-title">
-          <a href="index.html" class="frutos">FRUTOS <br /></a>
-          <a href="index.html" class="feito-a-mao">feito à mão</a>
-        </div>
-        <form
-          class="d-flex"
-          id="searchForm"
-          role="search"
-          style="margin-top: 15px; margin-left: 10px"
-        >
-          <div style="position: relative; width: 50%">
-            <input
-              class="form-control"
-              type="search"
-              placeholder="O que você procura?"
-              aria-label="Search"
-              id="searchInput"
-              style="height: 40px"
-              name="query"
-            />
-            <button
-              class="btn custom-search-btn"
-              id="loupe"
-              type="submit"
-              style="
-                position: absolute;
-                top: 50%;
-                right: 20px;
-                transform: translateY(-50%);
-                height: 30px;
-                width: 30px;
-                border: none;
-                background: none;
-              "
-            >
-              <i
-                class="fas fa-search"
-                style="color: #ebd8c3; font-size: 30px"
-              ></i>
-            </button>
-          </div>
-
-          <!-- the right atribute puts the button in the input box -->
-        </form>
-        <!--Hambuguer menu-->
-        <i
-          class="fas fa-bars menu-icon"
-          style="left: 0%"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasLeft"
-          aria-controls="offcanvasLeft"
-        ></i>
-      </div>
-
-      <!-- Offcanvas component -->
-      <div
-        class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="offcanvasLeft"
-        aria-labelledby="offcanvasLeftLabel"
-        style="width: 80%; background-color: #ebd8c3"
-      >
-        <div class="buttons-offset">
-          <a
-            href="https://www.instagram.com/frutosfeitoamao"
-            target="_blank"
-            class="button-offset"
-            ><i class="fab fa-instagram icon icon-instagram"></i
-          ></a>
-          <a
-            href="https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br!%21"
-            target="_blank"
-            class="button-offset"
-            ><i class="fab fa-whatsapp icon icon-whatsapp"></i
-          ></a>
-          <a
-            href="mailto:contato@frutosfeitoamao.com.br"
-            target="_blank"
-            class="button-offset"
-            ><i class="far fa-envelope icon icon-email"></i
-          ></a>
-        </div>
-        <div class="offcanvas-header">
-          <h5 id="offcanvasLeftLabel"></h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <a
-                href="index.html"
-                style="
-                  text-decoration: none;
-                  color: #c47601;
-                  font-size: 20px;
-                  font-weight: lighter;
-                "
-                >Home</a
-              >
-            </li>
-            <li class="list-group-item">
-              <a
-                href="./cursos/index.html?productId=0&imageIndex=0"
-                style="
-                  text-decoration: none;
-                  color: #c47601;
-                  font-size: 20px;
-                  font-weight: lighter;
-                "
-                >Cursos</a
-              >
-            </li>
-            <li class="list-group-item">
-              <a
-                href="./sobre/index.html"
-                style="
-                  text-decoration: none;
-                  color: #c47601;
-                  font-size: 20px;
-                  font-weight: lighter;
-                "
-                >Sobre</a
-              >
-            </li>
-            <li class="list-group-item">
-              <a
-                href="./contato/index.html"
-                style="
-                  text-decoration: none;
-                  color: #c47601;
-                  font-size: 20px;
-                  font-weight: lighter;
-                "
-                >Contato</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- line -->
-      <div class="line"></div>
-
-      <nav id="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="./cursos/index.html?productId=0&imageIndex=0">Cursos</a>
-        <a href="./sobre/index.html">Sobre</a>
-        <a href="./contato/index.html">Contato</a>
-      </nav>
-
-      <img src="./logo.png" alt="My Logo" class="logo-mobile" />
-      <!--logo used in the mobile phone mode-->
-    </header>
+    <!-------------------------- HEADER.JS ------------------------------->
+    <script src="/components/header/header.js" type="module"></script>
     <main class="main">
-      <img src="./logo.png" alt="My Logo" class="logo" />
+      <!-------------------------- sectionCarousel ------------------------------->
+      <link
+        rel="stylesheet"
+        href="/components/sectionCarousel/sectionCarousel.css"
+      />
+      <div id="section-carousel"></div>
+      <script src="/js/loadHomeSectionCarousel.js" type="module"></script>
 
-      <div class="txt_intro">
-        Bordados personalizados feitos totalmente à mão sob encomenda.
-      </div>
-      <div class="slogan">
-        “Bordando os Bons Frutos de Jesus com Amor e Arte.”
-      </div>
+      <!--link thumbnails-->
+      <section class="home-shortcuts">
+        <a
+          href="/cursos/index.html?productId=0&imageIndex=0"
+          class="home-shortcut"
+        >
+          <img
+            src="https://res.cloudinary.com/dhayneykx/image/upload/v1762440042/IMG-20251106-WA0024_lxrrzr.jpg"
+            alt="Cursos"
+          />
+          <span class="home-shortcut-title">Cursos</span>
+        </a>
+
+        <a href="/riscos-para-bordar/index.html" class="home-shortcut">
+          <img
+            src="https://res.cloudinary.com/dhayneykx/image/upload/v1765808731/risco-para-bordar-thumbnail_a8spuo.jpg"
+            alt="Riscos para Bordar"
+          />
+          <span class="home-shortcut-title">Riscos para Bordar</span>
+        </a>
+      </section>
+
+      <div class="firstText">Destaques</div>
       <section class="section">
         <button class="arrow arrow-left" id="prevBtn">&#8249;</button>
         <div class="images">
@@ -265,7 +103,7 @@
         <div class="notFoundContainer"><p>"Nenhum produto encontrado."</p></div>
       </section>
     </main>
-    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   </body>

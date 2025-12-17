@@ -1,5 +1,4 @@
-import { productDisplay, removeProductDisplay } from "./productDisplay.js";
-import { queryDoc } from "./searchBar.js";
+import { productDisplay } from "./productShowCase.js";
 import { scroll } from "./scroll.js";
 const imagesContainer = document.querySelector(".images");
 const prevBtn = document.getElementById("prevBtn"); //the scroll works without the declaration of prevBtn and nextBtn, for it uses getElementById
@@ -7,18 +6,8 @@ const nextBtn = document.getElementById("nextBtn");
 let query = null;
 scroll(prevBtn, nextBtn, imagesContainer);
 
-//--
+const featuredProducts = [21, 0, 1, 4, 5, 6, 8, 10, 14, 15, 16, 22]; // here are the products that will be shown in the destaque showcase
 
-document.addEventListener("DOMContentLoaded", () => {
-  //makes this scope waits until the DOM be totally loaded
-  const params = new URLSearchParams(window.location.search);
-  query = params.get("query");
-  queryDoc(query);
-});
-//--
-
-for (let i = 0; i < 21; i++) {
-  productDisplay(i); //calls the function that assembly the product card div
-}
+featuredProducts.forEach((id) => productDisplay(id));
 
 //console.log(imagesContainer.innerHTML);

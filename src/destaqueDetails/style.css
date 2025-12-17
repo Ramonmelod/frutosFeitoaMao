@@ -77,15 +77,12 @@
 .product-description {
   position: relative;
   height: 30%;
-  width: 80%;
-  top: 5%;
+  width: 75%;
+  top: 0%;
 }
 .product-description p {
   color: #6b6b6b;
   padding: 2% 0;
-}
-.productDetailContainer {
-  position: relative;
 }
 
 /* Media queries */

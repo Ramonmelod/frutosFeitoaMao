@@ -1,0 +1,102 @@
+.links-container {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.links-logo {
+  width: 220px;
+  margin-bottom: 10px;
+}
+.name-links {
+  font-size: 36px;
+  color: #c47601;
+  margin-bottom: 5px;
+}
+.links-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  color: #c47601;
+  margin-bottom: 5px;
+}
+
+.links-subtitle {
+  font-size: 14px;
+  color: #6b5e52;
+  margin-bottom: 30px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.link-button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+.store {
+  background-color: #e4cbb1;
+}
+
+.ebook {
+  background-color: #e4cbb1;
+}
+
+.portfolio {
+  background-color: #e4cbb1;
+}
+
+.location {
+  background-color: #e4cbb1;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 20px 0 30px;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+/* Cores por rede */
+.social-icon.instagram {
+  background: #e4cbb1;
+}
+
+.social-icon.whatsapp {
+  background: #e4cbb1;
+}
+
+.social-icon.tiktok {
+  background: #e4cbb1;
+}
+
+.social-icon.pinterest {
+  background: #e4cbb1;
+}

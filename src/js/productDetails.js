@@ -1,8 +1,17 @@
-import { query } from "../../js/query.js";
-export async function productDisplay(productId, imageIndex) {
+import { query } from "/js/query.js";
+export async function productDisplay(
+  isPriceRequestNedded,
+  itensPath,
+  productId,
+  imageIndex,
+  paymentLink,
+  buyButtonText,
+  thumbNailLink
+) {
   try {
-    const path = "../coursesCards.json";
+    const path = itensPath;
     const data = await query(path);
+    console.log(data);
 
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
     const main = document.createElement("main"); // create the div that receives the thumbnail
@@ -25,7 +34,9 @@ export async function productDisplay(productId, imageIndex) {
 
     // 👉 creating the WhatsApp button link
     const whatsappLink = document.createElement("a");
-    whatsappLink.href = `../pagamentos/index.html`;
+    whatsappLink.href = isPriceRequestNedded
+      ? paymentLink + ": " + data[productId].title
+      : paymentLink;
     whatsappLink.target = "_blank"; // opens in a new tab
 
     main.classList.add("main");
@@ -47,7 +58,7 @@ export async function productDisplay(productId, imageIndex) {
     productDescription.classList.add("product-description");
 
     // 👉 creating the button
-    buyButton.textContent = "Comprar"; //button text
+    buyButton.textContent = buyButtonText; //button text
     buyButton.classList.add("btn", "btn-success", "rounded-pill", "py-2");
     buyButton.style.backgroundColor = "#a3a882";
     buyButton.style.borderColor = "#a3a882";
@@ -91,7 +102,7 @@ export async function productDisplay(productId, imageIndex) {
 
         thumbnailImageIndexes.forEach((imageIndex) => {
           const productThumbNailLink = document.createElement("a");
-          productThumbNailLink.href = `./index.html?productId=${productId}&imageIndex=${imageIndex}`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageIndex=2
+          productThumbNailLink.href = `${thumbNailLink}=${productId}&imageIndex=${imageIndex}`;
           const thumbNail = document.createElement("img");
           thumbNail.src = data[productId].image_url[imageIndex];
           thumbNail.classList.add("thumbnail-img");

@@ -1,9 +1,10 @@
 import { productDisplay } from "/js/productDetails.js";
 
-const coursesPath = "/coursesCards.json";
-const buyPageLink = "/pagamentos/index.html";
+const coursesPath = "/embroideryPatternsCards.json";
+const buyPageLink =
+  "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto"; //"/pagamentos/index.html"; //change for using the api
 const buyButtonText = "Comprar";
-const thumbNailLink = "./index.html?productId";
+const thumbNailLink = "./riscosDetails.html?productId";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -14,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
     productDisplay(
-      false,
+      true, // when the the true option is enabled the buyPageLink goes to whatsapp
       coursesPath,
       productId,
       imageIndex,
@@ -26,5 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(error);
   }
 });
-
-//http://127.0.0.1:5500/src/productDetails/index.html?productId=9

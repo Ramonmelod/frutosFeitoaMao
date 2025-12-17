@@ -1,8 +1,9 @@
-import { productDisplay } from "/js/productDetails.js";
+import { productDisplay } from "../../js/productDetails.js";
 
-const coursesPath = "/coursesCards.json";
-const buyPageLink = "/pagamentos/index.html";
-const buyButtonText = "Comprar";
+const ProductsPath = "../productCards.json";
+const whatsappLink =
+  "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto";
+const buyButtonText = "Solicitar Orçamento";
 const thumbNailLink = "./index.html?productId";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -12,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const productId = params.get("productId");
     const imageIndex = params.get("imageIndex");
 
-    //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
+    //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE PRODUCTSCARD.JSON
     productDisplay(
-      false,
-      coursesPath,
+      true,
+      ProductsPath,
       productId,
       imageIndex,
-      buyPageLink,
+      whatsappLink,
       buyButtonText,
       thumbNailLink
     );
