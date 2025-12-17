@@ -1,0 +1,74 @@
+.links-container {
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.links-logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.links-title {
+  font-family: "Dancing Script", cursive;
+  font-size: 36px;
+  color: #c47601;
+  margin-bottom: 5px;
+}
+
+.links-subtitle {
+  font-size: 14px;
+  color: #6b5e52;
+  margin-bottom: 30px;
+}
+
+.link-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.link-button:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+.instagram {
+  background-color: #e1306c;
+}
+
+.tiktok {
+  background-color: #000000;
+}
+
+.pinterest {
+  background-color: #bd081c;
+}
+
+.whatsapp {
+  background-color: #a3a882;
+}
+
+.store {
+  background-color: #c47601;
+}
+
+.ebook {
+  background-color: #6b5e52;
+}
+
+.portfolio {
+  background-color: #8b7d70;
+}
+
+.location {
+  background-color: #4a6fa5;
+}
