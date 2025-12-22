@@ -1,0 +1,35 @@
+.site-footer {
+  background-color: #e4cbb1; /*#f9ede0*/
+  height: 200px;
+  color: #e6c8a9;
+  padding: 30px 20px;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #a3a882;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
