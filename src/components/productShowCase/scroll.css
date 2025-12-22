@@ -1,0 +1,44 @@
+/* navegation arrows */
+.arrow {
+  position: relative;
+  border-radius: 25px;
+  height: 60px;
+  top: 0;
+  background-color: #e4cbb1;
+  color: #c07809;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow-left {
+  margin-left: 2%;
+  margin-top: 210px;
+}
+
+.arrow-right {
+  margin-right: 2%;
+  margin-top: 210px;
+}
+
+.arrow:hover {
+  background-color: #e4c5b1a1;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .arrow {
+    top: 0;
+  }
+  .section {
+    margin-top: 30px;
+  }
+  .arrow-left {
+    left: 1%;
+  }
+
+  .arrow-right {
+    right: 1%;
+  }
+}

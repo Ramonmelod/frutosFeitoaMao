@@ -1,4 +1,4 @@
-import { query } from "./query.js";
+import { query } from "/js/query.js";
 
 const imagesContainer = document.querySelector(".images");
 let displayedProducts = [];

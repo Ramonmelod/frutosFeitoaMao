@@ -1,5 +1,5 @@
-import { productDisplay } from "./productShowCase.js";
-import { scroll } from "./scroll.js";
+import { productDisplay } from "/components/productShowCase/productShowCase.js";
+import { scroll } from "/components/productShowCase/scroll.js";
 const imagesContainer = document.querySelector(".images");
 const prevBtn = document.getElementById("prevBtn"); //the scroll works without the declaration of prevBtn and nextBtn, for it uses getElementById
 const nextBtn = document.getElementById("nextBtn");
