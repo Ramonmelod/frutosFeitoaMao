@@ -35,10 +35,10 @@
     margin-top: 30px;
   }
   .arrow-left {
-    left: 1%;
+    margin-left: 2px;
   }
 
   .arrow-right {
-    right: 1%;
+    margin-right: 2px;
   }
 }
