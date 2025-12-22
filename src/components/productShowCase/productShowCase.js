@@ -8,7 +8,6 @@ export const productDisplay = async (i) => {
     const data = await query("./productCards.json");
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
-    productCard.id = data[i].id;
 
     const productLink = document.createElement("a");
     productLink.href = `destaqueDetails/index.html?productId=${i}&imageIndex=0`; //http://127.0.0.1:5500/src/productDetails/index.html?productId=0&imageNumber=2
@@ -42,20 +41,7 @@ export const productDisplay = async (i) => {
     productInfo.appendChild(productTitle);
     productInfo.appendChild(aPartirDe);
     productInfo.appendChild(productPrice);
-    displayedProducts.push(productCard.id); // here the displayed elements id are pushed to the displayedProducts array
   } catch (error) {
     console.error("Erro:", error);
   }
-};
-
-export const removeProductDisplay = () => {
-  displayedProducts.forEach((product) => {
-    const productCard = document.getElementById(`${product}`);
-    if (productCard) {
-      productCard.remove();
-      console.log(`Product with id ${product} removed`);
-    } else {
-      console.log(`Product with id ${product} not found`);
-    }
-  });
 };
