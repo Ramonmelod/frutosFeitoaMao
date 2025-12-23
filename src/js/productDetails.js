@@ -9,6 +9,18 @@ export async function productDisplay(
   thumbNailLink
 ) {
   try {
+    /*
+
+
+    const container = document.querySelector(containerSelector);
+
+    if (!container) {
+      throw new Error(`Container "${containerSelector}" not found in DOM`);
+    }
+
+
+*/
+
     const path = itensPath;
     const data = await query(path);
     const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
