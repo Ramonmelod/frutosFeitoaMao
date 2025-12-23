@@ -5,6 +5,7 @@ const buyPageLink =
   "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto"; //"/pagamentos/index.html"; //change for using the api
 const buyButtonText = "Comprar";
 const thumbNailLink = "./decoracaoDetails.html?productId";
+const rootContainerClass = ".productDetail";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
     productDisplay(
       true, // when the the true option is enabled the buyButton redirects to whatsapp
+      rootContainerClass,
       coursesPath,
       productId,
       imageIndex,

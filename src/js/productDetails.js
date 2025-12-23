@@ -1,6 +1,7 @@
 import { query } from "/js/query.js";
 export async function productDisplay(
   isPriceRequestNedded,
+  containerSelector,
   itensPath,
   productId,
   imageIndex,
@@ -9,21 +10,14 @@ export async function productDisplay(
   thumbNailLink
 ) {
   try {
-    /*
-
-
-    const container = document.querySelector(containerSelector);
+    const container = document.querySelector(containerSelector); //select the div that will receive the created elements
 
     if (!container) {
       throw new Error(`Container "${containerSelector}" not found in DOM`);
     }
 
-
-*/
-
     const path = itensPath;
     const data = await query(path);
-    const productDetailContainer = document.querySelector(".productDetail"); //select the div that will receive the created elements
     const main = document.createElement("main"); // create the div that receives the thumbnail
     const productPictures = document.createElement("div"); // create the div that receives the thumbnail
     const productCard = document.createElement("div"); //create the div that receives the productImage element
@@ -77,12 +71,12 @@ export async function productDisplay(
     // appending the children
 
     document.body.appendChild(main);
-    main.appendChild(productDetailContainer);
+    main.appendChild(container);
     //main.appendChild(productDescription);
-    productDetailContainer.classList.add("productDetailContainer");
-    productDetailContainer.appendChild(productPictures);
-    productDetailContainer.appendChild(productCard); //here is added the new div to the images container
-    productDetailContainer.appendChild(productInfo); //here is added the new div to the images container
+    container.classList.add("container");
+    container.appendChild(productPictures);
+    container.appendChild(productCard); //here is added the new div to the images container
+    container.appendChild(productInfo); //here is added the new div to the images container
     thumbNailsCreate();
 
     productCard.appendChild(productLink);
