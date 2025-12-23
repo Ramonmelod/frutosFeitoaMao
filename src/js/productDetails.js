@@ -18,7 +18,7 @@ export async function productDisplay(
 
     const path = itensPath;
     const data = await query(path);
-    const main = document.createElement("main"); // create the div that receives the thumbnail
+    //const main = document.createElement("main"); // create the div that receives the thumbnail
     const productPictures = document.createElement("div"); // create the div that receives the thumbnail
     const productCard = document.createElement("div"); //create the div that receives the productImage element
     const productImage = document.createElement("img");
@@ -43,7 +43,7 @@ export async function productDisplay(
       : paymentLink;
     whatsappLink.target = "_blank"; // opens in a new tab
 
-    main.classList.add("main");
+    //main.classList.add("main");
     productCard.classList.add("product-card");
     productPictures.classList.add("product-pictures");
     productInfo.classList.add("product-info");
@@ -70,8 +70,8 @@ export async function productDisplay(
 
     // appending the children
 
-    document.body.appendChild(main);
-    main.appendChild(container);
+    //document.body.appendChild(main);
+    //main.appendChild(container);
     //main.appendChild(productDescription);
     container.classList.add("container");
     container.appendChild(productPictures);

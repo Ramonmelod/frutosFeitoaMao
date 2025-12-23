@@ -1,6 +1,7 @@
 .site-footer {
   background-color: #e4cbb1; /*#f9ede0*/
-  height: 200px;
+  margin-top: 200px;
+  height: 180px;
   color: #e6c8a9;
   padding: 30px 20px;
   text-align: center;
