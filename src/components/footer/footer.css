@@ -1,21 +1,14 @@
 .site-footer {
-  background-color: #e4cbb1; /*#f9ede0*/
   margin-top: 200px;
-  height: 180px;
-  color: #e6c8a9;
-  padding: 30px 20px;
-  text-align: center;
   font-family: Montserrat, sans-serif;
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-brand {
-  margin-bottom: 10px;
-  font-size: 14px;
+/* links area */
+.footer-main {
+  background-color: #f9ede0;
+  height: 250px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .footer-links {
@@ -34,6 +27,19 @@
 .footer-links a:hover {
   text-decoration: underline;
 }
+
+/* copyright area */
+.footer-bottom {
+  background-color: #ebd8c3;
+  height: 70px;
+  display: flex;
+  align-items: center; /*vertical center */
+  justify-content: center; /*horizontal center */
+  color: #a3a882;
+  font-size: 14px;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .site-footer {
     display: none;
