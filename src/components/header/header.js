@@ -4,7 +4,7 @@ async function loadHeader() {
   try {
     const response = await fetch("/components/header/header.html");
     const headerHtml = await response.text();
-    document.body.insertAdjacentHTML("afterbegin", headerHtml);
+    document.getElementById("header-root").innerHTML = headerHtml;
     initSearchBar();
   } catch (error) {
     console.error("Erro ao carregar o header:", error);

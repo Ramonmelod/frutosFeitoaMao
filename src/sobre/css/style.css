@@ -1,5 +1,10 @@
+.main {
+  margin: 20px;
+  height: 550px;
+}
 .comoSurgiu {
   position: relative;
+  margin-bottom: 50px;
   height: 550px;
   transition: all 0.3s ease-in-out;
   top: 200px;

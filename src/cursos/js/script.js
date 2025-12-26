@@ -4,6 +4,7 @@ const coursesPath = "/coursesCards.json";
 const buyPageLink = "/pagamentos/index.html";
 const buyButtonText = "Comprar";
 const thumbNailLink = "./index.html?productId";
+const rootContainerClass = ".productDetail";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE COURSESCARD.JSON
     productDisplay(
       false,
+      rootContainerClass,
       coursesPath,
       productId,
       imageIndex,

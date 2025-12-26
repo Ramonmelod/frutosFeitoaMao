@@ -5,6 +5,7 @@ const whatsappLink =
   "https://wa.me/5548991035724?text=Ol%C3%A1%2C+venho+atrav%C3%A9s+do+site+frutosfeitoamao.com.br+e+me+interessei+pelo+produto";
 const buyButtonText = "Solicitar Orçamento";
 const thumbNailLink = "./index.html?productId";
+const rootContainerClass = ".productDetail";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //NEED TO MAKE A PAGE NOT FOUND WHEN THE PRODUCT ID IS NOT IN THE PRODUCTSCARD.JSON
     productDisplay(
       true,
+      rootContainerClass,
       ProductsPath,
       productId,
       imageIndex,
