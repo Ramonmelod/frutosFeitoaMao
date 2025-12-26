@@ -154,7 +154,7 @@ header {
   z-index: 0; /*Layer number*/
   margin-bottom: 10px;
 }
-nav {
+header nav {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -189,7 +189,7 @@ nav a:hover {
     top: 10%;
     left: 0%;
   }
-  nav {
+  header nav {
     display: none;
     flex-direction: column;
     position: absolute;
