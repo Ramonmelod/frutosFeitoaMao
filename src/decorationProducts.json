@@ -13,5 +13,18 @@
     ],
     "description": "Gancho em formato de coração produzido em PLA - Poliácido Lático, leve e resistente, ideal para pendurar seus bordados feitos à mão ou até mesmo roupas, acessórios e toalhas leves, com fixação por fita dupla face 3M ultra forte, permitindo instalação rápida e segura sem necessidade de furar a parede.",
     "detailsPage": "/decoracao/decoracaoDetails.html"
+  },
+  {
+    "id": "1",
+    "title": "Organizador de laços e tiaras bege quadriculado",
+    "price": "R$60,00",
+    "image_url": [
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1766842807/IMG-20251226-WA0014_dvcpps.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1766842808/IMG-20251226-WA0016_rk5ik3.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1766842806/IMG-20251226-WA0018_bi8mqe.jpg",
+      "https://res.cloudinary.com/dhayneykx/image/upload/w_630,h_840/v1766842806/IMG-20251226-WA0011_wneyug.jpg"
+    ],
+    "description": "Organizador de laços e tiaras em tecido bege quadriculado, ideal para manter acessórios organizados de forma prática e charmosa, facilitando a visualização e o uso no dia a dia.",
+    "detailsPage": "/decoracao/decoracaoDetails.html"
   }
 ]
