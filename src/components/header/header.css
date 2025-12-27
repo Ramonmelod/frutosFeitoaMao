@@ -1,9 +1,3 @@
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f8f5ed;
-  position: relative;
-  justify-content: center;
-}
 header {
   display: flex;
   flex-direction: column;
