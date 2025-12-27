@@ -20,7 +20,6 @@ header {
   height: 28px;
   width: 100%;
   z-index: 0; /*Layer number*/
-  gap: 20px;
 }
 .band p {
   position: relative;
@@ -34,7 +33,7 @@ header {
   position: fixed;
   top: 0px;
   right: 35px;
-  width: 10%; /* the div buttons shall not be too big, for it would be on the options names*/
+
   margin-right: 1%;
 }
 
@@ -49,6 +48,7 @@ header {
   transition: all 0.5s ease-in-out;
   width: 5px;
 }
+/* Icon styles */
 .icon-instagram {
   color: #ffffff;
 }
@@ -69,11 +69,6 @@ header {
   border-radius: 25px;
   width: 10px;
   font-size: 20px;
-}
-
-/* Icon styles */
-.icon {
-  margin-right: 10px;
 }
 
 .logo-title-search {
