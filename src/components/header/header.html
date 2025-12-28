@@ -31,50 +31,33 @@
   </div>
   <!-- logo-title-search -->
   <div class="logo-title-search">
-    <a href="/index.html"
-      ><img src="/assets/clean-logo.png" alt="My Logo" class="mini-logo"
-    /></a>
     <div class="logo-title">
+      <a href="/index.html"
+        ><img
+          src="/assets/clean-logo-minimal-no-borders-lighter-color.png"
+          alt="My Logo"
+          class="mini-logo"
+      /></a>
+
       <a href="/index.html" class="frutos">FRUTOS <br /></a>
       <a href="/index.html" class="feito-a-mao">feito à mão</a>
     </div>
-    <form
-      class="d-flex"
-      id="searchForm"
-      role="search"
-      style="margin-top: 15px; margin-left: 10px"
-    >
-      <div style="position: relative; width: 50%">
+    <form id="searchForm">
+      <div class="search-wrapper">
         <input
           class="form-control"
           type="search"
           placeholder="O que você procura?"
           aria-label="Search"
           id="searchInput"
-          style="height: 40px"
           name="query"
         />
-        <button
-          class="btn custom-search-btn"
-          id="loupe"
-          type="submit"
-          style="
-            position: absolute;
-            top: 30%;
-            right: 20px;
-            transform: translateY(-50%);
-            height: 30px;
-            width: 30px;
-            border: none;
-            background: none;
-          "
-        >
-          <i class="bi bi-search" style="color: #ebd8c3; font-size: 30px"></i>
+        <button id="loupe" type="submit" aria-label="Buscar">
+          <i class="bi bi-search"></i>
         </button>
       </div>
-
-      <!-- the right atribute puts the button in the input box -->
     </form>
+
     <!--Hambuguer menu-->
     <i
       class="fas fa-bars menu-icon"

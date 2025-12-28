@@ -5,16 +5,14 @@ header {
   width: 100%;
   top: 0;
   background-color: #e4cbb1;
-  padding: 10px 0;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 190px;
+  height: 200px;
   z-index: 3; /*Layer number*/
 }
 .band {
   display: flex;
   flex-direction: row;
-  top: -10px;
   position: relative;
   background-color: #ebd8c3;
   height: 28px;
@@ -76,36 +74,21 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  top: -5px;
-}
-.menu-icon {
-  display: none;
-  position: relative;
-  margin: 25px;
-  font-size: 30px;
-  cursor: pointer;
-  color: #f8f5ed;
-  z-index: 1; /*Layer number*/
-}
-
-.mini-logo {
-  position: relative;
-  margin-left: 100px;
-  height: 100px;
-  width: auto;
-  transition: all 0.3s ease-in-out;
-  z-index: 1; /*Layer number*/
 }
 .logo-title {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: auto;
+  margin: auto 120px;
   text-decoration: none;
   z-index: 1; /*Layer number*/
-  height: 70px;
   width: 100px;
-  top: 10px;
+}
+.mini-logo {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+  z-index: 1; /*Layer number*/
 }
 .logo-title .frutos {
   position: relative;
@@ -127,12 +110,47 @@ header {
   font-family: "Dancing Script", cursive;
   z-index: 1; /*Layer number*/
 }
-.d-flex {
+/* here the input and the loupe of the form are styled*/
+#searchForm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 45%;
+}
+
+.search-wrapper {
   position: relative;
-  top: 20%;
-  left: 15%;
-  width: 90%;
-  height: 25%;
+  width: 100%;
+}
+
+.form-control {
+  height: 50px;
+  padding-right: 48px; /* loupe space*/
+}
+
+#loupe {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ebd8c3;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu-icon {
+  display: none;
+  position: relative;
+  margin: 25px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #f8f5ed;
+  z-index: 1; /*Layer number*/
 }
 .line {
   position: relative;
@@ -164,7 +182,6 @@ nav a {
 nav a:hover {
   color: #e7bb78;
 }
-/*final of the header*/
 /* Media queries */
 @media (max-width: 768px) {
   .band {
@@ -201,14 +218,7 @@ nav a:hover {
   .menu-icon {
     display: block;
   }
-  .mini-logo {
-    display: none;
-  }
-
   .logo-title {
-    display: none;
-  }
-  .logo {
     display: none;
   }
   .logo-mobile {
@@ -219,17 +229,13 @@ nav a:hover {
     height: 80px;
     z-index: 4; /*layer number*/
   }
+  #searchForm {
+    top: 120px;
+    width: 90%;
+  }
 
   .line {
     display: none;
-  }
-
-  .d-flex {
-    position: absolute;
-    top: 90%;
-    left: 3%;
-    width: 180%;
-    height: 23%;
   }
 
   .buttons {
