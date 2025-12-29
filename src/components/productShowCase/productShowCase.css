@@ -20,19 +20,24 @@
   border-radius: 10px;
   width: 300px;
   margin: 10px;
-  height: 430px;
+  height: 590px;
+  overflow: hidden; /* ESSENCIAL */
 }
 
 .product-card img {
   width: 300px;
   height: auto;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .product-info {
   text-align: center;
   padding: 15px;
   background-color: #fff;
   border-top: 2px solid #a3a882; /* boundary line */
+  height: 190px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .product-info .title {
