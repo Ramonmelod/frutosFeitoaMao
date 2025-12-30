@@ -1,7 +1,8 @@
 import { productDisplay } from "/js/productDetails.js";
 
 const coursesPath = "/coursesCards.json";
-const buyPageLink = "/pagamentos/index.html";
+const buyPageLink =
+  "/pagamentos/index.html?productSlug=curso-bordado-pingente-natal";
 const buyButtonText = "Comprar";
 const thumbNailLink = "./index.html?productId";
 const rootContainerClass = ".productDetail";

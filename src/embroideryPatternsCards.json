@@ -1,6 +1,7 @@
 [
   {
     "id": "0",
+    "productSlug": "risco-safari",
     "title": "Risco para bordar Safari",
     "price": "R$13,00",
     "image_url": [
@@ -12,6 +13,7 @@
   },
   {
     "id": "1",
+    "productSlug": "risco-jardim-borboleta",
     "title": "Risco para bordar Jardim de Borboleta",
     "price": "R$14,00",
     "image_url": [
@@ -22,6 +24,7 @@
   },
   {
     "id": "2",
+    "productSlug": "risco-amor-transbordou",
     "title": "Risco para bordar O amor Transbordou",
     "price": "R$10,00",
     "image_url": [
@@ -32,6 +35,7 @@
   },
   {
     "id": "3",
+    "productSlug": "risco-harry-potter",
     "title": "Risco para bordar Harry Potter",
     "price": "R$12,00",
     "image_url": [
@@ -42,6 +46,7 @@
   },
   {
     "id": "4",
+    "productSlug": "risco-lar-doce-lar",
     "title": "Risco para bordar Lar doce Lar",
     "price": "R$13,00",
     "image_url": [

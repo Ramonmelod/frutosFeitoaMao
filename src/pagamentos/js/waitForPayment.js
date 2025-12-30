@@ -20,8 +20,8 @@ export function waitForPayment(paymentId) {
         window.location.hostname === "localhost";
 
       const path = isLocal
-        ? "/src/pagamentos/pagamento-confirmado.html" // Option choosed when is running locally
-        : "/pagamentos/pagamento-confirmado.html"; // Option choosed when is running in production
+        ? "/src/pagamentos/pagamento-confirmado.html" // Remenber to change this implementation
+        : "/pagamentos/pagamento-confirmado.html";
 
       window.location.href = path;
     }
