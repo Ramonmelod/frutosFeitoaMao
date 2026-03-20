@@ -14,6 +14,7 @@ const pixCopyPasteBtn = document.getElementById("pixCopyPasteBtn");
 
 const params = new URLSearchParams(window.location.search);
 const productSlug = params.get("productSlug"); // get the product name
+console.log(productSlug);
 
 /* ------------------ state ------------------ */
 
@@ -56,7 +57,7 @@ function fetchWithTimeout(url, options = {}, timeout = 15000) {
   const id = setTimeout(() => controller.abort(), timeout);
 
   return fetch(url, { ...options, signal: controller.signal }).finally(() =>
-    clearTimeout(id)
+    clearTimeout(id),
   );
 }
 
@@ -73,13 +74,13 @@ pixForm.addEventListener("submit", async (e) => {
 
     // call /verify-email with timeout
     const response1 = await fetchWithTimeout(
-      "http://localhost:8080/verify-email", //"https://api.frutosfeitoamao.com.br/verify-email", //
+      "https://api.frutosfeitoamao.com.br/verify-email", //"http://localhost:8080/verify-email", //
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email }),
       },
-      12000
+      12000,
     );
 
     //read the received json
@@ -127,15 +128,16 @@ pixForm.addEventListener("submit", async (e) => {
       console.log(`AQUI ESTÁ O CODE> ${code}`);
 
       try {
+        console.log(productSlug);
         // call /create-pix with timeout
         const response2 = await fetchWithTimeout(
-          "http://localhost:8080/create-pix", //"https://api.frutosfeitoamao.com.br/create-pix", //
+          "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, name, code, productSlug }),
           },
-          15000
+          15000,
         );
 
         nameField.value = "";
