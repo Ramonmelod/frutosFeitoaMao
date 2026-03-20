@@ -28,7 +28,7 @@ export async function loadProductGrid({
       card.classList.add("product-grid-card");
 
       const link = document.createElement("a");
-      link.href = `${product.detailsPage}?productId=${product.id}&imageIndex=0`;
+      link.href = `${product.detailsPage}?productId=${product.id}&imageIndex=0&productSlug=${product.productSlug}`;
       link.style.textDecoration = "none";
 
       const img = document.createElement("img");
