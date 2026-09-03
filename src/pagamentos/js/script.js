@@ -18,6 +18,8 @@ const productSlug = params.get("productSlug"); // get the product name
 /* ------------------ state ------------------ */
 
 let pixCode = "";
+let submittedName = "";
+let submittedEmail = "";
 
 /* ------------------ COPY PIX BUTTON ------------------ */
 
@@ -68,8 +70,8 @@ pixForm.addEventListener("submit", async (e) => {
     const emailField = document.getElementById("email");
     const nameField = document.getElementById("name");
 
-    const name = nameField.value;
-    const email = emailField.value;
+    submittedName = nameField.value;
+    submittedEmail = emailField.value;
 
     // call /verify-email with timeout
     const response1 = await fetchWithTimeout(
@@ -77,7 +79,7 @@ pixForm.addEventListener("submit", async (e) => {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email }),
+        body: JSON.stringify({ name: submittedName, email: submittedEmail }),
       },
       12000,
     );
@@ -114,101 +116,6 @@ pixForm.addEventListener("submit", async (e) => {
     spinner.style.display = "none";
     wrongEmailAlert.style.display = "none";
     verificationForm.style.display = "block";
-
-    verificationForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      verifyBtn.textContent = "enviando...";
-      spinner.style.display = "flex";
-
-      const codeField = document.getElementById("verificationCode");
-      const code = codeField.value;
-
-      try {
-        // call /create-pix with timeout
-        const response2 = await fetchWithTimeout(
-          "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ email, name, code, productSlug }),
-          },
-          15000,
-        );
-
-        nameField.value = "";
-        emailField.value = "";
-
-        //read the received json
-        const data = await response2.json();
-
-        if (!response2.ok) {
-          spinner.style.display = "none";
-          codeField.value = "";
-          verifyBtn.textContent = "Validar";
-
-          let errorMessage =
-            "Houve um problema ao validar o código. Por favor, tente novamente.";
-
-          if (data && data.message) {
-            errorMessage = data.message;
-          }
-          // 2. Trata Status 400 (Falta email/código)
-          else if (response2.status === 400) {
-            errorMessage =
-              "Campos obrigatórios ausentes. Por favor, preencha o código de verificação e tente novamente.";
-          } else if (response2.status === 403) {
-            errorMessage =
-              "O código de verificação está incorreto ou expirou. Tente novamente ou solicite um novo e-mail.";
-          } else if (response2.status === 500) {
-            errorMessage =
-              "Houve um erro interno ao gerar o PIX. Tente novamente em alguns minutos.";
-          }
-
-          wrongCodeAlert.textContent = errorMessage;
-          wrongCodeAlert.style.display = "block";
-          return;
-        }
-        verifyBtn.textContent = "Gerando...";
-        const paymentId = data.payment_id;
-
-        if (data) {
-          spinner.style.display = "none";
-          verificationForm.style.display = "none";
-          resultDiv.style.display = "block";
-          pixCopyPasteBtn.style.display = "inline-block";
-
-          // clean previous QR code
-          QRCode.innerHTML = "";
-          pixCode = data.qr_code;
-
-          new QRCode(document.getElementById("qrCodeCanvas"), {
-            text: pixCode,
-            width: 250,
-            height: 250,
-          });
-
-          codeField.value = "";
-
-          verifyBtn.style.display = "none";
-          pixBtn.style.display = "none";
-
-          waitForPayment(paymentId);
-        }
-
-        wrongCodeAlert.style.display = "none";
-      } catch (error) {
-        console.error("Erro na requisição PIX:", error);
-
-        spinner.style.display = "none";
-        verifyBtn.textContent = "Validar";
-        codeField.value = "";
-
-        wrongCodeAlert.textContent =
-          "A conexão falhou ou demorou demais. Por favor, verifique sua conexão e tente novamente.";
-        wrongCodeAlert.style.display = "block";
-      } // <--- END OF THE INNER TRY-CATCH
-    });
   } catch (error) {
     console.error("Erro ao enviar dados:", error);
 
@@ -220,5 +127,108 @@ pixForm.addEventListener("submit", async (e) => {
     spinner.style.display = "none";
     pixFormNamefield.value = "";
     pixFormEmailfield.value = "";
+  }
+});
+
+/* ------------------ VERIFICATION FORM (registered once) ------------------ */
+
+verificationForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  verifyBtn.textContent = "enviando...";
+  spinner.style.display = "flex";
+
+  const codeField = document.getElementById("verificationCode");
+  const code = codeField.value;
+
+  try {
+    // call /create-pix with timeout
+    const response2 = await fetchWithTimeout(
+      "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: submittedEmail,
+          name: submittedName,
+          code,
+          productSlug,
+        }),
+      },
+      15000,
+    );
+
+    pixFormNamefield.value = "";
+    pixFormEmailfield.value = "";
+
+    //read the received json
+    const data = await response2.json();
+
+    if (!response2.ok) {
+      spinner.style.display = "none";
+      codeField.value = "";
+      verifyBtn.textContent = "Validar";
+
+      let errorMessage =
+        "Houve um problema ao validar o código. Por favor, tente novamente.";
+
+      if (data && data.message) {
+        errorMessage = data.message;
+      }
+      // 2. Trata Status 400 (Falta email/código)
+      else if (response2.status === 400) {
+        errorMessage =
+          "Campos obrigatórios ausentes. Por favor, preencha o código de verificação e tente novamente.";
+      } else if (response2.status === 403) {
+        errorMessage =
+          "O código de verificação está incorreto ou expirou. Tente novamente ou solicite um novo e-mail.";
+      } else if (response2.status === 500) {
+        errorMessage =
+          "Houve um erro interno ao gerar o PIX. Tente novamente em alguns minutos.";
+      }
+
+      wrongCodeAlert.textContent = errorMessage;
+      wrongCodeAlert.style.display = "block";
+      return;
+    }
+    verifyBtn.textContent = "Gerando...";
+    const paymentId = data.payment_id;
+
+    if (data) {
+      spinner.style.display = "none";
+      verificationForm.style.display = "none";
+      resultDiv.style.display = "block";
+      pixCopyPasteBtn.style.display = "inline-block";
+
+      // clean previous QR code
+      const qrCanvas = document.getElementById("qrCodeCanvas");
+      if (qrCanvas) qrCanvas.innerHTML = "";
+      pixCode = data.qr_code;
+
+      new QRCode(qrCanvas, {
+        text: pixCode,
+        width: 250,
+        height: 250,
+      });
+
+      codeField.value = "";
+
+      verifyBtn.style.display = "none";
+      pixBtn.style.display = "none";
+
+      waitForPayment(paymentId);
+    }
+
+    wrongCodeAlert.style.display = "none";
+  } catch (error) {
+    console.error("Erro na requisição PIX:", error);
+
+    spinner.style.display = "none";
+    verifyBtn.textContent = "Validar";
+    codeField.value = "";
+
+    wrongCodeAlert.textContent =
+      "A conexão falhou ou demorou demais. Por favor, verifique sua conexão e tente novamente.";
+    wrongCodeAlert.style.display = "block";
   }
 });
