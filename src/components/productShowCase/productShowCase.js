@@ -1,11 +1,16 @@
 import { query } from "/js/query.js";
 
 const imagesContainer = document.querySelector(".images");
-let displayedProducts = [];
 
-export const productDisplay = async (i) => {
+export const productDisplay = async (i, data) => {
   try {
-    const data = await query("./productCards.json");
+    if (!data) {
+      data = await query("/productCards.json");
+    }
+    if (!data || !data[i]) {
+      console.warn(`productDisplay: produto ${i} não encontrado`);
+      return;
+    }
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
 
@@ -16,6 +21,8 @@ export const productDisplay = async (i) => {
     //adding image
     const productImage = document.createElement("img");
     productImage.src = data[i].image_url[0];
+    productImage.alt = data[i].title;
+    productImage.loading = "lazy";
     //creating product-info container
     const productInfo = document.createElement("div");
     productInfo.classList.add("product-info");

@@ -4,7 +4,7 @@
   "description": "Site frutos feito a mão", 
   "main": "index.html",  
   "scripts": {
-    "start": "index.html"  
+    "start": "npx --yes serve src"
   },
   "repository": {
     "type": "git",

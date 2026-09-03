@@ -31,14 +31,24 @@ export function loadSectionCarousel({
   const prevBtn = document.createElement("button");
   prevBtn.className = "carousel-btn prev";
   prevBtn.innerHTML = "‹";
+  prevBtn.setAttribute("aria-label", "Slide anterior");
 
   const nextBtn = document.createElement("button");
   nextBtn.className = "carousel-btn next";
   nextBtn.innerHTML = "›";
+  nextBtn.setAttribute("aria-label", "Próximo slide");
 
   container.appendChild(slidesWrapper);
   container.appendChild(prevBtn);
   container.appendChild(nextBtn);
+
+  // pause auto-advance on hover/focus, resume on leave
+  const pauseAuto = () => clearInterval(timer);
+  const resumeAuto = () => startAuto();
+  container.addEventListener("mouseenter", pauseAuto);
+  container.addEventListener("mouseleave", resumeAuto);
+  container.addEventListener("focusin", pauseAuto);
+  container.addEventListener("focusout", resumeAuto);
 
   function updateSlide() {
     slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;

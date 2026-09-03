@@ -14,7 +14,6 @@ const pixCopyPasteBtn = document.getElementById("pixCopyPasteBtn");
 
 const params = new URLSearchParams(window.location.search);
 const productSlug = params.get("productSlug"); // get the product name
-console.log(productSlug);
 
 /* ------------------ state ------------------ */
 
@@ -125,10 +124,7 @@ pixForm.addEventListener("submit", async (e) => {
       const codeField = document.getElementById("verificationCode");
       const code = codeField.value;
 
-      console.log(`AQUI ESTÁ O CODE> ${code}`);
-
       try {
-        console.log(productSlug);
         // call /create-pix with timeout
         const response2 = await fetchWithTimeout(
           "https://api.frutosfeitoamao.com.br/create-pix", // "http://localhost:8080/create-pix",

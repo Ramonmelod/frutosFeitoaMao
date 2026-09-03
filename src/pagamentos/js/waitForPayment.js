@@ -1,9 +1,4 @@
 export function waitForPayment(paymentId) {
-  console.log("host:", window.location.host);
-  console.log("hostname:", window.location.hostname);
-  console.log("href:", window.location.href);
-  console.log("pathname:", window.location.pathname);
-  console.log("origin:", window.location.origin);
   const interval = setInterval(async () => {
     const res = await fetch(
       `https://api.frutosfeitoamao.com.br/payments/${paymentId}/status`,

@@ -15,25 +15,31 @@ export async function loadProductGrid({
 
     // clear previous grid
     container.innerHTML = "";
-    console.log(products);
     const data = products ?? (await query(productsPath));
-    console.log(data);
 
     const grid = document.createElement("section");
     grid.classList.add("product-grid");
-    grid.style.setProperty("--columns", columns);
+    grid.style.setProperty("--columns", String(columns));
 
     data.forEach((product, index) => {
       const card = document.createElement("article");
       card.classList.add("product-grid-card");
 
       const link = document.createElement("a");
-      link.href = `${product.detailsPage}?productId=${product.id}&imageIndex=0&productSlug=${product.productSlug}`;
+      const params = new URLSearchParams({
+        productId: product.id,
+        imageIndex: 0,
+      });
+      if (product.productSlug) {
+        params.set("productSlug", product.productSlug);
+      }
+      link.href = `${product.detailsPage}?${params.toString()}`;
       link.style.textDecoration = "none";
 
       const img = document.createElement("img");
       img.src = product.image_url[0];
       img.alt = product.title;
+      img.loading = "lazy";
 
       const title = document.createElement("p");
       title.classList.add("product-grid-title");

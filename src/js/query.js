@@ -1,4 +1,9 @@
+const cache = new Map();
+
 export const query = async (path) => {
+  if (cache.has(path)) {
+    return cache.get(path);
+  }
   try {
     const response = await fetch(path);
     if (!response.ok) {
@@ -6,6 +11,7 @@ export const query = async (path) => {
     }
 
     const data = await response.json();
+    cache.set(path, data);
     return data;
   } catch (error) {
     console.error("Erro:", error);

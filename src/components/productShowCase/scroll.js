@@ -1,4 +1,8 @@
 export const scroll = (prevBtn, nextBtn, imagesContainer) => {
+  if (!prevBtn || !nextBtn || !imagesContainer) {
+    console.warn("scroll: botões ou container não encontrados");
+    return;
+  }
   const scrollStep = 321; //adjust this value to control the step of the scroll
   const disabledTime = 250;
 

@@ -15,6 +15,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   title.textContent = `Resultados para "${term}"`;
 
+  // normalize: lowercase + remove diacritics so "mae" matches "mãe"
+  const normalize = (str) =>
+    (str || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+  const normalizedTerm = normalize(term);
+
   try {
     const dataProducts = await query("/productCards.json");
     const dataCourses = await query("/coursesCards.json");
@@ -28,9 +36,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       ...dataPatterns,
     ];
 
-    const results = unifiedData.filter((product) =>
-      product.title.toLowerCase().includes(term.toLowerCase())
-    );
+    const results = unifiedData.filter((product) => {
+      const haystack = normalize(`${product.title} ${product.description || ""}`);
+      return haystack.includes(normalizedTerm);
+    });
 
     if (results.length === 0) {
       document.querySelector(containerSelector).innerHTML =

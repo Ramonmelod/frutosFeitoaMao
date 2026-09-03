@@ -6,10 +6,11 @@ async function loadFooter() {
 
     const year = new Date().getFullYear();
     const copyRightText = document.querySelector(".copyright");
-    copyRightText.innerHTML = `© ${year} Frutos Feito à Mão`; // insert the current year in the copyright text
+    if (copyRightText) {
+      copyRightText.innerHTML = `© ${year} Frutos Feito à Mão`; // insert the current year in the copyright text
+    }
   } catch (error) {
-    console.log(error);
-    throw error;
+    console.error("Erro ao carregar o footer:", error);
   }
 }
 

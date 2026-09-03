@@ -1,6 +1,11 @@
 import { query } from "/js/query.js";
+
+function redirectToNotFound() {
+  window.location.href = "/404.html";
+}
+
 export async function productDisplay(
-  isPriceRequestNedded,
+  isPriceRequestNeeded,
   containerSelector,
   itensPath,
   productId,
@@ -16,8 +21,37 @@ export async function productDisplay(
       throw new Error(`Container "${containerSelector}" not found in DOM`);
     }
 
+    // Validate query params: must be present and numeric
+    if (
+      productId === null ||
+      imageIndex === null ||
+      !/^\d+$/.test(productId) ||
+      !/^\d+$/.test(imageIndex)
+    ) {
+      console.warn("productDisplay: productId/imageIndex ausentes ou inválidos");
+      redirectToNotFound();
+      return;
+    }
+
     const path = itensPath;
     const data = await query(path);
+
+    // Validate product exists and imageIndex is in range
+    if (!Array.isArray(data) || !data[productId]) {
+      console.warn(`productDisplay: produto ${productId} não encontrado`);
+      redirectToNotFound();
+      return;
+    }
+    const productImages = data[productId].image_url;
+    if (
+      !Array.isArray(productImages) ||
+      Number(imageIndex) < 0 ||
+      Number(imageIndex) >= productImages.length
+    ) {
+      console.warn(`productDisplay: imageIndex ${imageIndex} fora do intervalo`);
+      redirectToNotFound();
+      return;
+    }
     //const main = document.createElement("main"); // create the div that receives the thumbnail
     const productPictures = document.createElement("div"); // create the div that receives the thumbnail
     const productCard = document.createElement("div"); //create the div that receives the productImage element
@@ -38,8 +72,8 @@ export async function productDisplay(
 
     // 👉 creating the WhatsApp button link
     const whatsappLink = document.createElement("a");
-    whatsappLink.href = isPriceRequestNedded
-      ? paymentLink + ": " + data[productId].title
+    whatsappLink.href = isPriceRequestNeeded
+      ? `${paymentLink}: ${encodeURIComponent(data[productId].title)}`
       : paymentLink;
     whatsappLink.target = "_blank"; // opens in a new tab
 
@@ -49,6 +83,8 @@ export async function productDisplay(
     productInfo.classList.add("product-info");
 
     productImage.src = data[productId].image_url[imageIndex];
+    productImage.alt = data[productId].title;
+    productImage.loading = "lazy";
     productTitle.textContent = data[productId].title;
     productPrice.textContent = data[productId].price;
     productDescriptionText.textContent = data[productId].description;
@@ -90,7 +126,8 @@ export async function productDisplay(
     productDescription.appendChild(productDescriptionText);
 
     function removeCloudinarySizeParameters(url) {
-      return url.replace(/\/w_\d+,h_\d+/g, "");
+      // removes Cloudinary transformation params like /w_630,h_840/ in any order
+      return url.replace(/\/(?:w_\d+|h_\d+)(?:,(?:w_\d+|h_\d+))*\//g, "/");
     }
 
     function thumbNailsCreate() {
@@ -109,13 +146,14 @@ export async function productDisplay(
           productThumbNailLink.href = `${thumbNailLink}=${productId}&imageIndex=${imageIndex}`;
           const thumbNail = document.createElement("img");
           thumbNail.src = data[productId].image_url[imageIndex];
+          thumbNail.alt = `${data[productId].title} - imagem ${imageIndex + 1}`;
+          thumbNail.loading = "lazy";
           thumbNail.classList.add("thumbnail-img");
           productPictures.appendChild(productThumbNailLink);
           productThumbNailLink.appendChild(thumbNail);
         });
       } catch (error) {
-        console.log("in thumbNailCreate: " + error);
-        throw error;
+        console.error("in thumbNailCreate: " + error);
       }
     }
   } catch (error) {
