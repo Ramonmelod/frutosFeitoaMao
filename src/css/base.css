@@ -2,9 +2,18 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f8f5ed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* push footer to the bottom on pages with little content */
+#footer-root {
+  margin-top: auto;
 }
